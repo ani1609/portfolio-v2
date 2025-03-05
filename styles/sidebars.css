@@ -1,0 +1,153 @@
+.sidebar_container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.left_bar {
+  position: fixed;
+  left: 50px;
+  bottom: 0;
+  z-index: 3;
+  align-items: center;
+  width: 20px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 23px;
+  list-style-type: none;
+  animation-name: fadeLeftBar;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.github,
+.linkedin,
+.twitter,
+.discord,
+.instagram {
+  width: 20px;
+  height: 20px;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.github a,
+.linkedin a,
+.twitter a,
+.discord a,
+.instagram a {
+  color: var(--para);
+  transition: 0.3s ease-in-out;
+}
+
+.hover_effect {
+  transition: 0.2s ease-in-out;
+}
+
+.hover_effect:hover {
+  transform: translateY(-3px);
+}
+
+.hover_effect:hover a {
+  color: var(--primary);
+}
+
+.left_line,
+.right_line {
+  width: 1px;
+  height: 90px;
+  background-color: var(--para);
+}
+
+.right_bar {
+  position: fixed;
+  right: 50px;
+  bottom: 0;
+  z-index: 3;
+  align-items: center;
+  width: 20px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 21.17px;
+  list-style-type: none;
+  animation-name: fadeRightBar;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.email a {
+  font-family: "SF Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.556px;
+  color: var(--para);
+  writing-mode: vertical-rl;
+  transform-origin: center;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes fadeLeftBar {
+  from {
+    transform: translateX(-50px);
+    /* transform: translateY(295px); */
+    opacity: 0;
+  }
+  to {
+    /* transform: translateX(0px); */
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRightBar {
+  from {
+    transform: translateX(50px);
+    /* transform: translateY(295px); */
+    opacity: 0;
+  }
+  to {
+    /* transform: translateX(0px); */
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* ------responsiveness------ */
+
+@media only screen and (max-width: 1080px) {
+  .left_bar {
+    left: 30px;
+  }
+
+  .right_bar {
+    right: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left_bar {
+    display: none;
+  }
+
+  .right_bar {
+    display: none;
+  }
+}

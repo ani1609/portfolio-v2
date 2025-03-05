@@ -1,0 +1,144 @@
+.contact_container {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 106px);
+  opacity: 0;
+}
+
+.showContact {
+  animation-name: contactFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.contact_container h4 {
+  font-family: "SF Mono", monospace;
+  font-size: 22px;
+  color: var(--primary);
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.contact_container h1 {
+  font-family: "Noto Sans SC", sans-serif;
+  word-spacing: 5px;
+  color: var(--heading);
+  font-size: 45px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.contact_container p {
+  padding: 0px 25px;
+  margin: 0;
+  margin-top: 15px;
+  letter-spacing: 0.6px;
+  word-spacing: 0.8px;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--para);
+  text-align: center;
+}
+
+.contact_container a {
+  text-decoration: none;
+  font-family: "SF Mono", monospace;
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 300;
+  background-color: transparent;
+  border-radius: 3.5px;
+  border: 1px solid var(--primary);
+  padding: 12px 25px;
+  margin: 35px auto 0px auto;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.contact_container a:hover {
+  background-color: var(--hover);
+}
+
+@keyframes contactFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* -------- repsonsiveness -------- */
+
+@media screen and (max-width: 1080px) {
+  .contact_container h4 {
+    font-size: 20px;
+  }
+
+  .contact_container h1 {
+    font-size: clamp(30px, 5vw, 45px);
+  }
+
+  .contact_container p {
+    font-size: 15.5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact_container {
+    height: calc(100vh - 138.2px);
+  }
+
+  .contact_container h4 {
+    font-size: 18px;
+  }
+
+  .contact_container p {
+    font-size: 15px;
+  }
+
+  .contact_container a {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact_container p {
+    font-size: 14.5px;
+    margin-top: 12px;
+  }
+
+  .contact_container a {
+    font-size: 13px;
+    /* margin-top: 30px; */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact_container h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .contact_container p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 402.4px) {
+  .contact_container {
+    height: calc(100vh - 153.4px);
+  }
+}

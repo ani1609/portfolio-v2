@@ -1,0 +1,320 @@
+.showMajorProjects {
+  animation-name: majorProjectsFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.major_project_odd,
+.major_project_even {
+  width: 100%;
+  height: 350px;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.major_project_odd {
+  justify-content: flex-end;
+}
+
+.major_project_even {
+  justify-content: flex-start;
+}
+
+.major_project_odd > a,
+.major_project_even > a {
+  border-radius: 4px;
+  overflow: hidden;
+  position: absolute;
+  z-index: inherit;
+  background-color: #43ae95;
+  /* background-color: #93bafd; */
+  height: 100%;
+  width: 60%;
+  box-shadow: 0 0px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.major_project_odd > a img,
+.major_project_even > a img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%) contrast(100%) brightness(90%);
+  /* transition: 0.1s ease-in-out; */
+  mix-blend-mode: multiply;
+  object-fit: cover;
+}
+
+.major_project_odd > a:hover img,
+.major_project_even > a:hover img {
+  filter: grayscale(0%) contrast(100%) brightness(80%);
+  mix-blend-mode: normal;
+}
+
+.major_project_odd > a {
+  left: 0;
+}
+
+.major_project_even > a {
+  right: 0;
+}
+
+.project_details_odd,
+.project_details_even {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: inherit;
+  width: 50%;
+}
+
+.project_details_odd {
+  align-items: end;
+}
+
+.project_details_even {
+  align-items: baseline;
+}
+
+.project_details_odd h2,
+.project_details_even h2 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.project_details_odd h2 {
+  text-align: right;
+}
+
+.project_details_even h2 {
+  text-align: left;
+}
+
+.project_details_odd h2 h4,
+.project_details_even h2 h4 {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.project_details_odd h2 a,
+.project_details_even h2 a {
+  text-decoration: none;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 24px;
+  color: var(--heading);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.project_details_odd a:hover,
+.project_details_even a:hover {
+  color: var(--primary);
+}
+
+.project_details_odd p,
+.project_details_even p {
+  margin: 0;
+  font-size: 15.5px;
+  color: var(--para);
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--dark-navy);
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  letter-spacing: 0.6px;
+  word-spacing: 0.8px;
+}
+
+.project_details_odd {
+  text-align: right;
+}
+
+.project_details_even {
+  text-align: left;
+}
+
+.project_details_odd ul,
+.project_details_even ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0px;
+  margin: 0px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 5px;
+  max-width: 100%;
+  height: 15px !important;
+}
+
+.project_details_odd ul li,
+.project_details_even ul li {
+  font-family: "Open Sans", sans-serif;
+  color: var(--para);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.project_details_odd > a,
+.project_details_even > a {
+  padding: 8px;
+  color: var(--heading);
+  height: 23px;
+  width: 23px;
+  transition: 0.3s ease-in-out;
+}
+
+.project_details_odd > a:hover {
+  color: var(--primary);
+}
+
+.project_details_even > a:hover {
+  color: var(--primary);
+}
+
+@keyframes majorProjectsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ----------rsponsiveness----- */
+
+@media screen and (max-width: 1080px) {
+  .project_details_odd h2 a,
+  .project_details_even h2 a {
+    font-size: 22px;
+  }
+
+  .project_details_odd p,
+  .project_details_even p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .major_project_odd,
+  .major_project_even {
+    height: 350px;
+  }
+  .project_details_odd h2,
+  .project_details_even h2 {
+    text-align: left;
+  }
+  .project_details_odd h2 a,
+  .project_details_even h2 a {
+    font-size: 21px;
+  }
+
+  .project_details_odd h2 h4,
+  .project_details_even h2 h4 {
+    font-size: 11px;
+  }
+
+  .project_details_odd,
+  .project_details_even {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .major_project_odd > a,
+  .major_project_even > a {
+    width: 100%;
+    background-color: #182b3c;
+    pointer-events: none;
+  }
+
+  .project_details_odd,
+  .project_details_even {
+    align-items: baseline;
+  }
+
+  .project_details_odd p,
+  .project_details_even p {
+    /* text-align: left; */
+    text-align: justify;
+    font-size: 14.5px;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    filter: drop-shadow(0px 3px 8px rgba(2, 12, 27, 0.7));
+  }
+
+  .project_details_odd ul li,
+  .project_details_even ul li {
+    font-size: 11.5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .major_project_odd,
+  .major_project_even {
+    height: 380px;
+  }
+  .project_details_odd h2 a,
+  .project_details_even h2 a {
+    font-size: 19px;
+  }
+
+  .project_details_odd,
+  .project_details_even {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .project_details_odd,
+  .project_details_even {
+    align-items: baseline;
+  }
+
+  .project_details_odd p,
+  .project_details_even p {
+    font-size: 14px;
+  }
+
+  .project_details_odd ul li,
+  .project_details_even ul li {
+    font-size: 11px;
+  }
+}
+
+.project_details_odd ul::-webkit-scrollbar,
+.project_details_even ul::-webkit-scrollbar {
+  height: 4px;
+}
+
+.project_details_odd ul::-webkit-scrollbar-track,
+.project_details_even ul::-webkit-scrollbar-track {
+  background: var(--navy);
+  border-radius: 4px;
+}
+
+.project_details_odd ul::-webkit-scrollbar-thumb,
+.project_details_even ul::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}

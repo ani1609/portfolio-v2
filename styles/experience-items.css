@@ -1,0 +1,261 @@
+.experience_content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  opacity: 0;
+}
+
+.showExperienceContent {
+  animation-name: experienceFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.experience_tabs {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.experience_tabs button {
+  width: 140px;
+  height: 40px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: var(--para);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 0px;
+  outline: none;
+  border: none;
+  border-left: 2px solid var(--light-navy);
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.experience_tabs button:hover {
+  color: var(--primary);
+  background-color: var(--hover);
+}
+
+.selected_experience {
+  color: var(--primary) !important;
+  background-color: var(--hover) !important;
+}
+
+.vertical_slider {
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 40px;
+  background-color: var(--primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.experience_description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+}
+
+.fade_in_description {
+  animation-name: fadeInDescription;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.experience_description h2 {
+  margin: 0px;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--heading);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.experience_description h2 span {
+  color: var(--primary);
+}
+
+.experience_description h2 a {
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.experience_description h2 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.5px;
+  width: 0%;
+  background-color: var(--primary);
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+
+.experience_description h2 a:hover::after {
+  width: 100%;
+}
+
+.experience_description p {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: var(--para);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.experience_description ul {
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+
+.experience_description ul li {
+  letter-spacing: 0.6px;
+  word-spacing: 0.8px;
+  font-size: 16px;
+  color: var(--para);
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: justify;
+}
+
+.experience_description ul li::before {
+  content: "▹";
+  color: var(--primary);
+  font-size: 16px;
+  padding-right: 8px;
+}
+
+.experience_description ul li a {
+  color: green;
+}
+
+.experience_description ul li a {
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.experience_description ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.5px;
+  width: 0%;
+  background-color: var(--primary);
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+
+.experience_description ul li a:hover::after {
+  width: 100%;
+}
+
+.right_arrow {
+  width: 10px;
+  fill: var(--primary);
+}
+
+@keyframes experienceFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ------responsiveness----- */
+
+@media screen and (max-width: 1080px) {
+  .experience_description h2 {
+    font-size: 17px;
+  }
+
+  .experience_description p {
+    font-size: 11.5px;
+  }
+
+  .experience_description ul li {
+    font-size: 15.5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience_description h2 {
+    font-size: 16px;
+  }
+
+  .experience_description p {
+    font-size: 11px;
+  }
+
+  .experience_description ul li {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .experience_description h2 {
+    font-size: 15px;
+  }
+
+  .experience_description p {
+    font-size: 10.5px;
+  }
+
+  .experience_description ul li {
+    font-size: 14.5px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .experience_content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .experience_tabs {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .experience_tabs button {
+    min-width: 140px;
+    border: 0;
+    border-bottom: 2px solid var(--light-navy);
+  }
+
+  .horizontal_slider {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    height: 2px;
+    background-color: var(--primary);
+    transition: all 0.2s ease-in-out;
+  }
+}

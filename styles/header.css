@@ -1,0 +1,239 @@
+header {
+  position: relative;
+  height: 100vh;
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+header h4 {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: var(--primary);
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  animation-name: fadeInHeader;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1000ms;
+}
+
+header h1 {
+  line-height: 87px;
+  margin: 10px 0px 0px 0px;
+  font-size: 60px;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--heading);
+  animation-name: fadeInHeader;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1200ms;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+header h2 {
+  line-height: 87px;
+  margin: 0px;
+  font-size: 60px;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--para);
+  animation-name: fadeInHeader;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1400ms;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  text-align: justify;
+  font-size: 16px;
+  width: 550px;
+  color: var(--para);
+  font-family: "Source Sans Pro", sans-serif;
+  animation-name: fadeInHeader;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1600ms;
+}
+
+header a {
+  padding: 12px 0px;
+  border-radius: 4px;
+  width: 100px;
+  text-align: center;
+  color: var(--primary);
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 14px;
+  margin-top: 50px;
+  animation-name: fadeInHeader;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1800ms;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+
+header a:hover {
+  background-color: var(--hover);
+}
+
+.alien {
+  position: absolute;
+  top: 60px;
+  right: -55px;
+  animation-name: alienSlideIn;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  /* animation-delay: 1600ms; */
+}
+
+.alien img {
+  width: 300px;
+  height: 290px;
+}
+
+@keyframes fadeInHeader {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes alienSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes alienUpDown {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(80px);
+  }
+}
+
+/* font-size: clamp(21px, 6vw, 40px); */
+
+/* ---------responsiveness--------- */
+
+@media only screen and (max-width: 1080px) {
+  header {
+    width: 100%;
+    padding: 0px 100px;
+  }
+
+  header h1,
+  header h2 {
+    line-height: normal;
+    font-size: clamp(22px, 5vw, 59px);
+  }
+
+  header h4 {
+    font-size: 15px;
+  }
+
+  header p {
+    font-size: 15.5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0px 50px;
+  }
+
+  header h4 {
+    font-size: 14px;
+    animation-delay: 500ms;
+  }
+
+  header h1 {
+    margin-top: 12px;
+    animation-delay: 700ms;
+  }
+
+  header h2 {
+    animation-delay: 900ms;
+  }
+
+  header p {
+    animation-delay: 1100ms;
+    font-size: 15px;
+    margin-top: 17px;
+  }
+
+  header a {
+    font-size: 13.5px;
+    animation-delay: 1300ms;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  header p {
+    width: 100%;
+    text-align: justify;
+    word-spacing: normal;
+  }
+
+  header p {
+    font-size: 14.5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 0px 20px;
+  }
+
+  header h4 {
+    font-size: 13px;
+  }
+
+  header h1 {
+    font-size: fit-content;
+    white-space: nowrap;
+  }
+
+  header h2 {
+    margin-top: 3px;
+    font-size: fit-content;
+    white-space: nowrap;
+  }
+
+  header p {
+    margin-top: 12px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  header a {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+}

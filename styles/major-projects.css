@@ -1,0 +1,113 @@
+.major_projects_parent {
+  width: 75%;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 50px;
+  z-index: 2;
+  position: relative;
+  box-sizing: border-box;
+  /* align-items: center; */
+}
+
+.major_projects_parent h1 {
+  margin: 0px;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--heading);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+}
+
+.showMajorProjectsHeading {
+  animation-name: majorProjectsHeadingFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes majorProjectsHeadingFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.major_projects_parent h1::before {
+  content: "03.";
+  font-family: "SF Mono", monospace;
+  font-size: 25px;
+  color: var(--primary);
+  padding-top: 5px;
+  font-weight: 300;
+}
+
+.major_projects_parent h1::after {
+  content: "";
+  height: 1px;
+  width: 25%;
+  background-color: var(--light-navy);
+  margin-top: 5px;
+}
+
+/* -------reposniveness------- */
+
+@media only screen and (max-width: 1080px) {
+  .major_projects_parent {
+    width: 100%;
+    padding: 0px 100px;
+  }
+
+  .major_projects_parent h1 {
+    font-size: 26px;
+  }
+
+  .major_projects_parent h1::before {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .major_projects_parent {
+    padding: 0px 50px;
+    gap: 30px;
+  }
+
+  .major_projects_parent h1 {
+    font-size: 24px;
+    gap: 8px;
+  }
+
+  .major_projects_parent h1::before {
+    font-size: 18px;
+  }
+
+  .major_projects_parent h1::after {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .major_projects_parent {
+    padding: 0px 20px;
+  }
+
+  .major_projects_parent h1 {
+    font-size: 22px;
+  }
+
+  .major_projects_parent h1::before {
+    font-size: 16px;
+  }
+
+  .major_projects_parent h1::after {
+    width: 10%;
+  }
+}
