@@ -242,7 +242,22 @@
 
   .experience_tabs {
     flex-direction: row;
+    max-width: 100%;
     overflow-x: auto;
+  }
+
+  .experience_tabs::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .experience_tabs::-webkit-scrollbar-track {
+    background: var(--navy);
+    border-radius: 4px;
+  }
+
+  .experience_tabs::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
   }
 
   .experience_tabs button {

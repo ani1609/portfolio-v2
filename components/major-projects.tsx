@@ -15,7 +15,7 @@ export default function MajorProjects() {
       title: 'UI Astra',
       tagLine: 'UI Library',
       description:
-        'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, AstraIcons, for streamlined and efficient web development.',
+        'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, Astra Icons, for streamlined and efficient web development.',
       image: UiAstraImage,
       techStack: ['GSAP', 'Next.js', 'RadixUI', 'Tailwind CSS', 'Typescript'],
       github: 'https://github.com/uiastra',
