@@ -14,7 +14,7 @@
 
 .major_projects_parent h1 {
   margin: 0px;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   color: var(--heading);
   font-size: 28px;
   display: flex;
@@ -42,8 +42,8 @@
 }
 
 .major_projects_parent h1::before {
-  content: "03.";
-  font-family: "SF Mono", monospace;
+  content: '03.';
+  font-family: 'SF Mono', monospace;
   font-size: 25px;
   color: var(--primary);
   padding-top: 5px;
@@ -51,7 +51,7 @@
 }
 
 .major_projects_parent h1::after {
-  content: "";
+  content: '';
   height: 1px;
   width: 25%;
   background-color: var(--light-navy);

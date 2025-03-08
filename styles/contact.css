@@ -20,7 +20,7 @@
 }
 
 .contact_container h4 {
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 22px;
   color: var(--primary);
   font-weight: 300;
@@ -29,7 +29,7 @@
 }
 
 .contact_container h1 {
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   word-spacing: 5px;
   color: var(--heading);
   font-size: 45px;
@@ -45,14 +45,14 @@
   letter-spacing: 0.6px;
   word-spacing: 0.8px;
   font-size: 16px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: var(--para);
   text-align: center;
 }
 
 .contact_container a {
   text-decoration: none;
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 14px;
   color: var(--primary);
   font-weight: 300;

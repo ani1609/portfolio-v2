@@ -33,7 +33,7 @@
 }
 
 .footer_container p {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: var(--para);
   font-weight: 600;
@@ -43,7 +43,7 @@
 
 .footer_container p a {
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: var(--para);
   font-weight: 600;

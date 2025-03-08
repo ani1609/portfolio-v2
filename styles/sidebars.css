@@ -92,7 +92,7 @@
 }
 
 .email a {
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 14px;
   letter-spacing: 0.556px;
   color: var(--para);

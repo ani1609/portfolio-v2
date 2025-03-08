@@ -14,7 +14,7 @@
 
 .minor_projects_parent h1 {
   margin: 0px;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   color: var(--heading);
   font-size: 26px;
   display: flex;
@@ -43,7 +43,7 @@
 }
 
 .minor_projects_parent h1::before {
-  content: "";
+  content: '';
   height: 1px;
   width: 19%;
   background-color: var(--light-navy);
@@ -51,7 +51,7 @@
 }
 
 .minor_projects_parent h1::after {
-  content: "";
+  content: '';
   height: 1px;
   width: 19%;
   background-color: var(--light-navy);
@@ -79,7 +79,7 @@
 
 .minor_projects_parent button {
   text-decoration: none;
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 14px;
   color: var(--primary);
   font-weight: 300;

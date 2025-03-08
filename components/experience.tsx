@@ -1,7 +1,7 @@
-import { useRef, useEffect } from "react";
-import ExperienceItems from "./experience-items";
-import "../styles/experience.css";
-import { Experience } from "@/types/experience";
+import { useRef, useEffect } from 'react';
+import ExperienceItems from './experience-items';
+import '../styles/experience.css';
+import { Experience } from '@/types/experience';
 
 export default function ExperienceSection() {
   const experienceHeadingRef = useRef(null);
@@ -9,38 +9,41 @@ export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
       id: 1,
-      company: "Einetic",
-      jobTitle: "SDE Intern",
-      companyLink: "https://www.einetic.com/",
-      date: "Apr 2024 - Present",
+      company: 'UI Astra',
+      jobTitle: 'Full Stack Developer',
+      companyLink: 'https://www.uiastra.com/',
+      date: 'Apr 2024 - Present',
       description: [
-        'Developed <a href="https://uiastra.com/" target="_blank" rel="noopener noreferrer">UI Astra</a>, an in-house component library with reusable components and an icon library, reducing development speed by 40%',
-        'Improved UI/UX of <a href="https://galadriel.com/" target="_blank" rel="noopener noreferrer">Galadriel</a>, leading to a 25% increase in user engagement, and integrated user authentication and dashboard APIs, boosting security and user data accessibility.',
-        "Attended daily stand-up meetings to provide progress updates, discuss ongoing tasks, and collaborate with team members on project coordination and strategy.",
-        'Currently enhancing UI/UX and optimizing logic for <a href="https://warped.games/" target="_blank" rel="noopener noreferrer">Warped Games</a>, targeting a 30% increase in user interaction.',
+        'Integrated <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">CodeSandbox</a> using Sandpack Toolkit, providing users with interactive previews of components, resulting in a <b>25%</b> reduction in time spent on manual testing and component validation.',
+        'Contributed to the development and integration of AstraIcons, an icon library, enhancing visual consistency across projects and reducing design inconsistency issues by <b>20%</b>.',
+        'Authored comprehensive documentation for setting up UI Astra in environments including Next.js, Vite, Remix, Astro, Laravel, Gatsby, and custom setups, after rigorous testing. Documentation also included guidelines for dark mode implementation across all frameworks, reducing onboarding time for developers by <b>50%</b>.',
       ],
     },
     {
       id: 2,
-      company: "KWoC 2023",
-      jobTitle: "Mentor",
-      companyLink: "https://kwoc.kossiitkgp.org/",
-      date: "Nov 2023 - Jan 2024",
+      company: 'Neuroute AI',
+      jobTitle: 'Full Stack Developer',
+      companyLink: 'https://www.neuroute.ai/',
+      date: 'DEC 2024 - Present',
       description: [
-        'Initiated and crafted the project <a href="https://spendwise-two.vercel.app/" target="_blank" rel="noopener noreferrer">Spendwise</a> with initial basic features.',
-        "Mentored the project through Kharagpur Winter of Code, 2023, guiding over 30 contributors.",
-        "Carefully reviewed and integrated contributions, ensuring project quality and coherence, which led to a 20% reduction in bugs and inconsistencies.",
-        "Maintained project standards and managed updates, throughout the mentorship period, resulting in a 25% improvement in project stability and performance.",
+        'Integrated <a href="https://clinicaltrials.gov/data-api/api" target="_blank" rel="noopener noreferrer">CTGOV APIs</a> to fetch extensive clinical trial data, reducing research time by <b>40%</b> and enabling researchers to analyze <b>529K+</b> past trials efficiently.',
+        'Developed a clinical trial brainstorming feature leveraging historical data, helping researchers identify potential study sites and sponsors, reducing site selection time by <b>30%</b>.',
+        'Integrated <a href="https://www.pinecone.io/" target="_blank" rel="noopener noreferrer">Pinecone Assistant</a>, enabling researchers to receive detailed insights with reference studies, improving research accuracy and efficiency by <b>45%</b>.',
+        'Implemented interactive data visualizations using <a href="https://recharts.org/en-US/" target="_blank" rel="noopener noreferrer">Recharts</a>, increasing data accessibility by <b>60%</b> through intuitive charts and graphs.',
+        'Redesigned and developed the entire UI/UX of the application, enhancing user engagement by <b>35%</b> and reducing navigation time by <b>25%</b> through an improved interface.',
       ],
     },
     {
       id: 3,
-      company: "Freelancing",
-      jobTitle: "Freelance Web Developer",
-      companyLink: "",
-      date: "Jul 2023 - Present",
+      company: 'Einetic',
+      jobTitle: 'SDE Intern',
+      companyLink: 'https://www.einetic.com/',
+      date: 'Apr 2024 - Sep 2024',
       description: [
-        "As a freelancer, I have successfully delivered a wide range of projects, including the creation of personal portfolios, blog websites, custom e-learning platforms for tutors, and various other tailored online solutions.",
+        'Improved UI/UX of <a href="https://galadriel.com/" target="_blank" rel="noopener noreferrer">Galadriel</a>, leading to a <b>25%</b> increase in user engagement, and integrated user authentication and dashboard APIs, boosting security and user data accessibility.',
+        'Designed and developed the landing page for <a href="https://smallest.ai/" target="_blank" rel="noopener noreferrer">Smallest AI</a>, improving UI/UX for better user experience and engagement.',
+        'Enhanced UI/UX and optimized logic for <a href="https://warped.games/" target="_blank" rel="noopener noreferrer">Warped Games</a>, targeting a <b>30%</b> increase in user interaction.',
+        'Attended daily stand-up meetings to provide progress updates, discuss ongoing tasks, and collaborate with team members on project coordination and strategy.',
       ],
     },
   ];
@@ -48,14 +51,14 @@ export default function ExperienceSection() {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.4,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("showExperienceHeading");
+          entry.target.classList.add('showExperienceHeading');
         }
       });
     }, options);
@@ -72,7 +75,7 @@ export default function ExperienceSection() {
   }, []);
 
   return (
-    <section className="experience_container">
+    <section className='experience_container'>
       <h1 ref={experienceHeadingRef}>Where I&apos;ve Worked</h1>
       <ExperienceItems experiences={experiences} />
     </section>

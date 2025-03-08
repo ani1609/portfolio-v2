@@ -176,7 +176,7 @@
 
 .ham_tabs ol li {
   cursor: pointer;
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   color: var(--heading);
   font-size: 14px;
   transition: 0.3s ease-in-out;
@@ -185,7 +185,7 @@
 }
 
 .ham_tabs ol li::marker {
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 12px;
   color: var(--primary);
 }
@@ -201,7 +201,7 @@
   padding: 9px 17px 9px 17px;
   background-color: transparent;
   border: 1px solid var(--primary);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   border-radius: 4px;
   transition: 0.3s ease-in-out;
@@ -255,14 +255,14 @@
   border: 0;
   background-color: transparent;
   color: var(--heading);
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 13.5px;
   transition: 0.3s ease-in-out;
   padding: 8px 8px 8px 0px;
 }
 
 .nav_tabs ol li::marker {
-  font-family: "SF Mono", monospace;
+  font-family: 'SF Mono', monospace;
   font-size: 11.5px;
   color: var(--primary);
   width: 26.5px;
@@ -305,7 +305,7 @@
   padding: 9px 17px 9px 17px;
   background-color: transparent;
   border: 1px solid var(--primary);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   border-radius: 4px;
   transition: 0.3s ease-in-out;
