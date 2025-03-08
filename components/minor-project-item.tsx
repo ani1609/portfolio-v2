@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
-import { FolderIcon, GithubIcon } from "@/assets/icons";
-import Link from "next/link";
-import "../styles/minor-project-item.css";
-import { MinorProject } from "@/types/minor-project";
+import { useRef, useEffect } from 'react';
+import { FolderIcon, GithubIcon } from '@/assets/icons';
+import Link from 'next/link';
+import '../styles/minor-project-item.css';
+import { MinorProject } from '@/types/minor-project';
 
-export default function MinorProjectItems({
+export default function MinorProjectItem({
   minorProject,
 }: {
   minorProject: MinorProject;
@@ -16,13 +16,13 @@ export default function MinorProjectItems({
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.6,
     };
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("showMinorProject");
+        entry.target.classList.add('showMinorProject');
       }
     }, options);
 
@@ -36,33 +36,33 @@ export default function MinorProjectItems({
   }, []);
 
   const handleGithubClick = () => {
-    window.open(minorProject.github, "_blank");
+    window.open(minorProject.github, '_blank');
   };
 
   return (
     <div
       // href={minorProject.link}
-      className="minor_project"
+      className='minor_project'
       // target="_blank"
       ref={minorProjectRef}
-      rel="noopener noreferrer"
+      rel='noopener noreferrer'
     >
-      <div className="icons">
-        <div className="folder_icon">
-          <FolderIcon className="size-full" />
+      <div className='icons'>
+        <div className='folder_icon'>
+          <FolderIcon className='size-full' />
         </div>
         <Link
           href={minorProject.github}
-          className="github_icon"
-          target="_blank"
+          className='github_icon'
+          target='_blank'
           onClick={handleGithubClick}
-          rel="noopener noreferrer"
+          rel='noopener noreferrer'
         >
-          <GithubIcon className="size-full" />
+          <GithubIcon className='size-full' />
         </Link>
       </div>
 
-      <div className="minor_title">
+      <div className='minor_title'>
         <h2>{minorProject.title}</h2>
         {minorProject.tagLine && <h4>{minorProject.tagLine}</h4>}
       </div>

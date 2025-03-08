@@ -10,7 +10,7 @@
 
 .maintenance_container h1 {
   font-size: 50px;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   color: var(--heading);
   margin: 0;
   text-align: center;
@@ -20,7 +20,7 @@
 .maintenance_container p {
   font-size: 16;
   color: var(--para);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
   text-align: center;
 }

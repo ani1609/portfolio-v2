@@ -1,0 +1,26 @@
+# Ignore node_modules and build directories
+node_modules/
+.next/
+out/
+dist/
+
+# Ignore package lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Ignore public folder assets
+public/
+
+# Ignore build artifacts
+build/
+coverage/
+
+# Ignore specific file types
+*.log
+*.svg
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local

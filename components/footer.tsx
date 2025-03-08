@@ -4,9 +4,9 @@ import {
   InstagramIcon,
   LinkedinIcon,
   TwitterIcon,
-} from "@/assets/icons";
-import Link from "next/link";
-import "../styles/footer.css";
+} from '@/assets/icons';
+import Link from 'next/link';
+import '../styles/footer.css';
 
 interface FooterItem {
   name: string;
@@ -16,40 +16,40 @@ interface FooterItem {
 
 const footerItems: FooterItem[] = [
   {
-    name: "Github",
-    link: "https://github.com/ani1609",
+    name: 'Github',
+    link: 'https://github.com/ani1609',
     icon: GithubIcon,
   },
   {
-    name: "Discord",
-    link: "https://discordapp.com/users/754188469764358264",
+    name: 'Discord',
+    link: 'https://discordapp.com/users/754188469764358264',
     icon: DiscordIcon,
   },
   {
-    name: "Linkedin",
-    link: "https://www.linkedin.com/in/ankit-kumar-chowdhury-1b1690218",
+    name: 'Linkedin',
+    link: 'https://www.linkedin.com/in/ankit-kumar-chowdhury-1b1690218',
     icon: LinkedinIcon,
   },
   {
-    name: "Instagram",
-    link: "https://www.instagram.com/ankit.chdry/",
+    name: 'Instagram',
+    link: 'https://www.instagram.com/ankit.chdry/',
     icon: InstagramIcon,
   },
   {
-    name: "Twitter",
-    link: "https://twitter.com/AnkitCh03046966",
+    name: 'Twitter',
+    link: 'https://twitter.com/AnkitCh03046966',
     icon: TwitterIcon,
   },
 ];
 
 export default function Footer() {
   return (
-    <section className="footer_container">
+    <section className='footer_container'>
       <ul>
         {footerItems.map((footerLink, index) => (
           <li key={index}>
-            <Link href={footerLink.link} target="_blank">
-              <footerLink.icon className="size-5" />
+            <Link href={footerLink.link} target='_blank'>
+              <footerLink.icon className='size-5' />
             </Link>
           </li>
         ))}
@@ -58,20 +58,20 @@ export default function Footer() {
       <p>
         Designed by
         <Link
-          href="https://github.com/bchiang7"
-          target="_blank"
-          rel="noopener noreferrer"
+          href='https://github.com/bchiang7'
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          {" "}
-          Brittany Chiang{" "}
+          {' '}
+          Brittany Chiang{' '}
         </Link>
         & Built by
         <Link
-          href="https://github.com/ani1609/resume"
-          target="_blank"
-          rel="noopener noreferrer"
+          href='https://github.com/ani1609/resume'
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          {" "}
+          {' '}
           Ankit Kr. Chowdhury
         </Link>
       </p>

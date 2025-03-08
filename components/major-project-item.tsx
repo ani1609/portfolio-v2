@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
-import { GithubIcon } from "@/assets/icons";
-import Image from "next/image";
-import "../styles/major-project-item.css";
-import { MajorProject } from "@/types/major-project";
+import { useRef, useEffect } from 'react';
+import { GithubIcon } from '@/assets/icons';
+import Image from 'next/image';
+import '../styles/major-project-item.css';
+import { MajorProject } from '@/types/major-project';
 
-export default function MajorProjectsItems({
+export default function MajorProjectsItem({
   majorProject,
 }: {
   majorProject: MajorProject;
@@ -17,14 +17,14 @@ export default function MajorProjectsItems({
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("showMajorProjects");
+          entry.target.classList.add('showMajorProjects');
         }
       });
     }, options);
@@ -47,16 +47,16 @@ export default function MajorProjectsItems({
   return (
     <div>
       {majorProject.id % 2 !== 0 ? (
-        <div className="major_project_odd" ref={majorProjectOddRef}>
-          <a href={majorProject.link} target="_blank" rel="noopener noreferrer">
-            <Image src={majorProject.image} alt="project_image" />
+        <div className='major_project_odd' ref={majorProjectOddRef}>
+          <a href={majorProject.link} target='_blank' rel='noopener noreferrer'>
+            <Image src={majorProject.image} alt='project_image' />
           </a>
-          <div className="project_details_odd">
+          <div className='project_details_odd'>
             <div>
               <a
                 href={majorProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 {majorProject.title}
               </a>
@@ -70,24 +70,24 @@ export default function MajorProjectsItems({
             </ul>
             <a
               href={majorProject.github}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <GithubIcon />
             </a>
           </div>
         </div>
       ) : (
-        <div className="major_project_even" ref={majorProjectEvenRef}>
-          <a href={majorProject.link} target="_blank" rel="noopener noreferrer">
-            <Image src={majorProject.image} alt="project_image" />
+        <div className='major_project_even' ref={majorProjectEvenRef}>
+          <a href={majorProject.link} target='_blank' rel='noopener noreferrer'>
+            <Image src={majorProject.image} alt='project_image' />
           </a>
-          <div className="project_details_even">
+          <div className='project_details_even'>
             <div>
               <a
                 href={majorProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 {majorProject.title}
               </a>
@@ -101,8 +101,8 @@ export default function MajorProjectsItems({
             </ul>
             <a
               href={majorProject.github}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <GithubIcon />
             </a>

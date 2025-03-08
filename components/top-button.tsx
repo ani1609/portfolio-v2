@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import "../styles/top-button.css";
-import { ArrowupFromDotIcon } from "@/assets/icons";
+import { useState, useEffect } from 'react';
+import '../styles/top-button.css';
+import { ArrowupFromDotIcon } from '@/assets/icons';
 
 export default function TopButton() {
   const [showButton, setShowButton] = useState(false);
 
   const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -20,18 +20,18 @@ export default function TopButton() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <div className="Top_Button_Container">
+    <div className='Top_Button_Container'>
       {showButton && (
         <button onClick={handleClick}>
-          <ArrowupFromDotIcon className="size-5" />
+          <ArrowupFromDotIcon className='size-5' />
         </button>
       )}
     </div>

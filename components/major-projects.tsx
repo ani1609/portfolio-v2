@@ -1,54 +1,63 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
-import MajorProjectsItems from "./major-project-item";
-import UiAstraImage from "@/public/images/ui-astra.webp";
-import SpendwiseImage from "@/public/images/spendwise.webp";
-import ConversifyImage from "@/public/images/conversify.webp";
-import "../styles/major-projects.css";
-import { MajorProject } from "@/types/major-project";
+import { useRef, useEffect } from 'react';
+import MajorProjectsItem from './major-project-item';
+import UiAstraImage from '@/public/images/ui-astra.webp';
+import ConversifyImage from '@/public/images/conversify.webp';
+import NeurouteAiImage from '@/public/images/neuroute-ai.webp';
+import '../styles/major-projects.css';
+import { MajorProject } from '@/types/major-project';
 
 export default function MajorProjects() {
   const MajorProjects: MajorProject[] = [
     {
       id: 1,
-      title: "UI Astra",
-      tagLine: "Industry Level Project",
+      title: 'UI Astra',
+      tagLine: 'UI Library',
       description:
-        "A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, AstraIcons, for streamlined and efficient web development.",
+        'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, AstraIcons, for streamlined and efficient web development.',
       image: UiAstraImage,
-      techStack: ["GSAP", "Next.js", "RadixUI", "Tailwind CSS", "Typescript"],
-      github: "https://github.com/uiastra",
-      link: "https://uiastra.com",
+      techStack: ['GSAP', 'Next.js', 'RadixUI', 'Tailwind CSS', 'Typescript'],
+      github: 'https://github.com/uiastra',
+      link: 'https://uiastra.com',
     },
     {
       id: 2,
-      title: "Conversify",
-      tagLine: "Under Development",
+      title: 'Neuroute AI',
+      tagLine: '',
       description:
-        "End-to-End Encrypted Chat App: Seamlessly integrating the OpenPGP library, this MERN-based application ensures secure and private messaging with real-time chat capabilities, prioritizing communication privacy and offering a seamless user experience.",
-      image: ConversifyImage,
+        'A clinical research platform that leverages AI and data visualization to help researchers analyze past trials, identify study sites, and streamline the clinical trial process.',
+      image: NeurouteAiImage,
       techStack: [
-        "Express",
-        "MongoDB",
-        "Multer",
-        "OpenPGP",
-        "React",
-        "Socket.io",
+        'Firebase',
+        'Framer Motion',
+        'Next.js',
+        'Pinecone',
+        'PostgreSQL',
+        'Recharts',
+        'Tailwind CSS',
+        'TypeScript',
       ],
-      github: "https://github.com/ani1609/Conversify",
-      link: "https://github.com/ani1609/Conversify",
+      github: '',
+      link: 'https://neuroute.ai',
     },
     {
       id: 3,
-      title: "Spendwise",
-      tagLine: "KWoC '23, IIT KGP Triumph",
+      title: 'Conversify',
+      tagLine: 'Under Development',
       description:
-        "A user-friendly expense tracker app empowering individuals to effortlessly manage and analyze their financial transactions, fostering effective budgeting and financial awareness.",
-      image: SpendwiseImage,
-      techStack: ["ApexCharts", "React", "Firebase", "Tailwind CSS"],
-      github: "https://github.com/ani1609/Spendwise",
-      link: "https://spendwise-two.vercel.app/",
+        'End-to-End Encrypted Chat App: Seamlessly integrating the OpenPGP library, this MERN-based application ensures secure and private messaging with real-time chat capabilities, prioritizing communication privacy and offering a seamless user experience.',
+      image: ConversifyImage,
+      techStack: [
+        'Express',
+        'MongoDB',
+        'Multer',
+        'OpenPGP',
+        'React',
+        'Socket.io',
+      ],
+      github: 'https://github.com/ani1609/Conversify',
+      link: 'https://github.com/ani1609/Conversify',
     },
   ];
 
@@ -57,13 +66,13 @@ export default function MajorProjects() {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.9,
     };
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("showMajorProjectsHeading");
+        entry.target.classList.add('showMajorProjectsHeading');
       }
     }, options);
 
@@ -79,10 +88,10 @@ export default function MajorProjects() {
   }, []);
 
   return (
-    <section className="major_projects_parent">
+    <section className='major_projects_parent'>
       <h1 ref={MajorProjectHeadingRef}>Some Things I&apos;ve Built</h1>
       {MajorProjects.map((majorProject, index) => {
-        return <MajorProjectsItems key={index} majorProject={majorProject} />;
+        return <MajorProjectsItem key={index} majorProject={majorProject} />;
       })}
     </section>
   );

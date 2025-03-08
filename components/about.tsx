@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
-import MyPhoto from "@/public/images/me.jpeg";
-import Image from "next/image";
-import "../styles/about.css";
+import { useRef, useEffect } from 'react';
+import MyPhoto from '@/public/images/me.jpeg';
+import Image from 'next/image';
+import '../styles/about.css';
 
 export default function About() {
   const aboutHeadingRef = useRef(null);
@@ -12,14 +12,14 @@ export default function About() {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("showAbout");
+          entry.target.classList.add('showAbout');
         }
       });
     }, options);
@@ -37,10 +37,10 @@ export default function About() {
   }, []);
 
   return (
-    <section className="about_container">
+    <section className='about_container'>
       <h1 ref={aboutHeadingRef}>About Me</h1>
-      <div className="about_contents" ref={aboutContentsRef}>
-        <div className="about_description">
+      <div className='about_contents' ref={aboutContentsRef}>
+        <div className='about_description'>
           <p>
             Hey there, I&apos;m Ankit, a final-year B.Tech student in Computer
             Science and Engineering (CSE). Web development is my ultimate
@@ -56,7 +56,7 @@ export default function About() {
           <p>
             Here are a few technologies I&apos;ve been working with recently:
           </p>
-          <div className="skills_list">
+          <div className='skills_list'>
             <ul>
               <li>Nextjs</li>
               <li>TypeScript</li>
@@ -79,8 +79,8 @@ export default function About() {
             exciting path leads me next.
           </p>
         </div>
-        <div className="about_photo">
-          <Image src={MyPhoto} alt="my_photo" />
+        <div className='about_photo'>
+          <Image src={MyPhoto} alt='my_photo' />
         </div>
       </div>
     </section>

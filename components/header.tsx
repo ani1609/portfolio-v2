@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import "../styles/header.css";
+import { useEffect } from 'react';
+import '../styles/header.css';
 
 export default function Header() {
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Header() {
         applying front-end and back-end technologies. Dedicated to honing skills
         creating web solutions that captivate users solve real-world challenges.
       </p>
-      <a href="mailto:ankitparallax@gmail.com">Hire me!</a>
+      <a href='mailto:ankitparallax@gmail.com'>Hire me!</a>
     </header>
   );
 }

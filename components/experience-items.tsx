@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useRef, useEffect, useState } from "react";
-import "../styles/experience-items.css";
-import { Experience } from "@/types/experience";
+import { useRef, useEffect, useState } from 'react';
+import '../styles/experience-items.css';
+import { Experience } from '@/types/experience';
 
 export default function ExperienceItems({
   experiences,
@@ -16,15 +16,15 @@ export default function ExperienceItems({
   const [screenLessThan650, setScreenLessThan650] = useState<boolean>();
 
   const handleResize = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       setScreenLessThan650(window.innerWidth < 650);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   const [selectedExperience, setSelectedExperience] = useState<Experience>(
@@ -35,14 +35,14 @@ export default function ExperienceItems({
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.4,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("showExperienceContent");
+          entry.target.classList.add('showExperienceContent');
         }
       });
     }, options);
@@ -60,11 +60,11 @@ export default function ExperienceItems({
 
   useEffect(() => {
     if (experienceDescriptionRef.current) {
-      experienceDescriptionRef.current.classList.remove("fade_in_description");
-      experienceDescriptionRef.current.style.opacity = "0";
+      experienceDescriptionRef.current.classList.remove('fade_in_description');
+      experienceDescriptionRef.current.style.opacity = '0';
 
       setTimeout(() => {
-        experienceDescriptionRef.current?.classList.add("fade_in_description");
+        experienceDescriptionRef.current?.classList.add('fade_in_description');
       }, 1);
     }
   }, [selectedExperience]);
@@ -94,8 +94,8 @@ export default function ExperienceItems({
   }, []);
 
   return (
-    <div className="experience_content" ref={experienceContentRef}>
-      <div className="experience_tabs">
+    <div className='experience_content' ref={experienceContentRef}>
+      <div className='experience_tabs'>
         {experiences.map((experience, index) => (
           <button
             key={index}
@@ -105,27 +105,27 @@ export default function ExperienceItems({
               moveSlider(index);
             }}
             className={
-              selectedExperienceIndex === index ? "selected_experience" : ""
+              selectedExperienceIndex === index ? 'selected_experience' : ''
             }
           >
             {experience.company}
           </button>
         ))}
         {screenLessThan650 ? (
-          <div className="horizontal_slider" ref={horizontalSliderRef}></div>
+          <div className='horizontal_slider' ref={horizontalSliderRef}></div>
         ) : (
-          <div className="vertical_slider" ref={veticalSliderRef}></div>
+          <div className='vertical_slider' ref={veticalSliderRef}></div>
         )}
       </div>
-      <div className="experience_description" ref={experienceDescriptionRef}>
+      <div className='experience_description' ref={experienceDescriptionRef}>
         <h2>
-          {selectedExperience.jobTitle}{" "}
+          {selectedExperience.jobTitle}{' '}
           <span>
-            @{" "}
+            @{' '}
             <a
               href={selectedExperience.companyLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
               onClick={(e) => {
                 if (selectedExperience.id === 3) {
                   e.preventDefault();

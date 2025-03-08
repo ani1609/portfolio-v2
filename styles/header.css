@@ -13,7 +13,7 @@ header {
 
 header h4 {
   margin: 0px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: var(--primary);
   word-spacing: 5px;
@@ -28,7 +28,7 @@ header h1 {
   line-height: 87px;
   margin: 10px 0px 0px 0px;
   font-size: 60px;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   color: var(--heading);
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
@@ -43,7 +43,7 @@ header h2 {
   line-height: 87px;
   margin: 0px;
   font-size: 60px;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   color: var(--para);
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
@@ -63,7 +63,7 @@ header p {
   font-size: 16px;
   width: 550px;
   color: var(--para);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
   animation-fill-mode: both;
@@ -78,7 +78,7 @@ header a {
   color: var(--primary);
   text-decoration: none;
   border: 1px solid var(--primary);
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   font-size: 14px;
   margin-top: 50px;
   animation-name: fadeInHeader;
