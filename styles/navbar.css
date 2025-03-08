@@ -222,16 +222,15 @@
   animation-name: blurFadeIn;
   animation-duration: 0.4s;
   animation-fill-mode: both;
+  backdrop-filter: blur(2px);
   /* pointer-events: none; */
 }
 
 @keyframes blurFadeIn {
   from {
-    backdrop-filter: blur(0px);
     opacity: 0;
   }
   to {
-    backdrop-filter: blur(2px);
     opacity: 1;
   }
 }
