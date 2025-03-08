@@ -67,7 +67,7 @@ export default function Footer() {
         </Link>
         & Built by
         <Link
-          href='https://github.com/ani1609/resume'
+          href='https://github.com/ani1609/portfolio-v2'
           target='_blank'
           rel='noopener noreferrer'
         >
