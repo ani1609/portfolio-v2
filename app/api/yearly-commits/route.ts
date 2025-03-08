@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios, { AxiosResponse } from 'axios';
 import { GITHUB_GRAPHQL_URL } from '@/lib/config';
-import { ContributionCalendar } from '@/types/github';
+import { ContributionCalendar, GitHubCommitUser } from '@/types/github';
 
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 
@@ -37,13 +37,7 @@ export async function GET(req: Request) {
     `;
 
     const response: AxiosResponse<{
-      data: {
-        user: {
-          contributionsCollection: {
-            contributionCalendar: ContributionCalendar;
-          };
-        } | null;
-      };
+      data: { user: GitHubCommitUser | null };
     }> = await axios.post(
       GITHUB_GRAPHQL_URL,
       { query },

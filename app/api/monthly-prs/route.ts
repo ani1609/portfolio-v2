@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
 import axios, { AxiosResponse } from 'axios';
 import { GITHUB_GRAPHQL_URL } from '@/lib/config';
+import {
+  GitHubPullRequestUser,
+  PageInfo,
+  PullRequestContribution,
+} from '@/types/github';
 
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 
@@ -20,14 +25,11 @@ export async function GET(req: Request) {
       );
     }
 
-    const monthPadded = month.length === 1 ? `0${month}` : month;
-
-    // Get the last day of the month
-    const lastDay = new Date(parseInt(year), parseInt(month), 0).getDate();
+    const monthPadded = month.padStart(2, '0');
     const fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
-    const toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
+    const toDate = new Date(parseInt(year), parseInt(month), 0).toISOString();
 
-    const allPRs: Record<string, number> = {};
+    const prContributions: Record<string, number> = {};
     let endCursor: string | null = null;
     let hasNextPage = true;
 
@@ -53,16 +55,7 @@ export async function GET(req: Request) {
       `;
 
       const response: AxiosResponse<{
-        data: {
-          user: {
-            contributionsCollection?: {
-              pullRequestContributions?: {
-                nodes: { pullRequest: { createdAt: string } }[];
-                pageInfo: { hasNextPage: boolean; endCursor: string | null };
-              };
-            };
-          } | null;
-        };
+        data: { user: GitHubPullRequestUser | null };
       }> = await axios.post(
         GITHUB_GRAPHQL_URL,
         { query },
@@ -74,50 +67,50 @@ export async function GET(req: Request) {
         }
       );
 
-      const userData = response.data?.data?.user;
-      if (!userData || !userData.contributionsCollection) {
+      const userData = response.data.data.user;
+      if (!userData) {
         return NextResponse.json(
           { error: 'User not found or no PRs' },
           { status: 404 }
         );
       }
 
-      const prContributions =
-        userData.contributionsCollection.pullRequestContributions;
-      if (!prContributions) break;
-
-      prContributions.nodes.forEach((node) => {
+      const prNodes: PullRequestContribution[] =
+        userData.contributionsCollection.pullRequestContributions.nodes;
+      prNodes.forEach((node) => {
         const date = node.pullRequest.createdAt.split('T')[0];
-        allPRs[date] = (allPRs[date] || 0) + 1;
+        prContributions[date] = (prContributions[date] || 0) + 1;
       });
 
-      hasNextPage = prContributions.pageInfo.hasNextPage;
-      endCursor = prContributions.pageInfo.endCursor;
+      const pageInfo: PageInfo =
+        userData.contributionsCollection.pullRequestContributions.pageInfo;
+      hasNextPage = pageInfo.hasNextPage;
+      endCursor = pageInfo.endCursor;
     }
 
-    const sortedPRs = Object.fromEntries(
-      Object.entries(allPRs).sort(([a], [b]) => a.localeCompare(b))
-    );
+    const formattedResponse = Object.entries(prContributions)
+      .map(([date, count]) => ({ date, pullRequestCount: count }))
+      .sort((a, b) => a.date.localeCompare(b.date));
 
     return NextResponse.json({
       username,
       month,
       year,
-      pullRequests: sortedPRs,
+      pullRequests: formattedResponse,
     });
-  } catch (error: unknown) {
-    if (axios.isAxiosError(error) && error.response) {
-      console.error('Error fetching PR contributions:', error.response.data);
-      return NextResponse.json(
-        { error: error.response.data.message || 'Internal Server Error' },
-        { status: error.response.status }
-      );
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.error('Axios error:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+      });
     } else {
-      console.error('Error fetching PR contributions:', error);
-      return NextResponse.json(
-        { error: 'Internal Server Error' },
-        { status: 500 }
-      );
+      console.error('Unexpected error:', error);
     }
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
   }
 }
