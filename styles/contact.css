@@ -115,6 +115,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .contact_container {
+    height: calc(100dvh - 147.3px);
+  }
+
   .contact_container p {
     font-size: 14.5px;
     margin-top: 12px;
@@ -138,8 +142,8 @@
   }
 }
 
-@media only screen and (max-width: 452px) {
+@media only screen and (max-width: 503.2px) {
   .contact_container {
-    height: calc(100dvh - 164.7px);
+    height: calc(100dvh - 164.6px);
   }
 }

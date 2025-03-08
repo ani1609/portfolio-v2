@@ -88,11 +88,4 @@
 }
 
 @media screen and (max-width: 480px) {
-  .footer_container p a {
-    font-size: 10.5px;
-  }
-
-  .footer_container a {
-    font-size: 10.5px;
-  }
 }
