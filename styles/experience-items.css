@@ -82,6 +82,7 @@
   color: var(--heading);
   font-size: 18px;
   letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 .experience_description h2 span {

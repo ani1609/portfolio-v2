@@ -38,8 +38,6 @@
 .twitter,
 .discord,
 .instagram {
-  width: 20px;
-  height: 20px;
   transition: 0.2s ease-in-out;
   position: relative;
   z-index: 3;

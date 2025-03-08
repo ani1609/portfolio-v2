@@ -49,7 +49,7 @@ export default function MinorProjectItems({
     >
       <div className="icons">
         <div className="folder_icon">
-          <FolderIcon />
+          <FolderIcon className="size-full" />
         </div>
         <Link
           href={minorProject.github}
@@ -58,7 +58,7 @@ export default function MinorProjectItems({
           onClick={handleGithubClick}
           rel="noopener noreferrer"
         >
-          <GithubIcon />
+          <GithubIcon className="size-full" />
         </Link>
       </div>
 

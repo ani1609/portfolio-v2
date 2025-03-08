@@ -36,6 +36,7 @@ header h1 {
   animation-delay: 1200ms;
   letter-spacing: 1px;
   word-spacing: 5px;
+  font-weight: 600;
 }
 
 header h2 {
@@ -50,6 +51,7 @@ header h2 {
   animation-delay: 1400ms;
   word-spacing: 5px;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 header p {

@@ -52,7 +52,7 @@ export default function MajorProjectsItems({
             <Image src={majorProject.image} alt="project_image" />
           </a>
           <div className="project_details_odd">
-            <h2>
+            <div>
               <a
                 href={majorProject.link}
                 target="_blank"
@@ -60,8 +60,8 @@ export default function MajorProjectsItems({
               >
                 {majorProject.title}
               </a>
-              {majorProject.tagLine && <p>{majorProject.tagLine}</p>}
-            </h2>
+              {majorProject.tagLine && <h4>{majorProject.tagLine}</h4>}
+            </div>
             <p>{majorProject.description}</p>
             <ul>
               {majorProject.techStack.map((tech, index) => (
@@ -83,7 +83,7 @@ export default function MajorProjectsItems({
             <Image src={majorProject.image} alt="project_image" />
           </a>
           <div className="project_details_even">
-            <h2>
+            <div>
               <a
                 href={majorProject.link}
                 target="_blank"
@@ -91,8 +91,8 @@ export default function MajorProjectsItems({
               >
                 {majorProject.title}
               </a>
-              {majorProject.tagLine && <p>{majorProject.tagLine}</p>}
-            </h2>
+              {majorProject.tagLine && <h4>{majorProject.tagLine}</h4>}
+            </div>
             <p>{majorProject.description}</p>
             <ul>
               {majorProject.techStack.map((tech, index) => (

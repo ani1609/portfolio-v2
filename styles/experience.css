@@ -25,6 +25,7 @@
   align-items: center;
   gap: 15px;
   opacity: 0;
+  font-weight: 600;
 }
 
 .experience_container h1::before {

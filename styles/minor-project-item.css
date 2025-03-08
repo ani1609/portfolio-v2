@@ -58,11 +58,11 @@
 
 .github_icon {
   color: var(--para);
-  height: 23px;
-  width: 23px;
+  height: 32px;
+  width: 32px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  padding: 5px;
+  padding: 4px;
 }
 
 .github_icon:hover {
@@ -81,6 +81,7 @@
   margin: 0px;
   font-size: 19px;
   transition: 0.3s ease-in-out;
+  font-weight: 600;
 }
 
 .minor_project h4 {
@@ -124,16 +125,6 @@
 /* -------responsiveness-------*/
 
 @media only screen and (max-width: 768px) {
-  .folder_icon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .github_icon {
-    height: 21px;
-    width: 21px;
-  }
-
   .minor_project h2 {
     font-size: 18px;
   }
@@ -154,16 +145,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .folder_icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .github_icon {
-    height: 20px;
-    width: 20px;
-  }
-
   .minor_project h2 {
     font-size: 17px;
   }

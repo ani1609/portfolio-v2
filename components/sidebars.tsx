@@ -6,9 +6,44 @@ import {
   TwitterIcon,
   InstagramIcon,
   LinkedinIcon,
+  DiscordIcon,
 } from "@/assets/icons";
 import Link from "next/link";
 import "../styles/sidebars.css";
+
+interface SidebarItem {
+  name: string;
+  link: string;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+}
+
+const sidebarItems: SidebarItem[] = [
+  {
+    name: "Github",
+    link: "https://github.com/ani1609",
+    icon: GithubIcon,
+  },
+  {
+    name: "Discord",
+    link: "https://discordapp.com/users/754188469764358264",
+    icon: DiscordIcon,
+  },
+  {
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/ankit-kumar-chowdhury-1b1690218",
+    icon: LinkedinIcon,
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/ankit.chdry/",
+    icon: InstagramIcon,
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/AnkitCh03046966",
+    icon: TwitterIcon,
+  },
+];
 
 export default function Sidebars() {
   const [shouldRender, setShouldRender] = useState(false);
@@ -25,51 +60,18 @@ export default function Sidebars() {
     <div>
       {shouldRender && (
         <ul className="left_bar">
-          <li className="github hover_effect">
-            <Link
-              href="https://github.com/ani1609"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubIcon />
-            </Link>
-          </li>
-          <li className="discord hover_effect">
-            <Link
-              href="https://discordapp.com/users/754188469764358264"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubIcon />
-            </Link>
-          </li>
-          <li className="linkedin hover_effect">
-            <Link
-              href="https://www.linkedin.com/in/ankit-kr-chowdhury-1b1690218/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedinIcon />
-            </Link>
-          </li>
-          <li className="instagram hover_effect">
-            <Link
-              href="https://www.instagram.com/ankit.chdry/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <InstagramIcon />
-            </Link>
-          </li>
-          <li className="twitter hover_effect">
-            <Link
-              href="https://twitter.com/AnkitCh03046966"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TwitterIcon />
-            </Link>
-          </li>
+          {sidebarItems.map((sidebarItem, index) => (
+            <li key={index} className="github hover_effect">
+              <Link
+                href={sidebarItem.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <sidebarItem.icon className="size-5" />
+              </Link>
+            </li>
+          ))}
+
           <li className="left_line"></li>
         </ul>
       )}
