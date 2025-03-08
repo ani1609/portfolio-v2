@@ -15,7 +15,7 @@ export default function ExperienceSection() {
       date: 'Apr 2024 - Present',
       description: [
         'Integrated <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">CodeSandbox</a> using Sandpack Toolkit, providing users with interactive previews of components, resulting in a <b>25%</b> reduction in time spent on manual testing and component validation.',
-        'Contributed to the development and integration of AstraIcons, an icon library, enhancing visual consistency across projects and reducing design inconsistency issues by <b>20%</b>.',
+        'Contributed to the development and integration of <a href="https://uiastra.com/icons" target="_blank" rel="noopener noreferrer">Astra Icons</a>, an icon library, enhancing visual consistency across projects and reducing design inconsistency issues by <b>20%</b>.',
         'Authored comprehensive documentation for setting up UI Astra in environments including Next.js, Vite, Remix, Astro, Laravel, Gatsby, and custom setups, after rigorous testing. Documentation also included guidelines for dark mode implementation across all frameworks, reducing onboarding time for developers by <b>50%</b>.',
       ],
     },
