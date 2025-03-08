@@ -1,15 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
-import '../styles/header.css';
+import '../styles/hero.css';
 
-export default function Header() {
+export default function Hero() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <header>
+    <section className='hero_container'>
       <h4>Hi, my name is </h4>
       <h1>Ankit Kr. Chowdhury.</h1>
       <h2>I build things for the web.</h2>
@@ -19,6 +19,6 @@ export default function Header() {
         creating web solutions that captivate users solve real-world challenges.
       </p>
       <a href='mailto:ankitparallax@gmail.com'>Hire me!</a>
-    </header>
+    </section>
   );
 }

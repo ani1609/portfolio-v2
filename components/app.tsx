@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import Maintenance from './maintenance';
 import Navbar from './navbar';
-import Header from './header';
+import Hero from './hero';
 import Sidebars from './sidebars';
 import About from './about';
 import ExperienceSection from './experience';
@@ -31,7 +31,7 @@ export default function App() {
     return (
       <div className='App'>
         <Navbar />
-        <Header />
+        <Hero />
         <TopButton />
         <Sidebars />
         <About />

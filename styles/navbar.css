@@ -143,7 +143,7 @@
 .ham_tabs {
   display: none;
   z-index: 4;
-  height: 100vh;
+  height: 100dvh;
   width: min(75vw, 400px);
   position: fixed;
   top: 0;
@@ -217,7 +217,7 @@
   z-index: 3;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   animation-name: blurFadeIn;
   animation-duration: 0.4s;
