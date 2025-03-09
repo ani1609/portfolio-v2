@@ -58,13 +58,6 @@
   margin-top: 5px;
 }
 
-.project_line {
-  margin-top: 1px;
-  width: 29%;
-  height: 1px;
-  border-bottom: 1px solid #8892b0;
-}
-
 .minor_projects_container {
   width: 100%;
   box-sizing: border-box;

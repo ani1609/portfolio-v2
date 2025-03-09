@@ -14,21 +14,37 @@ export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
     const username = url.searchParams.get('username');
-    const month =
-      url.searchParams.get('month') || (new Date().getMonth() + 1).toString();
-    const year =
-      url.searchParams.get('year') || new Date().getFullYear().toString();
+    const month = url.searchParams.get('month');
+    const year = url.searchParams.get('year');
 
-    if (!username) {
+    if (!username || !month || !year) {
       return NextResponse.json(
-        { error: 'Username is required' },
+        { error: 'Username, month, and year are required' },
         { status: 400 }
       );
     }
 
-    const monthPadded = month.padStart(2, '0');
+    const monthNum = parseInt(month, 10);
+    const yearNum = parseInt(year, 10);
+
+    if (isNaN(monthNum) || monthNum < 1 || monthNum > 12) {
+      return NextResponse.json(
+        { error: 'Month must be a valid number between 1 to 12' },
+        { status: 400 }
+      );
+    }
+
+    if (isNaN(yearNum) || year.length !== 4) {
+      return NextResponse.json(
+        { error: 'Year must be a valid four-digit number' },
+        { status: 400 }
+      );
+    }
+
+    const monthPadded = monthNum.toString().padStart(2, '0');
     const fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
-    const toDate = new Date(parseInt(year), parseInt(month), 0).toISOString();
+    const lastDay = new Date(yearNum, monthNum, 0).getDate();
+    const toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
 
     const prContributions: Record<string, number> = {};
     let endCursor: string | null = null;

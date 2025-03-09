@@ -1,0 +1,130 @@
+.github_footprints_parent {
+  z-index: 2;
+  position: relative;
+  margin: auto;
+  margin-top: 150px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+  transition: opacity 0.5s ease-in-out;
+  box-sizing: border-box;
+}
+
+.github_footprints_parent h1 {
+  margin: 0px;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--heading);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  font-weight: 600;
+}
+
+.showGithubFootprintsHeading {
+  animation-name: githubFootprintsHeadingFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes githubFootprintsHeadingFadeIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.github_footprints_parent h1::before {
+  content: '03.';
+  font-family: 'SF Mono', monospace;
+  font-size: 25px;
+  color: var(--primary);
+  padding-top: 5px;
+  font-weight: 300;
+}
+
+.github_footprints_parent h1::after {
+  content: '';
+  height: 1px;
+  width: 25%;
+  background-color: var(--light-navy);
+  margin-top: 5px;
+}
+
+.github_footprints_parent h2 {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--heading);
+  margin: 0px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* -------reposniveness------- */
+
+@media only screen and (max-width: 1080px) {
+  .github_footprints_parent {
+    width: 100%;
+    padding: 0px 100px;
+  }
+
+  .github_footprints_parent h1 {
+    font-size: 26px;
+  }
+
+  .github_footprints_parent h1::before {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .github_footprints_parent {
+    padding: 0px 50px;
+    gap: 30px;
+  }
+
+  .github_footprints_parent h1 {
+    font-size: 24px;
+    gap: 8px;
+  }
+
+  .github_footprints_parent h1::before {
+    font-size: 18px;
+  }
+
+  .github_footprints_parent h1::after {
+    width: 15%;
+  }
+
+  .github_footprints_parent h2 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .github_footprints_parent {
+    padding: 0px 20px;
+  }
+
+  .github_footprints_parent h1 {
+    font-size: 22px;
+  }
+
+  .github_footprints_parent h1::before {
+    font-size: 16px;
+  }
+
+  .github_footprints_parent h1::after {
+    width: 10%;
+  }
+
+  .github_footprints_parent h2 {
+    font-size: 17px;
+  }
+}

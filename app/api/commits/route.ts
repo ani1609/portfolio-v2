@@ -13,20 +13,46 @@ export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
     const username = url.searchParams.get('username');
-    const year =
-      url.searchParams.get('year') || new Date().getFullYear().toString();
+    const month = url.searchParams.get('month');
+    const year = url.searchParams.get('year');
 
-    if (!username) {
+    if (!username || !year) {
       return NextResponse.json(
-        { error: 'Username is required' },
+        { error: 'Username and year are required' },
         { status: 400 }
       );
+    }
+
+    const yearNum = parseInt(year, 10);
+    if (isNaN(yearNum) || year.length !== 4) {
+      return NextResponse.json(
+        { error: 'Year must be a valid four-digit number' },
+        { status: 400 }
+      );
+    }
+
+    let fromDate = `${year}-01-01T00:00:00Z`;
+    let toDate = `${year}-12-31T23:59:59Z`;
+
+    if (month) {
+      const monthNum = parseInt(month, 10);
+      if (isNaN(monthNum) || monthNum < 1 || monthNum > 12) {
+        return NextResponse.json(
+          { error: 'Month must be a valid number between 1 to 12' },
+          { status: 400 }
+        );
+      }
+
+      const monthPadded = monthNum.toString().padStart(2, '0');
+      fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
+      const lastDay = new Date(yearNum, monthNum, 0).getDate();
+      toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
     }
 
     const query = `
       query {
         user(login: "${username}") {
-          contributionsCollection(from: "${year}-01-01T00:00:00Z", to: "${year}-12-31T23:59:59Z") {
+          contributionsCollection(from: "${fromDate}", to: "${toDate}") {
             contributionCalendar {
               weeks {
                 contributionDays {
@@ -69,7 +95,12 @@ export async function GET(req: Request) {
       (week) => week.contributionDays
     );
 
-    return NextResponse.json({ username, year, contributions });
+    return NextResponse.json({
+      username,
+      year,
+      month: month || null,
+      contributions,
+    });
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error('Axios error:', {

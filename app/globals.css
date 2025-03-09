@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
   --primary: #64ffda;
   --light-navy: #233554;
@@ -11,15 +15,15 @@
 }
 
 @theme inline {
-  --primary: #64ffda;
-  --light-navy: #233554;
-  --navy: #112240;
-  --dark-navy: #15223e;
-  --heading: #ccd6f6;
-  --para: #8892b0;
-  --hover: #1c303f;
+  --color-primary: var(--primary);
+  --color-light-navy: var(--light-navy);
+  --color-navy: var(--navy);
+  --color-dark-navy: var(--dark-navy);
+  --color-heading: var(--heading);
+  --color-para: var(--para);
+  --color-hover: var(--hover);
   --font-open: var(--font-open);
-  --font-mono: var(--font-mono);
+  --font-noto: var(--font-noto);
   --font-source: var(--font-source);
 }
 
