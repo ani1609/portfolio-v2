@@ -24,7 +24,7 @@ export default function MajorProjects() {
     {
       id: 2,
       title: 'Neuroute AI',
-      tagLine: '',
+      tagLine: 'AI based Clinical Research Platform',
       description:
         'A clinical research platform that leverages AI and data visualization to help researchers analyze past trials, identify study sites, and streamline the clinical trial process.',
       image: NeurouteAiImage,
@@ -44,9 +44,9 @@ export default function MajorProjects() {
     {
       id: 3,
       title: 'Conversify',
-      tagLine: 'Under Development',
+      tagLine: 'End-to-End Encrypted Chat App',
       description:
-        'End-to-End Encrypted Chat App: Seamlessly integrating the OpenPGP library, this MERN-based application ensures secure and private messaging with real-time chat capabilities, prioritizing communication privacy and offering a seamless user experience.',
+        'Seamlessly integrating the OpenPGP library, this MERN-based application ensures secure and private messaging with real-time chat capabilities, prioritizing communication privacy and offering a seamless user experience.',
       image: ConversifyImage,
       techStack: [
         'Express',

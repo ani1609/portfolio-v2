@@ -63,7 +63,7 @@ export default function About() {
               <li>Tailwind CSS</li>
             </ul>
             <ul>
-              <li>Prisma</li>
+              <li>Go</li>
               <li>Expressjs</li>
               <li>PostgreSQL</li>
             </ul>
