@@ -37,7 +37,7 @@ export default function GithubFootprints() {
     12,
   ];
   const prMonths: Month[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  const [commitMonth, setCommitMonth] = useState<Month | 'all'>('all');
+  const [commitMonth, setCommitMonth] = useState<Month | 'all'>(1);
   const [commitYear, setCommitYear] = useState<Year>(2025);
   const [prMonth, setPrMonth] = useState<Month>(1);
   const [prYear, setPrYear] = useState<Year>(2025);
