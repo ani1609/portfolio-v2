@@ -27,6 +27,8 @@ export interface GitHubCommitResponse {
   };
 }
 
+export type CommitItem = ContributionDay;
+
 // pr response from GitHub API
 
 export interface PullRequestContribution {
@@ -56,4 +58,9 @@ export interface GitHubPullRequestResponse {
   data: {
     user: GitHubPullRequestUser | null;
   };
+}
+
+export interface PullRequestItem {
+  date: string;
+  pullRequestCount: number;
 }

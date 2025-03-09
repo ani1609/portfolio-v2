@@ -5,6 +5,7 @@ import {
   GitHubPullRequestUser,
   PageInfo,
   PullRequestContribution,
+  PullRequestItem,
 } from '@/types/github';
 
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
@@ -88,7 +89,7 @@ export async function GET(req: Request) {
       endCursor = pageInfo.endCursor;
     }
 
-    const formattedResponse = Object.entries(prContributions)
+    const formattedResponse: PullRequestItem[] = Object.entries(prContributions)
       .map(([date, count]) => ({ date, pullRequestCount: count }))
       .sort((a, b) => a.date.localeCompare(b.date));
 

@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
 import axios, { AxiosResponse } from 'axios';
 import { GITHUB_GRAPHQL_URL } from '@/lib/config';
-import { ContributionCalendar, GitHubCommitUser } from '@/types/github';
+import {
+  CommitItem,
+  ContributionCalendar,
+  GitHubCommitUser,
+} from '@/types/github';
 
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 
@@ -60,7 +64,8 @@ export async function GET(req: Request) {
 
     const contributionCalendar: ContributionCalendar =
       userData.contributionsCollection.contributionCalendar;
-    const contributions = contributionCalendar.weeks.flatMap(
+
+    const contributions: CommitItem[] = contributionCalendar.weeks.flatMap(
       (week) => week.contributionDays
     );
 
