@@ -96,7 +96,7 @@ export default function GithubFootprints() {
 
   return (
     <section className='github_footprints_parent'>
-      <h1 ref={githubFootprintsHeadingRef}>My GutHub Footprints</h1>
+      <h1 ref={githubFootprintsHeadingRef}>My GitHub Footprints</h1>
 
       <div className='flex flex-col gap-y-6'>
         {/* commit graph  */}
