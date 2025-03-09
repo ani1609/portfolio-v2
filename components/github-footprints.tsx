@@ -116,7 +116,7 @@ export default function GithubFootprints() {
                   )
                 }
               >
-                <SelectTrigger className='w-32 h-8 border-primary text-primary cursor-pointer focus-visible:ring-0'>
+                <SelectTrigger className='w-32 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
                   <SelectValue placeholder='Select Month' />
                 </SelectTrigger>
                 <SelectContent className='w-32 border-primary z-50'>
@@ -124,7 +124,7 @@ export default function GithubFootprints() {
                     <SelectItem
                       key={index}
                       value={month.toString()}
-                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer'
+                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
                     >
                       {month === 'all'
                         ? 'All Month'
@@ -140,7 +140,7 @@ export default function GithubFootprints() {
                   setCommitYear(parseInt(value, 10) as Year)
                 }
               >
-                <SelectTrigger className='w-20 h-8 border-primary text-primary cursor-pointer focus-visible:ring-0'>
+                <SelectTrigger className='w-20 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
                   <SelectValue placeholder='Select Year' />
                 </SelectTrigger>
                 <SelectContent className='w-20 border-primary z-50'>
@@ -148,7 +148,7 @@ export default function GithubFootprints() {
                     <SelectItem
                       key={index}
                       value={year.toString()}
-                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer'
+                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
                     >
                       {year}
                     </SelectItem>
@@ -180,7 +180,7 @@ export default function GithubFootprints() {
                   setPrMonth(parseInt(value, 10) as Month)
                 }
               >
-                <SelectTrigger className='w-32 h-8 border-primary text-primary cursor-pointer focus-visible:ring-0'>
+                <SelectTrigger className='w-32 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
                   <SelectValue placeholder='Select Month' />
                 </SelectTrigger>
                 <SelectContent className='w-32 border-primary z-50'>
@@ -188,7 +188,7 @@ export default function GithubFootprints() {
                     <SelectItem
                       key={index}
                       value={month.toString()}
-                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer'
+                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
                     >
                       {getMonthName({ monthNumber: month })}
                     </SelectItem>
@@ -202,7 +202,7 @@ export default function GithubFootprints() {
                   setPrYear(parseInt(value, 10) as Year)
                 }
               >
-                <SelectTrigger className='w-20 h-8 border-primary text-primary cursor-pointer focus-visible:ring-0'>
+                <SelectTrigger className='w-20 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
                   <SelectValue placeholder='Select Year' />
                 </SelectTrigger>
                 <SelectContent className='w-20 border-primary z-50'>
@@ -210,7 +210,7 @@ export default function GithubFootprints() {
                     <SelectItem
                       key={index}
                       value={year.toString()}
-                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer'
+                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
                     >
                       {year}
                     </SelectItem>
