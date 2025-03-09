@@ -11,7 +11,7 @@
 
 .showAbout {
   animation-name: aboutFadeIn;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
 }
 
@@ -113,7 +113,7 @@
   width: 100%;
   top: 0px;
   left: 0px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   border-radius: 4px;
   background-color: #182b3c;
   mix-blend-mode: color;
@@ -130,7 +130,7 @@
   object-fit: cover;
   border-radius: 4px;
   margin: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   background-color: rgb(221, 221, 221);
 }
 
@@ -148,7 +148,7 @@
   left: 9px;
   border: 2px solid #30476e;
   border-radius: 4px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   z-index: -1;
 }
 

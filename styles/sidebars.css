@@ -50,7 +50,7 @@
 .discord a,
 .instagram a {
   color: var(--para);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .hover_effect {
@@ -99,7 +99,7 @@
   writing-mode: vertical-rl;
   transform-origin: center;
   text-decoration: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @keyframes fadeLeftBar {

@@ -51,7 +51,7 @@ export default function Sidebars() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShouldRender(true);
-    }, 2450);
+    }, 1400);
 
     return () => clearTimeout(timer);
   }, []);

@@ -27,7 +27,7 @@
 
 .showMinorProjectsHeading {
   animation-name: minorProjectsHeadingFadeIn;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
 }
 
@@ -81,7 +81,7 @@
   border: 1px solid var(--primary);
   padding: 12px 25px;
   margin: 0px auto 0px auto;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   letter-spacing: 1px;
   cursor: pointer;
 }
