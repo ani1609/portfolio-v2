@@ -17,7 +17,7 @@ export default function MinorProjectItem({
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.6,
+      threshold: 0.3,
     };
 
     const observer = new IntersectionObserver(([entry]) => {

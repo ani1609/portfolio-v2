@@ -18,6 +18,8 @@ import PrGraph from './pr-graph';
 
 export default function GithubFootprints() {
   const githubFootprintsHeadingRef = useRef(null);
+  const commitChartRef = useRef(null);
+  const prChartRef = useRef(null);
   const years: Year[] = [2021, 2022, 2023, 2024, 2025];
   const commitMonths: (Month | 'all')[] = [
     'all',
@@ -66,21 +68,29 @@ export default function GithubFootprints() {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.9,
+      threshold: 0.3,
     };
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('showGithubFootprintsHeading');
-      }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('showGithubFootprint');
+        }
+      });
     }, options);
 
-    const currentHeadingRef = githubFootprintsHeadingRef.current;
+    const githubFootprintsHeading = githubFootprintsHeadingRef.current;
+    const commitChart = commitChartRef.current;
+    const prChart = prChartRef.current;
 
-    if (currentHeadingRef) observer.observe(currentHeadingRef);
+    if (githubFootprintsHeading) observer.observe(githubFootprintsHeading);
+    if (commitChart) observer.observe(commitChart);
+    if (prChart) observer.observe(prChart);
 
     return () => {
-      if (currentHeadingRef) observer.unobserve(currentHeadingRef);
+      if (githubFootprintsHeading) observer.unobserve(githubFootprintsHeading);
+      if (commitChart) observer.unobserve(commitChart);
+      if (prChart) observer.unobserve(prChart);
     };
   }, []);
 
@@ -90,7 +100,10 @@ export default function GithubFootprints() {
 
       <div className='flex flex-col gap-y-6'>
         {/* commit graph  */}
-        <div className='bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'>
+        <div
+          ref={commitChartRef}
+          className='commit-chart bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+        >
           <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
             <h2>Code Commits</h2>
 
@@ -153,7 +166,10 @@ export default function GithubFootprints() {
         </div>
 
         {/* pr graph  */}
-        <div className='bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'>
+        <div
+          ref={prChartRef}
+          className='pr-chart bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+        >
           <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
             <h2>Pull Requests</h2>
 

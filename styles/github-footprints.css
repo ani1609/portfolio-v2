@@ -24,13 +24,13 @@
   font-weight: 600;
 }
 
-.showGithubFootprintsHeading {
-  animation-name: githubFootprintsHeadingFadeIn;
+.showGithubFootprint {
+  animation-name: githubFootprintsFadeIn;
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-@keyframes githubFootprintsHeadingFadeIn {
+@keyframes githubFootprintsFadeIn {
   from {
     transform: translateY(50px);
     opacity: 0;
@@ -42,7 +42,7 @@
 }
 
 .github_footprints_parent h1::before {
-  content: '03.';
+  content: '04.';
   font-family: 'SF Mono', monospace;
   font-size: 25px;
   color: var(--primary);
@@ -64,6 +64,11 @@
   margin: 0px;
   font-size: 19px;
   font-weight: 600;
+}
+
+.commit-chart,
+.pr-chart {
+  opacity: 0;
 }
 
 /* -------reposniveness------- */
