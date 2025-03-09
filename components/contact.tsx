@@ -10,7 +10,7 @@ export default function Contact() {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.6,
+      threshold: 0.3,
     };
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <section className='contact_container' ref={contactRef}>
-      <h4>04.</h4>
+      <h4>05.</h4>
       <h1>Get In Touch</h1>
       <p>
         Feel free to reach out to me through the contact button below. I&apos;m

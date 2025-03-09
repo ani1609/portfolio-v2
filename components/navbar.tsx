@@ -5,6 +5,19 @@ import Image from 'next/image';
 import Logo from '@/public/images/A.webp';
 import '../styles/navbar.css';
 
+interface NavItem {
+  title: string;
+  scrollTo: string;
+}
+
+const navItems: NavItem[] = [
+  { title: 'About', scrollTo: '.about_container' },
+  { title: 'Experience', scrollTo: '.experience_container' },
+  { title: 'Work', scrollTo: '.major_projects_parent' },
+  { title: 'GitHub Footprints', scrollTo: '.github_footprints_parent' },
+  { title: 'Contact', scrollTo: '.contact_container' },
+];
+
 export default function Navbar() {
   const [shouldRender, setShouldRender] = useState<boolean>(false);
   const [navbarShadow, setNavbarShadow] = useState<boolean>(false);
@@ -75,16 +88,11 @@ export default function Navbar() {
           </a>
           <div className='nav_tabs'>
             <ol>
-              <li onClick={() => scrollToSection('.about_container')}>About</li>
-              <li onClick={() => scrollToSection('.experience_container')}>
-                Experience
-              </li>
-              <li onClick={() => scrollToSection('.major_projects_parent')}>
-                Work
-              </li>
-              <li onClick={() => scrollToSection('.contact_container', 0)}>
-                Contact
-              </li>
+              {navItems.map((item, index) => (
+                <li key={index} onClick={() => scrollToSection(item.scrollTo)}>
+                  {item.title}
+                </li>
+              ))}
             </ol>
             <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
               Resume
@@ -108,16 +116,11 @@ export default function Navbar() {
             }
           >
             <ol>
-              <li onClick={() => scrollToSection('.about_container')}>About</li>
-              <li onClick={() => scrollToSection('.experience_container')}>
-                Experience
-              </li>
-              <li onClick={() => scrollToSection('.major_projects_parent')}>
-                Work
-              </li>
-              <li onClick={() => scrollToSection('.contact_container', 0)}>
-                Contact
-              </li>
+              {navItems.map((item, index) => (
+                <li key={index} onClick={() => scrollToSection(item.scrollTo)}>
+                  {item.title}
+                </li>
+              ))}
             </ol>
             <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
               Resume
