@@ -21,7 +21,7 @@
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  animation-delay: 1000ms;
+  animation-delay: 900ms;
 }
 
 .hero_container h1 {
@@ -33,7 +33,7 @@
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  animation-delay: 1200ms;
+  animation-delay: 1000ms;
   letter-spacing: 1px;
   word-spacing: 5px;
   font-weight: 600;
@@ -48,7 +48,7 @@
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  animation-delay: 1400ms;
+  animation-delay: 1100ms;
   word-spacing: 5px;
   letter-spacing: 1px;
   font-weight: 600;
@@ -67,7 +67,7 @@
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  animation-delay: 1600ms;
+  animation-delay: 1200ms;
 }
 
 .hero_container a {
@@ -84,28 +84,13 @@
   animation-name: fadeInHeader;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  animation-delay: 1800ms;
-  transition: 0.3s ease-in-out;
+  animation-delay: 1300ms;
+  transition: 0.5s ease-in-out;
   letter-spacing: 1px;
 }
 
 .hero_container a:hover {
   background-color: var(--hover);
-}
-
-.alien {
-  position: absolute;
-  top: 60px;
-  right: -55px;
-  animation-name: alienSlideIn;
-  animation-duration: 4s;
-  animation-fill-mode: both;
-  /* animation-delay: 1600ms; */
-}
-
-.alien img {
-  width: 300px;
-  height: 290px;
 }
 
 @keyframes fadeInHeader {
@@ -171,27 +156,27 @@
 
   .hero_container h4 {
     font-size: 14px;
-    animation-delay: 500ms;
+    animation-delay: 300ms;
   }
 
   .hero_container h1 {
     margin-top: 12px;
-    animation-delay: 700ms;
+    animation-delay: 400ms;
   }
 
   .hero_container h2 {
-    animation-delay: 900ms;
+    animation-delay: 500ms;
   }
 
   .hero_container p {
-    animation-delay: 1100ms;
+    animation-delay: 600ms;
     font-size: 15px;
     margin-top: 17px;
   }
 
   .hero_container a {
     font-size: 13.5px;
-    animation-delay: 1300ms;
+    animation-delay: 700ms;
     margin-top: 40px;
   }
 }
