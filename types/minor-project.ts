@@ -4,6 +4,6 @@ export interface MinorProject {
   description: string;
   techStack: string[];
   github: string;
-  link?: string;
+  link: string;
   tagLine?: string;
 }

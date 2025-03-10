@@ -48,52 +48,6 @@ export default function MinorProjects() {
       link: 'https://github.com/ani1609/HealTetherAssessment',
       github: 'https://github.com/ani1609/HealTetherAssessment',
     },
-    // {
-    //   id: 3,
-    //   title: 'Explorway',
-    //   description:
-    //     'Explore breathtaking destinations, send enquiries, and let our experienced team create personalized itineraries for an unforgettable journey.',
-    //   techStack: ['React', 'Firebase', 'Express.js', 'MongoDB'],
-    //   link: 'https://explorway.vercel.app/',
-    //   github: 'https://github.com/ani1609/Explorway',
-    // },
-    // {
-    //   id: 4,
-    //   title: 'Prathamik',
-    //   description:
-    //     'Step into the future of online education with an all-inclusive platform that seamlessly combines video calls, Google OCR vision, an online IDE, an AI chatbot, and other cutting-edge features for a dynamic and immersive learning journey.',
-    //   techStack: [
-    //     'React',
-    //     'ChatGPT API',
-    //     'VideoSDK',
-    //     'Google OCR Vision',
-    //     'Firebse',
-    //     'Express.js',
-    //     'MongoDB',
-    //   ],
-    //   link: 'https://github.com/ani1609/Prathamik',
-    //   github: 'https://github.com/ani1609/Prathamik',
-    //   tagLine: 'Hack4Bengal 2.0 Sensation',
-    // },
-    // {
-    //   id: 5,
-    //   title: 'Venline',
-    //   description:
-    //     'Discover an innovative ecommerce marketplace, connecting vendors and customers. Explore farm-fresh fruits and vegetables, supporting local growers and promoting sustainability.',
-    //   techStack: ['Ejs', 'CSS', 'Express.js', 'MongoDB'],
-    //   link: 'https://github.com/ani1609/Venline',
-    //   github: 'https://github.com/ani1609/Venline',
-    //   tagLine: 'Diversion 2k23 Success',
-    // },
-    // {
-    //   id: 6,
-    //   title: 'Weather App',
-    //   description:
-    //     'This project seamlessly integrates OpenWeatherMap API to provide real-time weather data for a given locationand OpenCage APIs to deliver dynamic weather information based on user location, enhancing accuracy and user-friendliness.',
-    //   techStack: ['OpenWeatherMap API', 'OpenCage API', '', ''],
-    //   link: 'https://weather-sable-sigma.vercel.app/',
-    //   github: 'https://github.com/ani1609/weather',
-    // },
   ];
 
   useEffect(() => {

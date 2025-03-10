@@ -9,7 +9,7 @@ import '../styles/major-projects.css';
 import { MajorProject } from '@/types/major-project';
 
 export default function MajorProjects() {
-  const MajorProjects: MajorProject[] = [
+  const majorProjects: MajorProject[] = [
     {
       id: 1,
       title: 'UI Astra',
@@ -90,7 +90,7 @@ export default function MajorProjects() {
   return (
     <section className='major_projects_parent'>
       <h1 ref={MajorProjectHeadingRef}>Some Things I&apos;ve Built</h1>
-      {MajorProjects.map((majorProject, index) => {
+      {majorProjects.map((majorProject, index) => {
         return <MajorProjectsItem key={index} majorProject={majorProject} />;
       })}
     </section>
