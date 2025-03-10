@@ -1,9 +1,11 @@
+'use client';
+
 import { useRef, useEffect } from 'react';
 import ExperienceItems from './experience-items';
 import '../styles/experience.css';
 import { experiences } from '@/data/experience';
 
-export default function ExperienceSection() {
+export default function Experience() {
   const experienceHeadingRef = useRef(null);
 
   useEffect(() => {

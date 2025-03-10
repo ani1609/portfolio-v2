@@ -1,49 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import {
-  GithubIcon,
-  TwitterIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  DiscordIcon,
-} from '@/assets/icons';
 import Link from 'next/link';
 import '../styles/sidebars.css';
-
-interface SidebarItem {
-  name: string;
-  link: string;
-  icon: React.FC<React.SVGProps<SVGSVGElement>>;
-}
-
-const sidebarItems: SidebarItem[] = [
-  {
-    name: 'Github',
-    link: 'https://github.com/ani1609',
-    icon: GithubIcon,
-  },
-  {
-    name: 'Discord',
-    link: 'https://discordapp.com/users/754188469764358264',
-    icon: DiscordIcon,
-  },
-  {
-    name: 'Linkedin',
-    link: 'https://www.linkedin.com/in/ankit-kumar-chowdhury-1b1690218',
-    icon: LinkedinIcon,
-  },
-  {
-    name: 'Instagram',
-    link: 'https://www.instagram.com/ankit.chdry/',
-    icon: InstagramIcon,
-  },
-  {
-    name: 'Twitter',
-    link: 'https://twitter.com/AnkitCh03046966',
-    icon: TwitterIcon,
-  },
-];
+import { socialItems } from '@/data/social';
 
 export default function Sidebars() {
   const [shouldRender, setShouldRender] = useState(false);
@@ -60,14 +20,14 @@ export default function Sidebars() {
     <div>
       {shouldRender && (
         <ul className='left_bar'>
-          {sidebarItems.map((sidebarItem, index) => (
+          {socialItems.map((socialItem, index) => (
             <li key={index} className='github hover_effect'>
               <Link
-                href={sidebarItem.link}
+                href={socialItem.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <sidebarItem.icon className='size-5' />
+                <socialItem.icon className='size-5' />
               </Link>
             </li>
           ))}

@@ -35,15 +35,10 @@ export default function MinorProjectItem({
     };
   }, []);
 
-  const handleGithubClick = () => {
-    window.open(minorProject.github, '_blank');
-  };
-
   return (
     <div
-      // href={minorProject.link}
+      onClick={() => window.open(minorProject.link, '_blank')}
       className='minor_project'
-      // target="_blank"
       ref={minorProjectRef}
       rel='noopener noreferrer'
     >
@@ -55,7 +50,7 @@ export default function MinorProjectItem({
           href={minorProject.github}
           className='github_icon'
           target='_blank'
-          onClick={handleGithubClick}
+          onClick={(e) => e.stopPropagation()}
           rel='noopener noreferrer'
         >
           <GithubIcon className='size-full' />
