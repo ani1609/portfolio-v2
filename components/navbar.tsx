@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Logo from '@/public/images/A.webp';
 import '../styles/navbar.css';
+import Link from 'next/link';
 
 interface NavItem {
   title: string;
@@ -80,12 +81,12 @@ export default function Navbar() {
             navbarShadow ? 'navbar_container navbar_shadow' : 'navbar_container'
           }
         >
-          <a
+          <Link
             href='https://portfolio-ani1609.vercel.app'
             className='logo-container'
           >
             <Image src={Logo} alt='logo' />
-          </a>
+          </Link>
           <div className='nav_tabs'>
             <ol>
               {navItems.map((item, index) => (
@@ -94,9 +95,9 @@ export default function Navbar() {
                 </li>
               ))}
             </ol>
-            <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
+            <Link href={resumeLink} target='_blank' rel='noopener noreferrer'>
               Resume
-            </a>
+            </Link>
           </div>
           <div className='ham_icon' onClick={handleHamIconClick}>
             <span
@@ -122,9 +123,9 @@ export default function Navbar() {
                 </li>
               ))}
             </ol>
-            <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
+            <Link href={resumeLink} target='_blank' rel='noopener noreferrer'>
               Resume
-            </a>
+            </Link>
           </div>
         </nav>
       )}

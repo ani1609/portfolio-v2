@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import '../styles/experience-items.css';
 import { Experience } from '@/types/experience';
+import Link from 'next/link';
 
 export default function ExperienceItems({
   experiences,
@@ -122,7 +123,7 @@ export default function ExperienceItems({
           {selectedExperience.jobTitle}{' '}
           <span>
             @{' '}
-            <a
+            <Link
               href={selectedExperience.companyLink}
               target='_blank'
               rel='noopener noreferrer'
@@ -133,7 +134,7 @@ export default function ExperienceItems({
               }}
             >
               {selectedExperience.company}
-            </a>
+            </Link>
           </span>
         </h2>
         <p>{selectedExperience.date}</p>

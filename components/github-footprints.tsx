@@ -1,11 +1,11 @@
 'use client';
 
-import { fetcher } from '@/lib/fetcher';
 import { useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
 import CommitGraph from './commit-graph';
 import '../styles/github-footprints.css';
 import { CommitResponse, Month, PrResponse, Year } from '@/types/chart';
+import { fetcher } from '@/lib/fetcher';
 import {
   Select,
   SelectContent,

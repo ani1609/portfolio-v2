@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import '../styles/hero.css';
 
 export default function Hero() {
@@ -11,7 +12,7 @@ export default function Hero() {
         applying front-end and back-end technologies. Dedicated to honing skills
         creating web solutions that captivate users solve real-world challenges.
       </p>
-      <a href='mailto:ankitparallax@gmail.com'>Hire me!</a>
+      <Link href='mailto:ankitparallax@gmail.com'>Hire me!</Link>
     </section>
   );
 }

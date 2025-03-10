@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import '../styles/contact.css';
+import Link from 'next/link';
 
 export default function Contact() {
   const contactRef = useRef(null);
@@ -37,7 +38,7 @@ export default function Contact() {
         excited to connect and discuss any web development opportunities or
         projects you have in mind. Let&apos;s build something great together!
       </p>
-      <a href='mailto:ankitparallax@gmail.com'>Let&apos;s Connect</a>
+      <Link href='mailto:ankitparallax@gmail.com'>Let&apos;s Connect</Link>
     </section>
   );
 }

@@ -1,5 +1,3 @@
-'use client';
-
 import '../styles/maintenance.css';
 
 export default function Maintenance() {

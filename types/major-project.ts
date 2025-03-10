@@ -7,6 +7,6 @@ export interface MajorProject {
   techStack: string[];
   github: string;
   image: StaticImageData;
-  link?: string;
+  link: string;
   tagLine?: string;
 }

@@ -5,6 +5,7 @@ import { GithubIcon } from '@/assets/icons';
 import Image from 'next/image';
 import '../styles/major-project-item.css';
 import { MajorProject } from '@/types/major-project';
+import Link from 'next/link';
 
 export default function MajorProjectsItem({
   majorProject,
@@ -48,18 +49,22 @@ export default function MajorProjectsItem({
     <div>
       {majorProject.id % 2 !== 0 ? (
         <div className='major_project_odd' ref={majorProjectOddRef}>
-          <a href={majorProject.link} target='_blank' rel='noopener noreferrer'>
+          <Link
+            href={majorProject.link}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Image src={majorProject.image} alt='project_image' />
-          </a>
+          </Link>
           <div className='project_details_odd'>
             <div>
-              <a
+              <Link
                 href={majorProject.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 {majorProject.title}
-              </a>
+              </Link>
               {majorProject.tagLine && <h4>{majorProject.tagLine}</h4>}
             </div>
             <p>{majorProject.description}</p>
@@ -68,29 +73,33 @@ export default function MajorProjectsItem({
                 <li key={index}>{tech}</li>
               ))}
             </ul>
-            <a
+            <Link
               href={majorProject.github}
               target='_blank'
               rel='noopener noreferrer'
             >
               <GithubIcon />
-            </a>
+            </Link>
           </div>
         </div>
       ) : (
         <div className='major_project_even' ref={majorProjectEvenRef}>
-          <a href={majorProject.link} target='_blank' rel='noopener noreferrer'>
+          <Link
+            href={majorProject.link}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Image src={majorProject.image} alt='project_image' />
-          </a>
+          </Link>
           <div className='project_details_even'>
             <div>
-              <a
+              <Link
                 href={majorProject.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 {majorProject.title}
-              </a>
+              </Link>
               {majorProject.tagLine && <h4>{majorProject.tagLine}</h4>}
             </div>
             <p>{majorProject.description}</p>
@@ -99,13 +108,13 @@ export default function MajorProjectsItem({
                 <li key={index}>{tech}</li>
               ))}
             </ul>
-            <a
+            <Link
               href={majorProject.github}
               target='_blank'
               rel='noopener noreferrer'
             >
               <GithubIcon />
-            </a>
+            </Link>
           </div>
         </div>
       )}
