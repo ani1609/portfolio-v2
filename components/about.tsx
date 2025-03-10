@@ -7,8 +7,7 @@ import '../styles/about.css';
 
 export default function About() {
   const aboutHeadingRef = useRef(null);
-  const aboutDescriptionRef = useRef(null);
-  const aboutImageRef = useRef(null);
+  const aboutContentsRef = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -26,25 +25,22 @@ export default function About() {
     }, options);
 
     const aboutHeading = aboutHeadingRef.current;
-    const aboutDescription = aboutDescriptionRef.current;
-    const aboutImage = aboutImageRef.current;
+    const aboutContents = aboutContentsRef.current;
 
     if (aboutHeading) observer.observe(aboutHeading);
-    if (aboutDescription) observer.observe(aboutDescription);
-    if (aboutImage) observer.observe(aboutImage);
+    if (aboutContents) observer.observe(aboutContents);
 
     return () => {
       if (aboutHeading) observer.unobserve(aboutHeading);
-      if (aboutDescription) observer.unobserve(aboutDescription);
-      if (aboutImage) observer.unobserve(aboutImage);
+      if (aboutContents) observer.unobserve(aboutContents);
     };
   }, []);
 
   return (
     <section className='about_container'>
       <h1 ref={aboutHeadingRef}>About Me</h1>
-      <div className='about_contents'>
-        <div ref={aboutDescriptionRef} className='about_description'>
+      <div className='about_contents' ref={aboutContentsRef}>
+        <div className='about_description'>
           <p>
             Hey there, I&apos;m Ankit, a final-year B.Tech student in Computer
             Science and Engineering (CSE). Web development is my ultimate
@@ -83,7 +79,7 @@ export default function About() {
             exciting path leads me next.
           </p>
         </div>
-        <div ref={aboutImageRef} className='about_photo'>
+        <div className='about_photo'>
           <Image src={MyPhoto} alt='my_photo' />
         </div>
       </div>
