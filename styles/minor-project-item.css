@@ -16,6 +16,7 @@
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  cursor: pointer;
 }
 
 .minor_project:hover {

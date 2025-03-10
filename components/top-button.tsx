@@ -7,6 +7,10 @@ import { ArrowupFromDotIcon } from '@/assets/icons';
 export default function TopButton() {
   const [showButton, setShowButton] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
