@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Ankit Kr. Chowdhury',
   description:
     'Personal portfolio and projects by Ankit Kr. Chowdhury, showcasing expertise in software development, UI/UX, and open-source contributions.',
-  icons: '/favicon.png',
+  icons: '/favicon.ico',
 };
 
 export default function RootLayout({
