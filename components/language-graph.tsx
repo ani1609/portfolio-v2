@@ -106,7 +106,7 @@ export default function LanguageGraph({
             position='right'
             offset={8}
             className='fill-para'
-            fontSize={14}
+            fontSize={12}
             formatter={(value: string) =>
               getLanguageAbbreviations[value.toLocaleLowerCase()]
             }
