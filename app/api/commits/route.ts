@@ -25,7 +25,7 @@ export async function GET(req: Request) {
 
     // Validate Year
     const { error: yearError, year } = validateYear(req);
-    if (yearError || year === undefined) return yearError;
+    if (yearError) return yearError;
 
     const url = new URL(req.url);
     const month = url.searchParams.get('month');
@@ -44,7 +44,7 @@ export async function GET(req: Request) {
 
       const monthPadded = monthNum.toString().padStart(2, '0');
       fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
-      const lastDay = new Date(year, monthNum, 0).getDate();
+      const lastDay = new Date(year as number, monthNum, 0).getDate();
       toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
     }
 

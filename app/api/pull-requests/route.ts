@@ -27,16 +27,16 @@ export async function GET(req: Request) {
 
     // Validate Month
     const { error: monthError, month } = validateMonth(req);
-    if (monthError || month === undefined) return monthError;
+    if (monthError) return monthError;
 
     // Validate Year
     const { error: yearError, year } = validateYear(req);
-    if (yearError || year === undefined) return yearError;
+    if (yearError) return yearError;
 
-    const monthPadded = month.toString().padStart(2, '0');
-    const fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
-    const lastDay = new Date(year, month, 0).getDate();
-    const toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
+    const monthPadded = (month as number).toString().padStart(2, '0');
+    const fromDate = `${year as number}-${monthPadded}-01T00:00:00Z`;
+    const lastDay = new Date(year as number, month as number, 0).getDate();
+    const toDate = `${year as number}-${monthPadded}-${lastDay}T23:59:59Z`;
 
     const prContributions: Record<string, number> = {};
     let endCursor: string | null = null;
