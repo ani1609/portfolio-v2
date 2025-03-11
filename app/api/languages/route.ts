@@ -70,7 +70,8 @@ export async function GET(req: Request) {
     });
 
     const topLanguages: LanguageItem[] = Object.entries(languageMap)
-      .map(([name, size]) => ({ name, size }))
+      // .map(([name, size]) => ({ name, size }))
+      .map(([name, size]) => ({ name, size: Math.round(size / 1024) }))
       .sort((a, b) => b.size - a.size)
       .slice(0, 5);
 

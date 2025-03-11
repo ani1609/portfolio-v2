@@ -22,6 +22,13 @@ import { getMonthName } from '@/lib/utils';
 import CommitGraph from './commit-graph';
 import PrGraph from './pr-graph';
 import LanguageGraph from './language-graph';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from './ui/tooltip';
+import { DotICon, InfoIcon } from '@/assets/icons';
 
 export default function GithubFootprints() {
   const githubFootprintsHeadingRef = useRef(null);
@@ -251,6 +258,25 @@ export default function GithubFootprints() {
           >
             <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
               <h2>Languages Used</h2>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='p-1 text-primary cursor-pointer'>
+                    <InfoIcon />
+                  </TooltipTrigger>
+                  <TooltipContent className='flex flex-col gap-y-1'>
+                    <div className='flex items-center gap-x-2'>
+                      <DotICon />
+                      <p>Data is based on the most recent 100 repositories.</p>
+                    </div>
+
+                    <div className='flex items-center gap-x-2'>
+                      <DotICon />
+                      <p>All sizes are displayed in MB.</p>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
 
             <LanguageGraph
