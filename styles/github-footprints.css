@@ -67,7 +67,8 @@
 }
 
 .commit-chart,
-.pr-chart {
+.pr-chart,
+.language-chart {
   opacity: 0;
 }
 

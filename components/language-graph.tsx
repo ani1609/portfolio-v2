@@ -1,29 +1,40 @@
-import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  // LabelList,
+  XAxis,
+  YAxis,
+} from 'recharts';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart';
-import { PullRequestItem } from '@/types/github';
+import { LanguageItem } from '@/types/github';
 import ChartLoading from './chart-loading';
 import ChartError from './chart-error';
 import ChartNoData from './chart-no-data';
 
 const chartConfig = {
-  pullRequestCount: {
-    label: 'Pull Requests',
+  size: {
+    label: 'Name',
     color: 'var(--primary)',
   },
 } satisfies ChartConfig;
 
-interface PrGraphProps {
-  chartData: PullRequestItem[];
+interface LanguageGraphProps {
+  chartData: LanguageItem[];
   isLoading: boolean;
   error: Error | undefined;
 }
 
-export default function PrGraph({ chartData, isLoading, error }: PrGraphProps) {
+export default function LanguageGraph({
+  chartData,
+  isLoading,
+  error,
+}: LanguageGraphProps) {
   if (isLoading) {
     return (
       <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'>
@@ -53,21 +64,26 @@ export default function PrGraph({ chartData, isLoading, error }: PrGraphProps) {
       config={chartConfig}
       className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'
     >
-      <BarChart accessibilityLayer data={chartData}>
+      <BarChart accessibilityLayer data={chartData} layout='vertical'>
         <CartesianGrid vertical={false} className='stroke-primary/20' />
+
+        <YAxis
+          dataKey='name'
+          type='category'
+          tickLine={false}
+          tickMargin={10}
+          axisLine={false}
+          tickFormatter={(value) => value.slice(0, 3)}
+          hide
+        />
         <XAxis
-          dataKey='date'
+          dataKey='size'
           tickLine={false}
           axisLine={false}
           tickMargin={8}
           minTickGap={32}
-          tickFormatter={(value) => {
-            const date = new Date(value);
-            return date.toLocaleDateString('en-US', {
-              month: 'short',
-              day: 'numeric',
-            });
-          }}
+          type='number'
+          tickFormatter={(value) => `${value.toLocaleString()}`}
         />
         <ChartTooltip
           cursor={false}
@@ -78,8 +94,23 @@ export default function PrGraph({ chartData, isLoading, error }: PrGraphProps) {
             />
           }
         />
-
-        <Bar dataKey='pullRequestCount' fill='var(--primary)' radius={4} />
+        <Bar
+          dataKey='size'
+          layout='vertical'
+          fill='var(--color-size)'
+          radius={4}
+        >
+          {/* <LabelList
+            dataKey='name'
+            position='insideLeft'
+            offset={8}
+            className='fill-para'
+            fontSize={14}
+            formatter={(value: string) =>
+              getLanguageAbbreviations[value.toLocaleLowerCase()]
+            }
+          /> */}
+        </Bar>
       </BarChart>
     </ChartContainer>
   );

@@ -29,15 +29,27 @@ export default function CommitGraph({
   error,
 }: CommitGraphProps) {
   if (isLoading) {
-    return <ChartLoading />;
+    return (
+      <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px]'>
+        <ChartLoading />
+      </div>
+    );
   }
 
   if (error) {
-    return <ChartError />;
+    return (
+      <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px]'>
+        <ChartError />
+      </div>
+    );
   }
 
   if (chartData.length === 0) {
-    return <ChartNoData />;
+    return (
+      <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px]'>
+        <ChartNoData />
+      </div>
+    );
   }
 
   return (
@@ -45,14 +57,7 @@ export default function CommitGraph({
       config={chartConfig}
       className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px]'
     >
-      <AreaChart
-        accessibilityLayer
-        data={chartData}
-        margin={{
-          left: 12,
-          right: 12,
-        }}
-      >
+      <AreaChart accessibilityLayer data={chartData}>
         <CartesianGrid vertical={false} className='stroke-primary/20' />
         <XAxis
           dataKey='date'

@@ -77,7 +77,7 @@ export async function GET(req: Request) {
     return NextResponse.json(
       {
         username,
-        languagesUsed: topLanguages,
+        languages: topLanguages,
       },
       { status: 200 }
     );

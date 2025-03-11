@@ -25,7 +25,7 @@ export async function GET(req: Request) {
 
     // Validate Year
     const { error: yearError, year } = validateYear(req);
-    if (yearError || year === null || year === undefined) return yearError;
+    if (yearError || year === undefined) return yearError;
 
     const url = new URL(req.url);
     const month = url.searchParams.get('month');

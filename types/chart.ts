@@ -1,4 +1,4 @@
-import { CommitItem, PullRequestItem } from './github';
+import { CommitItem, LanguageItem, PullRequestItem } from './github';
 
 export interface CommitResponse {
   usename: string;
@@ -11,6 +11,11 @@ export interface PrResponse {
   year: number;
   month: number;
   pullRequests: PullRequestItem[];
+}
+
+export interface LanguageResponse {
+  username: string;
+  languages: LanguageItem[];
 }
 
 export type Year = 2021 | 2022 | 2023 | 2024 | 2025;

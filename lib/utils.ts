@@ -26,6 +26,29 @@ export const getMonthName = ({ monthNumber }: { monthNumber: Month }) => {
   return months[monthNumber - 1];
 };
 
+export const getLanguageAbbreviations: Record<string, string> = {
+  'javascript': 'JS',
+  'typescript': 'TS',
+  'python': 'PY',
+  'java': 'JAVA',
+  'c': 'C',
+  'c++': 'CPP',
+  'c#': 'CS',
+  'swift': 'SWIFT',
+  'go': 'GO',
+  'rust': 'RS',
+  'ruby': 'RB',
+  'php': 'PHP',
+  'kotlin': 'KT',
+  'dart': 'DART',
+  'scala': 'SCALA',
+  'r': 'R',
+  'html': 'HTML',
+  'css': 'CSS',
+  'scss': 'SCSS',
+  'less': 'LESS',
+};
+
 export function validateGitHubToken(): NextResponse | undefined {
   if (!GITHUB_ACCESS_TOKEN) {
     return NextResponse.json(
