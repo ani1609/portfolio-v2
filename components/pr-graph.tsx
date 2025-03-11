@@ -39,7 +39,7 @@ export default function PrGraph({ chartData, isLoading, error }: PrGraphProps) {
   return (
     <ChartContainer
       config={chartConfig}
-      className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px]'
+      className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'
     >
       <BarChart accessibilityLayer data={chartData}>
         <CartesianGrid vertical={false} className='stroke-primary/20' />

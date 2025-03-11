@@ -48,10 +48,12 @@ export default function CommitGraph({
       <AreaChart
         accessibilityLayer
         data={chartData}
-        margin={{
-          left: 12,
-          right: 12,
-        }}
+        margin={
+          {
+            // left: 12,
+            // right: 12,
+          }
+        }
       >
         <CartesianGrid vertical={false} className='stroke-primary/20' />
         <XAxis

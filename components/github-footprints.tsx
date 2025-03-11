@@ -2,9 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
-import CommitGraph from './commit-graph';
 import '../styles/github-footprints.css';
-import { CommitResponse, Month, PrResponse, Year } from '@/types/chart';
+import {
+  CommitResponse,
+  LanguageResponse,
+  Month,
+  PrResponse,
+  Year,
+} from '@/types/chart';
 import { fetcher } from '@/lib/fetcher';
 import {
   Select,
@@ -14,12 +19,15 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { getMonthName } from '@/lib/utils';
+import CommitGraph from './commit-graph';
 import PrGraph from './pr-graph';
+import LanguageGraph from './language-graph';
 
 export default function GithubFootprints() {
   const githubFootprintsHeadingRef = useRef(null);
   const commitChartRef = useRef(null);
   const prChartRef = useRef(null);
+  const languageChartRef = useRef(null);
   const years: Year[] = [2021, 2022, 2023, 2024, 2025];
   const commitMonths: (Month | 'all')[] = [
     'all',
@@ -64,6 +72,12 @@ export default function GithubFootprints() {
     fetcher
   );
 
+  const {
+    data: languageResponse,
+    isLoading: isLanguageLoading,
+    error: isLanguageError,
+  } = useSWR<LanguageResponse>(`/api/languages?username=ani1609`, fetcher);
+
   useEffect(() => {
     const options = {
       root: null,
@@ -82,15 +96,18 @@ export default function GithubFootprints() {
     const githubFootprintsHeading = githubFootprintsHeadingRef.current;
     const commitChart = commitChartRef.current;
     const prChart = prChartRef.current;
+    const languageChart = languageChartRef.current;
 
     if (githubFootprintsHeading) observer.observe(githubFootprintsHeading);
     if (commitChart) observer.observe(commitChart);
     if (prChart) observer.observe(prChart);
+    if (languageChart) observer.observe(languageChart);
 
     return () => {
       if (githubFootprintsHeading) observer.unobserve(githubFootprintsHeading);
       if (commitChart) observer.unobserve(commitChart);
       if (prChart) observer.unobserve(prChart);
+      if (languageChart) observer.unobserve(languageChart);
     };
   }, []);
 
@@ -166,65 +183,82 @@ export default function GithubFootprints() {
         </div>
 
         {/* pr graph  */}
-        <div
-          ref={prChartRef}
-          className='pr-chart bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
-        >
-          <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-            <h2>Pull Requests</h2>
+        <div className='flex flex-col lg:flex-row gap-6'>
+          <div
+            ref={prChartRef}
+            className='pr-chart flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+          >
+            <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
+              <h2>Pull Requests</h2>
 
-            <div className='flex items-center gap-x-4'>
-              <Select
-                value={prMonth.toString()}
-                onValueChange={(value) =>
-                  setPrMonth(parseInt(value, 10) as Month)
-                }
-              >
-                <SelectTrigger className='w-32 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
-                  <SelectValue placeholder='Select Month' />
-                </SelectTrigger>
-                <SelectContent className='w-32 border-primary z-50'>
-                  {prMonths.map((month, index) => (
-                    <SelectItem
-                      key={index}
-                      value={month.toString()}
-                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
-                    >
-                      {getMonthName({ monthNumber: month })}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div className='flex items-center gap-x-4'>
+                <Select
+                  value={prMonth.toString()}
+                  onValueChange={(value) =>
+                    setPrMonth(parseInt(value, 10) as Month)
+                  }
+                >
+                  <SelectTrigger className='w-32 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
+                    <SelectValue placeholder='Select Month' />
+                  </SelectTrigger>
+                  <SelectContent className='w-32 border-primary z-50'>
+                    {prMonths.map((month, index) => (
+                      <SelectItem
+                        key={index}
+                        value={month.toString()}
+                        className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
+                      >
+                        {getMonthName({ monthNumber: month })}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
 
-              <Select
-                value={prYear.toString()}
-                onValueChange={(value) =>
-                  setPrYear(parseInt(value, 10) as Year)
-                }
-              >
-                <SelectTrigger className='w-20 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
-                  <SelectValue placeholder='Select Year' />
-                </SelectTrigger>
-                <SelectContent className='w-20 border-primary z-50'>
-                  {years.map((year, index) => (
-                    <SelectItem
-                      key={index}
-                      value={year.toString()}
-                      className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
-                    >
-                      {year}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+                <Select
+                  value={prYear.toString()}
+                  onValueChange={(value) =>
+                    setPrYear(parseInt(value, 10) as Year)
+                  }
+                >
+                  <SelectTrigger className='w-20 h-8 border-primary text-primary hover:bg-hover transition-colors cursor-pointer focus-visible:ring-0'>
+                    <SelectValue placeholder='Select Year' />
+                  </SelectTrigger>
+                  <SelectContent className='w-20 border-primary z-50'>
+                    {years.map((year, index) => (
+                      <SelectItem
+                        key={index}
+                        value={year.toString()}
+                        className='bg-dark-navy text-primary hover:bg-hover cursor-pointer transition-colors'
+                      >
+                        {year}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
+
+            <PrGraph
+              chartData={prResponse ? prResponse.pullRequests : []}
+              isLoading={isPrLoading}
+              error={isPrError}
+            />
           </div>
 
-          <PrGraph
-            chartData={prResponse ? prResponse.pullRequests : []}
-            isLoading={isPrLoading}
-            error={isPrError}
-          />
+          <div
+            ref={languageChartRef}
+            className='language-chart flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+          >
+            <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
+              <h2>Languages Used</h2>
+            </div>
+
+            <LanguageGraph
+              chartData={languageResponse ? languageResponse.languages : []}
+              isLoading={isLanguageLoading}
+              error={isLanguageError}
+            />
+          </div>
         </div>
       </div>
     </section>
