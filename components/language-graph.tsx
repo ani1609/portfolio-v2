@@ -36,15 +36,27 @@ export default function LanguageGraph({
   error,
 }: LanguageGraphProps) {
   if (isLoading) {
-    return <ChartLoading />;
+    return (
+      <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'>
+        <ChartLoading />
+      </div>
+    );
   }
 
   if (error) {
-    return <ChartError />;
+    return (
+      <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'>
+        <ChartError />
+      </div>
+    );
   }
 
   if (chartData.length === 0) {
-    return <ChartNoData />;
+    return (
+      <div className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'>
+        <ChartNoData />
+      </div>
+    );
   }
 
   return (
