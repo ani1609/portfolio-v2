@@ -52,16 +52,7 @@ export default function LanguageGraph({
       config={chartConfig}
       className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[200px] xl:h-[250px]'
     >
-      <BarChart
-        accessibilityLayer
-        data={chartData}
-        layout='vertical'
-        margin={
-          {
-            // right: 60,
-          }
-        }
-      >
+      <BarChart accessibilityLayer data={chartData} layout='vertical'>
         <CartesianGrid vertical={false} className='stroke-primary/20' />
 
         <YAxis
