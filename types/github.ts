@@ -64,3 +64,48 @@ export interface PullRequestItem {
   date: string;
   pullRequestCount: number;
 }
+
+// languages used from GitHub API
+export interface Language {
+  name: string;
+}
+
+export interface LanguageEdge {
+  size: number;
+  node: Language;
+}
+
+export interface LanguageConnection {
+  edges: LanguageEdge[];
+}
+
+export interface Repository {
+  name: string;
+  languages: LanguageConnection;
+}
+
+export interface PageInfo {
+  hasNextPage: boolean;
+  endCursor: string;
+}
+
+export interface RepositoriesContributedTo {
+  totalCount: number;
+  nodes: Repository[];
+  pageInfo: PageInfo;
+}
+
+export interface GitHubLanguageUser {
+  repositoriesContributedTo: RepositoriesContributedTo;
+}
+
+export interface GitHubLanguageResponse {
+  data: {
+    user: GitHubLanguageUser | null;
+  };
+}
+
+export interface LanguageItem {
+  name: string;
+  size: number;
+}
