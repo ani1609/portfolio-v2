@@ -2,7 +2,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  // LabelList,
+  LabelList,
   XAxis,
   YAxis,
 } from 'recharts';
@@ -16,6 +16,7 @@ import { LanguageItem } from '@/types/github';
 import ChartLoading from './chart-loading';
 import ChartError from './chart-error';
 import ChartNoData from './chart-no-data';
+import { getLanguageAbbreviations } from '@/lib/utils';
 
 const chartConfig = {
   size: {
@@ -100,16 +101,16 @@ export default function LanguageGraph({
           fill='var(--color-size)'
           radius={4}
         >
-          {/* <LabelList
+          <LabelList
             dataKey='name'
-            position='insideLeft'
+            position='right'
             offset={8}
             className='fill-para'
             fontSize={14}
             formatter={(value: string) =>
               getLanguageAbbreviations[value.toLocaleLowerCase()]
             }
-          /> */}
+          />
         </Bar>
       </BarChart>
     </ChartContainer>
