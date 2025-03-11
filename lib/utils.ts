@@ -1,6 +1,8 @@
 import { Month } from '@/types/chart';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { NextResponse } from 'next/server';
+const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -23,3 +25,92 @@ export const getMonthName = ({ monthNumber }: { monthNumber: Month }) => {
   ];
   return months[monthNumber - 1];
 };
+
+export function validateGitHubToken(): NextResponse | undefined {
+  if (!GITHUB_ACCESS_TOKEN) {
+    return NextResponse.json(
+      { error: 'GitHub Access Token is missing' },
+      { status: 400 }
+    );
+  }
+}
+
+export function getGitHubHeaders() {
+  return {
+    'Authorization': `Bearer ${GITHUB_ACCESS_TOKEN}`,
+    'Content-Type': 'application/json',
+  };
+}
+
+export function validateUsername(req: Request): {
+  error?: NextResponse;
+  username?: string;
+} {
+  const url = new URL(req.url);
+  const username = url.searchParams.get('username');
+
+  if (!username) {
+    return {
+      error: NextResponse.json(
+        { error: 'Username is required' },
+        { status: 400 }
+      ),
+    };
+  }
+
+  return { username };
+}
+
+export function validateMonth(req: Request): {
+  error?: NextResponse;
+  month?: number;
+} {
+  const url = new URL(req.url);
+  const month = url.searchParams.get('month');
+
+  if (!month) {
+    return {
+      error: NextResponse.json({ error: 'Month is required' }, { status: 400 }),
+    };
+  }
+
+  const monthNum = parseInt(month, 10);
+  if (isNaN(monthNum) || monthNum < 1 || monthNum > 12) {
+    return {
+      error: NextResponse.json(
+        { error: 'Invalid month. Must be between 1 and 12' },
+        { status: 400 }
+      ),
+    };
+  }
+
+  return { month: monthNum };
+}
+
+export function validateYear(req: Request): {
+  error?: NextResponse;
+  year?: number;
+} {
+  const url = new URL(req.url);
+  const year = url.searchParams.get('year');
+
+  if (!year) {
+    return {
+      error: NextResponse.json({ error: 'Year is required' }, { status: 400 }),
+    };
+  }
+
+  const yearNum = parseInt(year, 10);
+  const currentYear = new Date().getFullYear();
+
+  if (isNaN(yearNum) || yearNum < 2000 || yearNum > currentYear) {
+    return {
+      error: NextResponse.json(
+        { error: `Invalid year. Must be between 2000 and ${currentYear}` },
+        { status: 400 }
+      ),
+    };
+  }
+
+  return { year: yearNum };
+}

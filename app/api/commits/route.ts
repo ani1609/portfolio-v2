@@ -6,30 +6,29 @@ import {
   ContributionCalendar,
   GitHubCommitUser,
 } from '@/types/github';
-
-const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
+import {
+  getGitHubHeaders,
+  validateGitHubToken,
+  validateUsername,
+  validateYear,
+} from '@/lib/utils';
 
 export async function GET(req: Request) {
   try {
+    // Validate GitHub Token
+    const tokenError = validateGitHubToken();
+    if (tokenError) return tokenError;
+
+    // Validate Username
+    const { error: usernameError, username } = validateUsername(req);
+    if (usernameError) return usernameError;
+
+    // Validate Year
+    const { error: yearError, year } = validateYear(req);
+    if (yearError || year === null || year === undefined) return yearError;
+
     const url = new URL(req.url);
-    const username = url.searchParams.get('username');
     const month = url.searchParams.get('month');
-    const year = url.searchParams.get('year');
-
-    if (!username || !year) {
-      return NextResponse.json(
-        { error: 'Username and year are required' },
-        { status: 400 }
-      );
-    }
-
-    const yearNum = parseInt(year, 10);
-    if (isNaN(yearNum) || year.length !== 4) {
-      return NextResponse.json(
-        { error: 'Year must be a valid four-digit number' },
-        { status: 400 }
-      );
-    }
 
     let fromDate = `${year}-01-01T00:00:00Z`;
     let toDate = `${year}-12-31T23:59:59Z`;
@@ -45,7 +44,7 @@ export async function GET(req: Request) {
 
       const monthPadded = monthNum.toString().padStart(2, '0');
       fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
-      const lastDay = new Date(yearNum, monthNum, 0).getDate();
+      const lastDay = new Date(year, monthNum, 0).getDate();
       toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
     }
 
@@ -71,12 +70,7 @@ export async function GET(req: Request) {
     }> = await axios.post(
       GITHUB_GRAPHQL_URL,
       { query },
-      {
-        headers: {
-          'Authorization': `Bearer ${GITHUB_ACCESS_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-      }
+      { headers: getGitHubHeaders() }
     );
 
     const userData = response.data?.data?.user;
@@ -97,8 +91,8 @@ export async function GET(req: Request) {
 
     return NextResponse.json({
       username,
-      year,
       month: month || null,
+      year,
       contributions,
     });
   } catch (error) {

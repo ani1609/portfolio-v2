@@ -2,48 +2,40 @@ import { NextResponse } from 'next/server';
 import axios, { AxiosResponse } from 'axios';
 import { GITHUB_GRAPHQL_URL } from '@/lib/config';
 import {
-  GitHubPullRequestUser,
+  GitHubPullRequestResponse,
   PageInfo,
   PullRequestContribution,
   PullRequestItem,
 } from '@/types/github';
-
-const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
+import {
+  getGitHubHeaders,
+  validateGitHubToken,
+  validateMonth,
+  validateUsername,
+  validateYear,
+} from '@/lib/utils';
 
 export async function GET(req: Request) {
   try {
-    const url = new URL(req.url);
-    const username = url.searchParams.get('username');
-    const month = url.searchParams.get('month');
-    const year = url.searchParams.get('year');
+    // Validate GitHub Token
+    const tokenError = validateGitHubToken();
+    if (tokenError) return tokenError;
 
-    if (!username || !month || !year) {
-      return NextResponse.json(
-        { error: 'Username, month, and year are required' },
-        { status: 400 }
-      );
-    }
+    // Validate Username
+    const { error: usernameError, username } = validateUsername(req);
+    if (usernameError) return usernameError;
 
-    const monthNum = parseInt(month, 10);
-    const yearNum = parseInt(year, 10);
+    // Validate Month
+    const { error: monthError, month } = validateMonth(req);
+    if (monthError || month === null || month === undefined) return monthError;
 
-    if (isNaN(monthNum) || monthNum < 1 || monthNum > 12) {
-      return NextResponse.json(
-        { error: 'Month must be a valid number between 1 to 12' },
-        { status: 400 }
-      );
-    }
+    // Validate Year
+    const { error: yearError, year } = validateYear(req);
+    if (yearError || year === null || year === undefined) return yearError;
 
-    if (isNaN(yearNum) || year.length !== 4) {
-      return NextResponse.json(
-        { error: 'Year must be a valid four-digit number' },
-        { status: 400 }
-      );
-    }
-
-    const monthPadded = monthNum.toString().padStart(2, '0');
+    const monthPadded = month.toString().padStart(2, '0');
     const fromDate = `${year}-${monthPadded}-01T00:00:00Z`;
-    const lastDay = new Date(yearNum, monthNum, 0).getDate();
+    const lastDay = new Date(year, month, 0).getDate();
     const toDate = `${year}-${monthPadded}-${lastDay}T23:59:59Z`;
 
     const prContributions: Record<string, number> = {};
@@ -71,18 +63,12 @@ export async function GET(req: Request) {
         }
       `;
 
-      const response: AxiosResponse<{
-        data: { user: GitHubPullRequestUser | null };
-      }> = await axios.post(
-        GITHUB_GRAPHQL_URL,
-        { query },
-        {
-          headers: {
-            'Authorization': `Bearer ${GITHUB_ACCESS_TOKEN}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const response: AxiosResponse<GitHubPullRequestResponse> =
+        await axios.post(
+          GITHUB_GRAPHQL_URL,
+          { query },
+          { headers: getGitHubHeaders() }
+        );
 
       const userData = response.data.data.user;
       if (!userData) {
