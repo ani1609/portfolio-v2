@@ -20,7 +20,7 @@ import { getLanguageAbbreviations } from '@/lib/utils';
 
 const chartConfig = {
   size: {
-    label: 'Name',
+    label: 'Size',
     color: 'var(--primary)',
   },
 } satisfies ChartConfig;
