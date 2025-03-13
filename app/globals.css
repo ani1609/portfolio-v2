@@ -71,7 +71,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 @layer components {
-  #contact-section {
+  #contact-section,
+  .about-section > h1,
+  .about-section > div {
     @apply opacity-0;
   }
 }
