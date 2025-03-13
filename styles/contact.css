@@ -144,6 +144,6 @@
 
 @media only screen and (max-width: 503.2px) {
   .contact_container {
-    height: calc(100dvh - 164px);
+    height: calc(100dvh - 164.6px);
   }
 }
