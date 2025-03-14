@@ -93,9 +93,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @layer components {
+  #about-section > h1,
+  #about-section > div,
+  #experience-section > h1,
+  #experience-section > div,
   #contact-section,
-  .about-section > h1,
-  .about-section > div,
   .experience-content {
     @apply opacity-0;
   }
