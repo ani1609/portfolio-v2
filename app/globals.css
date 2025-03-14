@@ -84,6 +84,36 @@ body::-webkit-scrollbar-thumb {
     @apply animate-[fade-in_0.5s_both];
   }
 
+  @keyframes slide-left-bar {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-right-bar {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-left-bar {
+    animation: slide-left-bar 0.5s both;
+  }
+
+  .animate-slide-in-right-bar {
+    animation: slide-right-bar 0.5s both;
+  }
+
   .scrollbar-hide {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
