@@ -2,6 +2,8 @@
 
 @plugin 'tailwindcss-animate';
 
+@plugin 'tailwind-scrollbar';
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -46,9 +48,97 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  @apply bg-[var(--navy)] rounded-md;
+  @apply bg-[var(--dark-navy)] rounded-md;
 }
 
 body::-webkit-scrollbar-thumb {
   @apply bg-[var(--primary)] rounded-md;
+}
+
+@layer utilities {
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-slide-in {
+    @apply animate-[slide-in_0.5s_both];
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    @apply animate-[fade-in_0.5s_both];
+  }
+
+  @keyframes slide-left-bar {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-right-bar {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-left-bar {
+    animation: slide-left-bar 0.5s both;
+  }
+
+  .animate-slide-in-right-bar {
+    animation: slide-right-bar 0.5s both;
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}
+
+@layer components {
+  #about-section > h1,
+  #about-section > div,
+  #experience-section > h1,
+  #experience-section > div,
+  #major-projects-section > h1,
+  #major-project-odd,
+  #major-project-even,
+  #minor-projects-section > h1,
+  #minor-project,
+  #github-footprints-section > h1,
+  #commit-chart,
+  #pr-chart,
+  #language-chart,
+  #contact-section {
+    @apply opacity-0;
+  }
 }

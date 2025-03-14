@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import '../styles/top-button.css';
+// import '../styles/top-button.css';
 import { ArrowupFromDotIcon } from '@/assets/icons';
 
 export default function TopButton() {
@@ -32,12 +32,13 @@ export default function TopButton() {
   }, []);
 
   return (
-    <div className='Top_Button_Container'>
-      {showButton && (
-        <button onClick={handleClick}>
-          <ArrowupFromDotIcon className='size-5' />
-        </button>
-      )}
-    </div>
+    showButton && (
+      <button
+        onClick={handleClick}
+        className='animate-slide-in bg-[#15223e] text-primary fixed bottom-2.5 right-2.5 sm:bottom-[30px] sm:right-[30px] md:right-[50px] lg:right-[90px] rounded-full cursor-pointer p-2 opacity-0 shadow-[0_0px_13px_2px_rgba(2,_12,_27,_0.7)]'
+      >
+        <ArrowupFromDotIcon className='size-5' />
+      </button>
+    )
   );
 }

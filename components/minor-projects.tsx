@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from 'react';
 import MinorProjectItem from './minor-project-item';
-import '../styles/minor-projects.css';
 import { minorProjects } from '@/data/minor-projects';
 
 export default function MinorProjects() {
@@ -18,7 +17,7 @@ export default function MinorProjects() {
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('showMinorProjectsHeading');
+        entry.target.classList.add('animate-slide-in');
       }
     }, options);
 
@@ -32,9 +31,18 @@ export default function MinorProjects() {
   }, []);
 
   return (
-    <section className='minor_projects_parent'>
-      <h1 ref={minorProjectHeadingRef}>Other Noteworthy Projects</h1>
-      <div className='minor_projects_container'>
+    <section
+      id='minor-projects-section'
+      className='mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%] relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10'
+    >
+      <h1
+        ref={minorProjectHeadingRef}
+        className='font-noto text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
+      >
+        Other Noteworthy Projects
+      </h1>
+
+      <div className='w-full gap-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {minorProjects
           .slice(0, showAllProjects ? minorProjects.length : 3)
           .map((minorProject, index) => (
@@ -42,7 +50,10 @@ export default function MinorProjects() {
           ))}
       </div>
       {minorProjects.length > 3 && (
-        <button onClick={() => setShowAllProjects((prev) => !prev)}>
+        <button
+          onClick={() => setShowAllProjects((prev) => !prev)}
+          className='cursor-pointer font-mono text-primary text-sm font-light bg-transparent rounded-sm border border-primary py-3 px-6 mx-auto hover:bg-hover tracking-[1px] transition-colors'
+        >
           {showAllProjects ? 'Show Less' : 'Show More'}
         </button>
       )}

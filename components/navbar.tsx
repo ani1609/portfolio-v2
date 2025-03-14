@@ -16,7 +16,7 @@ const navItems: NavItem[] = [
   { title: 'Experience', scrollTo: '.experience_container' },
   { title: 'Work', scrollTo: '.major_projects_parent' },
   { title: 'GitHub Footprints', scrollTo: '.github_footprints_parent' },
-  { title: 'Contact', scrollTo: '.contact_container' },
+  { title: 'Contact', scrollTo: '#contact-section' },
 ];
 
 export default function Navbar() {
