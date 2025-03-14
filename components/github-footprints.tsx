@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
-import '../styles/github-footprints.css';
 import {
   CommitResponse,
   LanguageResponse,
@@ -95,7 +94,7 @@ export default function GithubFootprints() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('showGithubFootprint');
+          entry.target.classList.add('animate-slide-in');
         }
       });
     }, options);
@@ -119,17 +118,28 @@ export default function GithubFootprints() {
   }, []);
 
   return (
-    <section className='github_footprints_parent'>
-      <h1 ref={githubFootprintsHeadingRef}>My GitHub Footprints</h1>
+    <section
+      id='github-footprints-section'
+      className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
+    >
+      <h1
+        ref={githubFootprintsHeadingRef}
+        className='font-noto text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
+      >
+        My GitHub Footprints
+      </h1>
 
       <div className='flex flex-col gap-y-6'>
         {/* commit graph  */}
         <div
           ref={commitChartRef}
-          className='commit-chart bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+          id='commit-chart'
+          className=' bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
         >
           <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-            <h2>Code Commits</h2>
+            <h2 className='font-noto text-heading font-semibold text-base sm:text-lg md:text-xl'>
+              Code Commits
+            </h2>
 
             <div className='flex items-center gap-x-4'>
               <Select
@@ -193,10 +203,13 @@ export default function GithubFootprints() {
         <div className='flex flex-col lg:flex-row gap-6'>
           <div
             ref={prChartRef}
-            className='pr-chart flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+            id='pr-chart'
+            className=' flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
           >
             <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-              <h2>Pull Requests</h2>
+              <h2 className='font-noto text-heading font-semibold text-base sm:text-lg md:text-xl'>
+                Pull Requests
+              </h2>
 
               <div className='flex items-center gap-x-4'>
                 <Select
@@ -254,10 +267,13 @@ export default function GithubFootprints() {
 
           <div
             ref={languageChartRef}
-            className='language-chart flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
+            id='language-chart'
+            className=' flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
           >
             <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-              <h2>Languages Used</h2>
+              <h2 className='font-noto text-heading font-semibold text-base sm:text-lg md:text-xl'>
+                Languages Used
+              </h2>
 
               <TooltipProvider>
                 <Tooltip>

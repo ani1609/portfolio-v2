@@ -97,8 +97,11 @@ body::-webkit-scrollbar-thumb {
   #about-section > div,
   #experience-section > h1,
   #experience-section > div,
-  #contact-section,
-  .experience-content {
+  #github-footprints-section > h1,
+  #commit-chart,
+  #pr-chart,
+  #language-chart,
+  #contact-section {
     @apply opacity-0;
   }
 }
