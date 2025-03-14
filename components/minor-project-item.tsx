@@ -40,7 +40,7 @@ export default function MinorProjectItem({
       id='minor-project'
       ref={minorProjectRef}
       rel='noopener noreferrer'
-      className='group h-[300px] sm:h-[330px] w-full flex flex-col justify-between text-left p-5 bg-dark-navy transition-all duration-500 ease-in-out transform relative z-[2] rounded-sm overflow-hidden cursor-pointer shadow-[0_10px_30px_-15px_rgba(2,12,27,0.7)] hover:-translate-y-1.5'
+      className='group h-[380px] sm:h-[350px] w-full flex flex-col justify-between text-left p-5 bg-dark-navy transition-all duration-500 ease-in-out transform relative z-[2] rounded-sm overflow-hidden cursor-pointer shadow-[0_10px_30px_-15px_rgba(2,12,27,0.7)] hover:-translate-y-1.5'
     >
       <div className='w-full flex justify-between items-center'>
         <div className='size-[45px] text-primary'>

@@ -102,6 +102,7 @@ body::-webkit-scrollbar-thumb {
   #major-projects-section > h1,
   #major-project-odd,
   #major-project-even,
+  #minor-projects-section > h1,
   #minor-project,
   #github-footprints-section > h1,
   #commit-chart,
