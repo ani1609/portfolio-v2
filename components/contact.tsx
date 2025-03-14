@@ -15,7 +15,7 @@ export default function Contact() {
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-scroll-fade-in');
+        entry.target.classList.add('animate-slide-in');
       }
     }, options);
 
@@ -32,7 +32,7 @@ export default function Contact() {
     <section
       ref={contactRef}
       id='contact-section'
-      className='h-[calc(100dvh-169.98px)] sm:h-[calc(100dvh-109.99px)] px-5 sm:px-12 md:px-24 relative z-[2] mx-auto flex flex-col items-center justify-center'
+      className='h-[calc(100dvh-169.98px)] sm:h-[calc(100dvh-109.99px)] relative z-[2] flex flex-col items-center justify-center mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
       <h4 className='font-mono text-base sm:text-lg md:text-xl lg:text-2xl font-light text-primary'>
         05.

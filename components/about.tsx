@@ -18,7 +18,7 @@ export default function About() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-scroll-fade-in');
+          entry.target.classList.add('animate-slide-in');
         }
       });
     }, options);
@@ -36,7 +36,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className='about-section w-full mx-auto relative z-[2] px-5 sm:px-12 md:px-24 md:w-[75%] flex flex-col gap-y-6'>
+    <section className='about-section flex flex-col gap-y-6 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'>
       <h1
         ref={aboutHeadingRef}
         className='font-noto text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["01."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'

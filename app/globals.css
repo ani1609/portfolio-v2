@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @layer utilities {
-  @keyframes scroll-fade-in {
+  @keyframes slide-in {
     from {
       opacity: 0;
       transform: translateY(50px);
@@ -65,15 +65,38 @@ body::-webkit-scrollbar-thumb {
     }
   }
 
-  .animate-scroll-fade-in {
-    @apply animate-[scroll-fade-in_0.5s_both];
+  .animate-slide-in {
+    @apply animate-[slide-in_0.5s_both];
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    @apply animate-[fade-in_0.5s_both];
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
 }
 
 @layer components {
   #contact-section,
   .about-section > h1,
-  .about-section > div {
+  .about-section > div,
+  .experience-content {
     @apply opacity-0;
   }
 }
