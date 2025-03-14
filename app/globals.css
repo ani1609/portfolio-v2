@@ -2,6 +2,8 @@
 
 @plugin 'tailwindcss-animate';
 
+@plugin 'tailwind-scrollbar';
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -46,7 +48,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  @apply bg-[var(--navy)] rounded-md;
+  @apply bg-[var(--dark-navy)] rounded-md;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -97,6 +99,8 @@ body::-webkit-scrollbar-thumb {
   #about-section > div,
   #experience-section > h1,
   #experience-section > div,
+  #major-project-odd,
+  #major-project-even,
   #major-projects-section > h1,
   #github-footprints-section > h1,
   #commit-chart,
