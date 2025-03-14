@@ -199,8 +199,8 @@ export default function GithubFootprints() {
           />
         </div>
 
-        {/* pr graph  */}
         <div className='flex flex-col lg:flex-row gap-6'>
+          {/* pr graph  */}
           <div
             ref={prChartRef}
             id='pr-chart'
@@ -265,6 +265,7 @@ export default function GithubFootprints() {
             />
           </div>
 
+          {/* language graph  */}
           <div
             ref={languageChartRef}
             id='language-chart'
