@@ -24,9 +24,11 @@
   --color-heading: var(--heading);
   --color-para: var(--para);
   --color-hover: var(--hover);
-  --font-open: var(--font-open);
-  --font-noto: var(--font-noto);
-  --font-source: var(--font-source);
+
+  --font-open-sans: var(--font-open-sans, 'Open Sans', sans-serif);
+  --font-noto-sans: var(--font-noto-sans, 'Noto Sans SC', sans-serif);
+  --font-source-sans: var(--font-source-sans, 'Source Sans 3', sans-serif);
+  --font-sf-mono: var(--font-sf-mono, 'SF Mono', monospace);
 }
 
 body {
