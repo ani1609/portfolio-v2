@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import { experiences } from '@/data/experience';
 import Link from 'next/link';
 import { Experience as ExperienceType } from '@/types/experience';
+import { Section } from './ui/section';
 
 export default function Experience() {
   const experienceHeadingRef = useRef(null);
@@ -91,7 +92,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section
+    <Section
       id='experience-section'
       className='flex flex-col mt-[150px] gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
@@ -171,6 +172,6 @@ export default function Experience() {
           </ul>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

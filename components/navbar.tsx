@@ -6,6 +6,7 @@ import Logo from '@/public/images/A.webp';
 import Link from 'next/link';
 import { navItems } from '@/data/nav';
 import { resumeLink } from '@/data/resume';
+import { Section } from '@/types/nav';
 
 export default function Navbar() {
   const [shouldRender, setShouldRender] = useState<boolean>(false);
@@ -18,8 +19,9 @@ export default function Navbar() {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToSection = (selector: string, offset: number = 80) => {
-    const section = document.querySelector(selector) as HTMLElement | null;
+  const scrollToSection = (sectionToScroll: Section, offset: number = 80) => {
+    const section = document.getElementById(sectionToScroll);
+
     if (section) {
       const offsetTop = section.offsetTop;
       const scrollToPosition = offsetTop - offset;

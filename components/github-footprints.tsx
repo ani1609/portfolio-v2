@@ -28,6 +28,7 @@ import {
   TooltipTrigger,
 } from './ui/tooltip';
 import { DotICon, InfoIcon } from '@/assets/icons';
+import { Section } from './ui/section';
 
 export default function GithubFootprints() {
   const githubFootprintsHeadingRef = useRef(null);
@@ -118,7 +119,7 @@ export default function GithubFootprints() {
   }, []);
 
   return (
-    <section
+    <Section
       id='github-footprints-section'
       className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
@@ -304,6 +305,6 @@ export default function GithubFootprints() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

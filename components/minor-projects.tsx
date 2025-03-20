@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import MinorProjectItem from './minor-project-item';
 import { minorProjects } from '@/data/minor-projects';
+import { Section } from './ui/section';
 
 export default function MinorProjects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -31,7 +32,7 @@ export default function MinorProjects() {
   }, []);
 
   return (
-    <section
+    <Section
       id='minor-projects-section'
       className='mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%] relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10'
     >
@@ -58,6 +59,6 @@ export default function MinorProjects() {
           {showAllProjects ? 'Show Less' : 'Show More'}
         </button>
       )}
-    </section>
+    </Section>
   );
 }

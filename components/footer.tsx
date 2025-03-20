@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { socialItems } from '@/data/social';
+import { Section } from './ui/section';
 
 export default function Footer() {
   return (
-    <section className='px-5 pt-0 pb-5 relative z-[2] flex flex-col gap-y-4 justify-center items-center '>
+    <Section className='px-5 pt-0 pb-5 relative z-[2] flex flex-col gap-y-4 justify-center items-center '>
       <ul className='flex sm:hidden gap-x-5 justify-center items-center'>
         {socialItems.map((socialItem, index) => (
           <Link key={index} href={socialItem.link} target='_blank'>
@@ -38,6 +39,6 @@ export default function Footer() {
           Ankit Kr. Chowdhury
         </Link>
       </p>
-    </section>
+    </Section>
   );
 }

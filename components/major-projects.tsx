@@ -3,6 +3,7 @@
 import { useRef, useEffect } from 'react';
 import MajorProjectsItem from './major-project-item';
 import { majorProjects } from '@/data/major-projects';
+import { Section } from './ui/section';
 
 export default function MajorProjects() {
   const MajorProjectHeadingRef = useRef(null);
@@ -32,7 +33,7 @@ export default function MajorProjects() {
   }, []);
 
   return (
-    <section
+    <Section
       id='major-projects-section'
       className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
@@ -46,6 +47,6 @@ export default function MajorProjects() {
       {majorProjects.map((majorProject, index) => {
         return <MajorProjectsItem key={index} majorProject={majorProject} />;
       })}
-    </section>
+    </Section>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
+import { Section } from './ui/section';
 import MyPhoto from '@/public/images/me.jpeg';
 import Image from 'next/image';
 
@@ -37,7 +38,7 @@ export default function About() {
   }, []);
 
   return (
-    <section
+    <Section
       id='about-section'
       className='flex flex-col gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
@@ -107,6 +108,6 @@ export default function About() {
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

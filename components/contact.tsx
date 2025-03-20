@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { Section } from './ui/section';
 
 export default function Contact() {
   const contactRef = useRef(null);
@@ -29,7 +30,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section
+    <Section
       ref={contactRef}
       id='contact-section'
       className='h-[calc(100dvh-164.98px)] sm:h-[calc(100dvh-105.99px)] relative z-[2] flex flex-col items-center justify-center mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
@@ -57,6 +58,6 @@ export default function Contact() {
       >
         Let&apos;s Connect
       </Link>
-    </section>
+    </Section>
   );
 }

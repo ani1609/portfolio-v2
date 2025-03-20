@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className='relative z-[2] h-dvh flex flex-col justify-center items-start mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'>
+    <section
+      id='hero-section'
+      className='relative z-[2] h-dvh flex flex-col justify-center items-start mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
+    >
       <h4 className='animate-slide-in-hero-item hero-delay-300 md:hero-delay-900 font-open-sans text-sm sm:text-base text-primary tracking-[1px] [word-spacing:5px]'>
         Hi, my name is
       </h4>
