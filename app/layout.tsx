@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { sfMono, openSans, notoSans, sourceSans } from '@/app/fonts';
+import { sfMono, openSans, notoSans, sourceSans } from '@/app/fonts/index';
 
 export const metadata: Metadata = {
   title: 'Ankit Kr. Chowdhury',
