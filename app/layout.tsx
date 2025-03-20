@@ -18,12 +18,12 @@ export const sourceSans = Source_Sans_3({
 
 export const sfMono = localFont({
   src: [
-    { path: '../fonts/SFMonoLight.woff', weight: '300' },
-    { path: '../fonts/SFMonoRegular.woff', weight: '400' },
-    { path: '../fonts/SFMonoMedium.woff', weight: '500' },
-    { path: '../fonts/SFMonoSemiBold.woff', weight: '600' },
-    { path: '../fonts/SFMonoBold.woff', weight: '700' },
-    { path: '../fonts/SFMonoHeavy.woff', weight: '800' },
+    { path: './fonts/SFMonoLight.woff', weight: '300' },
+    { path: './fonts/SFMonoRegular.woff', weight: '400' },
+    { path: './fonts/SFMonoMedium.woff', weight: '500' },
+    { path: './fonts/SFMonoSemiBold.woff', weight: '600' },
+    { path: './fonts/SFMonoBold.woff', weight: '700' },
+    { path: './fonts/SFMonoHeavy.woff', weight: '800' },
   ],
   variable: '--font-sf-mono',
 });
