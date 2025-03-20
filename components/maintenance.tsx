@@ -5,7 +5,7 @@ export default function Maintenance() {
         Under Maintenance
       </h1>
 
-      <p className='text-para text-center font-source text-sm sm:text-base'>
+      <p className='text-para text-center font-sf-mono text-sm sm:text-base'>
         Sorry for the inconvenience. I am currently updating my portfolio.
         Please check back later.
       </p>
