@@ -18,18 +18,22 @@ export default function Sidebars() {
   return (
     <>
       {shouldRender && (
-        <div className='animate-slide-in-left-bar fixed left-[50px] bottom-0 z-[3] flex flex-col w-5 gap-y-6 items-center'>
+        <div className='hidden animate-slide-in-left-bar fixed left-[50px] bottom-0 z-[3] md:flex flex-col w-5 gap-y-6 items-center'>
           <ul className='flex flex-col w-5 gap-y-5 items-center'>
             {socialItems.map((socialItem, index) => (
-              <li key={index} className=''>
-                <Link
-                  href={socialItem.link}
-                  target='_blank'
-                  rel='noopener noreferrer'
+              <Link
+                key={index}
+                href={socialItem.link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <li
+                  key={index}
+                  className='text-para hover:text-primary p-[1px] hover:-translate-y-[3px] transition-transform duration-200'
                 >
-                  <socialItem.icon className='size-5 text-para hover:text-primary hover:-translate-y-[3px] transition-transform duration-200' />
-                </Link>
-              </li>
+                  <socialItem.icon className='size-5' />
+                </li>
+              </Link>
             ))}
           </ul>
 
@@ -38,12 +42,12 @@ export default function Sidebars() {
       )}
 
       {shouldRender && (
-        <div className='animate-slide-in-right-bar fixed right-[50px] bottom-0 z-[3] flex flex-col justify-end w-5 gap-y-6 items-center'>
+        <div className='hidden animate-slide-in-right-bar fixed right-[50px] bottom-0 z-[3] md:flex flex-col justify-end w-5 gap-y-6 items-center'>
           <ul className='flex flex-col w-5 gap-y-5 items-center'>
-            <li className='font-mono text-sm tracking-[ 0.556px] text-para [writing-mode:vertical-rl] origin-center'>
+            <li className='text-xs tracking-[0.8425px] text-para [writing-mode:vertical-rl] origin-center'>
               <Link
                 href='mailto:ankitparallax@gmail.com'
-                className='inline-block text-para hover:text-primary hover:-translate-y-[3px] transition-transform duration-200'
+                className='inline-block font-sf-mono text-para hover:text-primary hover:-translate-y-[3px] transition-transform duration-200'
               >
                 ankitparallax@gmail.com
               </Link>

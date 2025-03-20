@@ -124,7 +124,7 @@ export default function GithubFootprints() {
     >
       <h1
         ref={githubFootprintsHeadingRef}
-        className='font-noto text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
+        className='font-noto-sans text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-sf-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
       >
         My GitHub Footprints
       </h1>
@@ -137,7 +137,7 @@ export default function GithubFootprints() {
           className=' bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
         >
           <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-            <h2 className='font-noto text-heading font-semibold text-base sm:text-lg md:text-xl'>
+            <h2 className='font-noto-sans text-heading font-semibold text-base sm:text-lg md:text-xl'>
               Code Commits
             </h2>
 
@@ -207,7 +207,7 @@ export default function GithubFootprints() {
             className=' flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
           >
             <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-              <h2 className='font-noto text-heading font-semibold text-base sm:text-lg md:text-xl'>
+              <h2 className='font-noto-sans text-heading font-semibold text-base sm:text-lg md:text-xl'>
                 Pull Requests
               </h2>
 
@@ -272,7 +272,7 @@ export default function GithubFootprints() {
             className=' flex-1 bg-[#15223e] w-full rounded-md overflow-hidden flex flex-col gap-y-4 p-4 sm:p-6'
           >
             <div className='w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3'>
-              <h2 className='font-noto text-heading font-semibold text-base sm:text-lg md:text-xl'>
+              <h2 className='font-noto-sans text-heading font-semibold text-base sm:text-lg md:text-xl'>
                 Languages Used
               </h2>
 
@@ -282,12 +282,12 @@ export default function GithubFootprints() {
                     <InfoIcon />
                   </TooltipTrigger>
                   <TooltipContent className='flex flex-col gap-y-1'>
-                    <div className='flex items-center gap-x-2'>
+                    <div className='flex items-center gap-x-1'>
                       <DotICon />
                       <p>Data is based on the most recent 100 repositories.</p>
                     </div>
 
-                    <div className='flex items-center gap-x-2'>
+                    <div className='flex items-center gap-x-1'>
                       <DotICon />
                       <p>All sizes are displayed in MB.</p>
                     </div>

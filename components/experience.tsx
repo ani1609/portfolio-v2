@@ -97,7 +97,7 @@ export default function Experience() {
     >
       <h1
         ref={experienceHeadingRef}
-        className='font-noto text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
+        className='font-noto-sans text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-sf-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
       >
         Where I&apos;ve Worked
       </h1>
@@ -115,7 +115,7 @@ export default function Experience() {
                 setSelectedExperienceIndex(index);
                 moveSlider(index);
               }}
-              className={`cursor-pointer w-[140px] min-w-[140px] h-10 border-b-2 border-light-navy sm:border-0 sm:border-l font-semibold tracking-[2px] font-open text-xs transition-all duration-500 ease-in-out hover:bg-hover hover:text-primary ${
+              className={`cursor-pointer w-[140px] min-w-[140px] h-10 border-b-2 border-light-navy sm:border-0 sm:border-l font-semibold tracking-[2px] font-open-sans text-xs transition-all duration-500 ease-in-out hover:bg-hover hover:text-primary ${
                 selectedExperienceIndex === index
                   ? 'text-primary bg-hover'
                   : 'text-para bg-transparent'
@@ -138,7 +138,7 @@ export default function Experience() {
         </div>
 
         <div className='flex flex-col gap-y-2.5' ref={experienceDescriptionRef}>
-          <h2 className='font-noto text-heading tracking-[0.5px] font-semibold text-sm md:text-base lg:text-lg'>
+          <h2 className='font-noto-sans text-heading tracking-[0.5px] font-semibold text-sm md:text-base lg:text-lg'>
             {selectedExperience.jobTitle}{' '}
             <span className='text-primary'>
               @{' '}
@@ -153,7 +153,7 @@ export default function Experience() {
             </span>
           </h2>
 
-          <p className='font-open text-para text-[11px] sm:text-xs font-semibold tracking-[2px] '>
+          <p className='font-open-sans text-para tracking-[1.6px] font-semibold whitespace-nowrap text-xs'>
             {selectedExperience.date}
           </p>
 
@@ -162,7 +162,7 @@ export default function Experience() {
               <li
                 key={index}
                 dangerouslySetInnerHTML={{ __html: item }}
-                className='tracking-[0.6px] [word-spacing:0.8px] text-sm sm:text-base font-source text-justify text-para 
+                className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base
               before:content-["▹"] before:text-primary before:text-base before:pr-2
               [&>a]:text-primary [&>a]:relative [&>a]:after:content-[""] [&>a]:after:absolute [&>a]:after:left-0 [&>a]:after:bottom-0 [&>a]:after:right-0 [&>a]:after:h-[0.5px] [&>a]:after:w-[0%] [&>a]:after:bg-primary [&>a]:after:transition-all [&>a]:after:duration-200 [&>a]:after:ease-in-out [&>a]:hover:after:w-full
               '

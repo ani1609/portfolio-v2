@@ -71,27 +71,27 @@ export default function MajorProjectsItem({
                 href={majorProject.link}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-lg sm:text-xl md:text-[1.375rem] lg:text-2xl font-semibold tracking-[1px] text-heading transition-colors duration-500 hover:text-primary'
+                className='text-lg sm:text-xl md:text-[1.375rem] lg:text-2xl font-noto-sans font-semibold tracking-[1px] text-heading transition-colors duration-500 hover:text-primary'
               >
                 {majorProject.title}
               </Link>
 
               {majorProject.tagLine && (
-                <h4 className='font-open text-primary text-xs'>
+                <h4 className='text-xs text-primary font-open-sans font-light'>
                   {majorProject.tagLine}
                 </h4>
               )}
             </div>
 
-            <p className='text-justify md:text-right text-sm max-md:bg-transparent md:drop-shadow-lg sm:text-[0.969rem] font-source text-para bg-dark-navy md:p-6 rounded-sm'>
+            <p className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base text-justify md:text-right max-md:bg-transparent md:drop-shadow-lg bg-dark-navy md:p-6 rounded-sm'>
               {majorProject.description}
             </p>
 
-            <ul className='flex items-center gap-x-5 flex-nowrap overflow-x-auto overflow-y-hidden pb-1 max-w-full scrollbar-thin scrollbar-thumb-primary scrollbar-track-dark-navy'>
+            <ul className='flex items-center gap-x-5 flex-nowrap overflow-x-auto overflow-y-hidden max-w-full scrollbar-hide'>
               {majorProject.techStack.map((tech, index) => (
                 <li
                   key={index}
-                  className='text-[0.688rem] sm:text-xs font-open text-para tracking-[1.5px] font-semibold whitespace-nowrap'
+                  className='font-open-sans text-para tracking-[1.6px] font-semibold whitespace-nowrap text-xs'
                 >
                   {tech}
                 </li>
@@ -103,7 +103,7 @@ export default function MajorProjectsItem({
               target='_blank'
               rel='noopener noreferrer'
             >
-              <div className='p-1 text-heading hover:text-primary transition-colors duration-500 ease-in-out'>
+              <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
                 <GithubIcon className='size-6' />
               </div>
             </Link>
@@ -134,27 +134,27 @@ export default function MajorProjectsItem({
                 href={majorProject.link}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-lg sm:text-xl md:text-[1.375rem] lg:text-2xl font-semibold tracking-[1px] text-heading transition-colors duration-500 hover:text-primary'
+                className='text-lg sm:text-xl md:text-[1.375rem] lg:text-2xl font-noto-sans font-semibold tracking-[1px] text-heading transition-colors duration-500 hover:text-primary'
               >
                 {majorProject.title}
               </Link>
 
               {majorProject.tagLine && (
-                <h4 className='font-open text-primary text-xs'>
+                <h4 className='text-xs text-primary font-open-sans font-light'>
                   {majorProject.tagLine}
                 </h4>
               )}
             </div>
 
-            <p className='text-justify md:text-left text-sm max-md:bg-transparent md:drop-shadow-lg sm:text-[0.969rem] font-source text-para bg-dark-navy md:p-6 rounded-sm'>
+            <p className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base text-justify md:text-left max-md:bg-transparent md:drop-shadow-lg bg-dark-navy md:p-6 rounded-sm'>
               {majorProject.description}
             </p>
 
-            <ul className='flex items-center gap-x-5 flex-nowrap overflow-x-auto overflow-y-hidden pb-1 max-w-full scrollbar-thin scrollbar-thumb-primary scrollbar-track-dark-navy'>
+            <ul className='flex items-center gap-x-5 flex-nowrap overflow-x-auto overflow-y-hidden max-w-full scrollbar-hide'>
               {majorProject.techStack.map((tech, index) => (
                 <li
                   key={index}
-                  className='text-[0.688rem] sm:text-xs font-open text-para tracking-[1.5px] font-semibold whitespace-nowrap'
+                  className='font-open-sans text-para tracking-[1.6px] font-semibold whitespace-nowrap text-xs'
                 >
                   {tech}
                 </li>
@@ -166,7 +166,7 @@ export default function MajorProjectsItem({
               target='_blank'
               rel='noopener noreferrer'
             >
-              <div className='p-1 text-heading hover:text-primary transition-colors duration-500 ease-in-out'>
+              <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
                 <GithubIcon className='size-6' />
               </div>
             </Link>

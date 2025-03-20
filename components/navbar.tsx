@@ -26,7 +26,7 @@ export default function Navbar() {
   const [isNew, setIsNew] = useState<boolean>(true);
 
   const resumeLink =
-    'https://drive.google.com/file/d/1wF7-y_bC_rymmTKyVz2ZAosZuhBwao4_/view?usp=sharing';
+    'https://drive.google.com/file/d/125sVFrIbADz_FUk1TTHFvo0bATsUR0p_/view?usp=sharing';
 
   useEffect(() => {
     const timer = setTimeout(() => setShouldRender(true), 100);
