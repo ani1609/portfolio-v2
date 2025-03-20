@@ -124,6 +124,73 @@ body::-webkit-scrollbar-thumb {
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
   }
+
+  @keyframes fadeInNavigation {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-fade-in-navigation {
+    animation: fadeInNavigation 0.5s both;
+  }
+
+  /* Rotate Down Animation */
+  @keyframes rotate-down {
+    from {
+      transform: translateY(0px) rotate(0deg);
+    }
+    to {
+      transform: translateY(7.9px) rotate(45deg);
+    }
+  }
+  .animate-rotate-down {
+    @apply animate-[rotate-down_0.4s_forwards];
+  }
+
+  /* Rotate Up Animation */
+  @keyframes rotate-up {
+    from {
+      transform: translateY(0px) rotate(0deg);
+    }
+    to {
+      transform: translateY(-7.9px) rotate(-45deg);
+    }
+  }
+  .animate-rotate-up {
+    @apply animate-[rotate-up_0.4s_forwards];
+  }
+
+  /* Reverse Rotate Down */
+  @keyframes remove-rotate-down {
+    from {
+      transform: translateY(7.9px) rotate(45deg);
+    }
+    to {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  .animate-remove-rotate-down {
+    @apply animate-[remove-rotate-down_0.4s_forwards];
+  }
+
+  /* Reverse Rotate Up */
+  @keyframes remove-rotate-up {
+    from {
+      transform: translateY(-7.9px) rotate(-45deg);
+    }
+    to {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  .animate-remove-rotate-up {
+    @apply animate-[remove-rotate-up_0.4s_forwards];
+  }
 }
 
 @layer components {

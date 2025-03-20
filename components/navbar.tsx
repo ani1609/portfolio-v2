@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Logo from '@/public/images/A.webp';
-import '../styles/navbar.css';
 import Link from 'next/link';
 
 interface NavItem {
@@ -74,61 +73,107 @@ export default function Navbar() {
   };
 
   return (
-    <div>
-      {shouldRender && (
-        <nav
-          className={
-            navbarShadow ? 'navbar_container navbar_shadow' : 'navbar_container'
-          }
+    shouldRender && (
+      <header
+        className={`bg-[#0e192d] h-[70px] w-full z-10 fixed top-0 left-0 right-0 transition-all duration-500 ease-in-out px-5 sm:px-8 md:px-12 flex items-center justify-between ${
+          navbarShadow
+            ? 'shadow-[0px_10px_30px_-10px_rgba(2,12,27,0.7)]'
+            : 'shadow-none'
+        }`}
+      >
+        <Link
+          href='https://portfolio-ani1609.vercel.app'
+          className='size-[45px] bg-[black] animate-fade-in rounded-[2px] overflow-hidden'
         >
+          <Image src={Logo} alt='logo' className='size-full object-cover' />
+        </Link>
+
+        <div className='hidden md:flex gap-x-9 items-center'>
+          <ol className='flex gap-x-12 list-[decimal-leading-zero] marker:text-xs marker:text-primary marker:tracking-wider'>
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                onClick={() => scrollToSection(item.scrollTo)}
+                style={{ animationDelay: `${index * 100}ms` }}
+                className='animate-fade-in-navigation cursor-pointer font-sf-mono text-heading p-2 tracking-wider text-xs hover:text-primary transition-colors duration-500 ease-in-out'
+              >
+                {item.title}
+              </li>
+            ))}
+          </ol>
+
           <Link
-            href='https://portfolio-ani1609.vercel.app'
-            className='logo-container'
+            href={resumeLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ animationDelay: `${navItems.length * 100}ms` }}
+            className='animate-fade-in-navigation text-xs text-primary font-open-sans py-3 px-6 font-semibold tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
           >
-            <Image src={Logo} alt='logo' />
+            Resume
           </Link>
-          <div className='nav_tabs'>
-            <ol>
-              {navItems.map((item, index) => (
-                <li key={index} onClick={() => scrollToSection(item.scrollTo)}>
-                  {item.title}
-                </li>
-              ))}
-            </ol>
-            <Link href={resumeLink} target='_blank' rel='noopener noreferrer'>
-              Resume
-            </Link>
-          </div>
-          <div className='ham_icon' onClick={handleHamIconClick}>
-            <span
-              className={
-                hamMenu ? 'rotateDown' : isNew ? '' : 'removeRotateDown'
-              }
-            ></span>
-            <span className={hamMenu ? (isNew ? '' : 'remove') : ''}></span>
-            <span
-              className={hamMenu ? 'rotateUp' : isNew ? '' : 'removeRotateUp'}
-            ></span>
-          </div>
-          {hamMenu && <div className='blur' onClick={toggleHamMenu}></div>}
+        </div>
+
+        <div
+          className='relative z-[5] flex md:hidden size-[45px] animate-fade-in flex-col justify-center items-center gap-[5px] cursor-pointer'
+          onClick={handleHamIconClick}
+        >
+          <span
+            className={`bg-primary relative h-[3px] w-[30px] rounded-[1px] transition-[0.5s_ease-in-out] ${
+              hamMenu
+                ? 'animate-rotate-down'
+                : isNew
+                  ? ''
+                  : 'animate-remove-rotate-down'
+            }`}
+          ></span>
+          <span
+            className={`bg-primary relative h-[3px] w-[30px] rounded-[1px] transition-[0.5s_ease-in-out] ${
+              hamMenu ? (isNew ? '' : 'opacity-0') : ''
+            }`}
+          ></span>
+          <span
+            className={`bg-primary relative h-[3px] w-[30px] rounded-[1px] transition-[0.5s_ease-in-out] ${
+              hamMenu
+                ? 'animate-rotate-up'
+                : isNew
+                  ? ''
+                  : 'animate-remove-rotate-up'
+            }`}
+          ></span>
+        </div>
+
+        {hamMenu && (
           <div
-            className={
-              hamMenu ? 'ham_tabs ham_tabs_show' : 'ham_tabs ham_tabs_hide'
-            }
+            className='fixed z-[3] top-0 right-0 bottom-0 h-dvh w-screen [transition:0.5s_ease-in-out] backdrop-filter backdrop-blur-[2px]'
+            onClick={toggleHamMenu}
+          ></div>
+        )}
+
+        <div
+          className={`z-[4] flex md:hidden bg-navy h-dvh w-[75vw] max-w-[400px] fixed top-0 right-0 bottom-0 flex-col justify-center items-center gap-y-10 [transition:0.5s_ease-in-out] ${hamMenu ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          <ol className='flex flex-col gap-y-8 list-[decimal-leading-zero] marker:text-xs marker:text-primary marker:tracking-wider'>
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                onClick={() => scrollToSection(item.scrollTo)}
+                className='cursor-pointer font-sf-mono text-heading p-2 tracking-wider text-center text-xs hover:text-primary transition-colors duration-500 ease-in-out'
+              >
+                {item.title}
+              </li>
+            ))}
+          </ol>
+
+          <Link
+            href={resumeLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-xs text-primary font-open-sans py-3 px-6 font-semibold tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
           >
-            <ol>
-              {navItems.map((item, index) => (
-                <li key={index} onClick={() => scrollToSection(item.scrollTo)}>
-                  {item.title}
-                </li>
-              ))}
-            </ol>
-            <Link href={resumeLink} target='_blank' rel='noopener noreferrer'>
-              Resume
-            </Link>
-          </div>
-        </nav>
-      )}
-    </div>
+            Resume
+          </Link>
+        </div>
+      </header>
+    )
   );
 }
