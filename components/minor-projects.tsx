@@ -34,7 +34,7 @@ export default function MinorProjects() {
   return (
     <Section
       id='minor-projects-section'
-      className='mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%] relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10'
+      className='mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%] relative z-[2] mt-[150px] flex flex-col justify-start gap-y-6 sm:gap-y-10'
     >
       <h1
         ref={minorProjectHeadingRef}

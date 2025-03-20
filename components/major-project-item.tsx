@@ -65,7 +65,7 @@ export default function MajorProjectsItem({
             />
           </Link>
 
-          <div className='w-full p-6 flex flex-col justify-between md:items-end h-full items-start md:w-1/2 md:p-0 z-[inherit] relative'>
+          <div className='w-full p-5 flex flex-col justify-between md:items-end h-full items-start md:w-1/2 md:p-0 z-[inherit] relative'>
             <div className='md:text-right flex flex-col justify-center gap-[5px]'>
               <Link
                 href={majorProject.link}
@@ -83,7 +83,7 @@ export default function MajorProjectsItem({
               )}
             </div>
 
-            <p className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base text-justify md:text-right max-md:bg-transparent md:drop-shadow-lg bg-dark-navy md:p-6 rounded-sm'>
+            <p className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base text-justify md:text-right max-md:bg-transparent md:drop-shadow-lg bg-dark-navy md:p-5 rounded-sm'>
               {majorProject.description}
             </p>
 
@@ -128,7 +128,7 @@ export default function MajorProjectsItem({
             />
           </Link>
 
-          <div className='w-full p-6 flex flex-col justify-between md:items-start h-full items-start md:w-1/2 md:p-0 z-[inherit] relative'>
+          <div className='w-full p-5 flex flex-col justify-between md:items-start h-full items-start md:w-1/2 md:p-0 z-[inherit] relative'>
             <div className='flex flex-col justify-center gap-[5px]'>
               <Link
                 href={majorProject.link}
@@ -146,7 +146,7 @@ export default function MajorProjectsItem({
               )}
             </div>
 
-            <p className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base text-justify md:text-left max-md:bg-transparent md:drop-shadow-lg bg-dark-navy md:p-6 rounded-sm'>
+            <p className='tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base text-justify md:text-left max-md:bg-transparent md:drop-shadow-lg bg-dark-navy md:p-5 rounded-sm'>
               {majorProject.description}
             </p>
 

@@ -35,7 +35,7 @@ export default function MajorProjects() {
   return (
     <Section
       id='major-projects-section'
-      className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
+      className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
       <h1
         ref={MajorProjectHeadingRef}
@@ -44,9 +44,11 @@ export default function MajorProjects() {
         Some Things I&apos;ve Built
       </h1>
 
-      {majorProjects.map((majorProject, index) => {
-        return <MajorProjectsItem key={index} majorProject={majorProject} />;
-      })}
+      <div className='flex flex-col gap-y-6 sm:gap-y-10'>
+        {majorProjects.map((majorProject, index) => {
+          return <MajorProjectsItem key={index} majorProject={majorProject} />;
+        })}
+      </div>
     </Section>
   );
 }

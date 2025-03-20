@@ -8,7 +8,8 @@ export const experiences: Experience[] = [
     companyLink: 'https://www.uiastra.com/',
     date: 'Apr 2024 - Present',
     description: [
-      'Integrated <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">CodeSandbox</a> using Sandpack Toolkit, providing users with interactive previews of components, resulting in a <b>25%</b> reduction in time spent on manual testing and component validation.',
+      'Integrating <a href="https://ui.shadcn.com/docs/registry" target="_blank" rel="noopener noreferrer">ShadCN Registry</a> and <a href="https://ui.shadcn.com/docs/cli" target="_blank" rel="noopener noreferrer">CLI integration</a> to automate UI component installation and generation, reducing manual setup time by <b>80%</b> and streamlining onboarding for new projects by <b>65%</b>.',
+      'Integrated <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">CodeSandbox</a> using <a href="https://sandpack.codesandbox.io/" target="_blank" rel="noopener noreferrer"> Sandpack Toolkit </a>, providing users with interactive previews of components, resulting in a <b>25%</b> reduction in time spent on manual testing and component validation.',
       'Contributed to the development and integration of <a href="https://uiastra.com/icons" target="_blank" rel="noopener noreferrer">Astra Icons</a>, an icon library, enhancing visual consistency across projects and reducing design inconsistency issues by <b>20%</b>.',
       'Authored comprehensive documentation for setting up UI Astra in environments including Next.js, Vite, Remix, Astro, Laravel, Gatsby, and custom setups, after rigorous testing. Documentation also included guidelines for dark mode implementation across all frameworks, reducing onboarding time for developers by <b>50%</b>.',
     ],

@@ -38,7 +38,7 @@ export default function Navbar() {
     const handleScroll = () => setNavbarShadow(window.scrollY > 5);
 
     const handleResize = () => {
-      if (window.innerWidth >= 769) {
+      if (window.innerWidth >= 1025) {
         setHamMenu(false);
         setIsNew(true);
       }
@@ -76,14 +76,14 @@ export default function Navbar() {
           <Image src={Logo} alt='logo' className='size-full object-cover' />
         </Link>
 
-        <div className='hidden md:flex gap-x-9 items-center'>
-          <ol className='flex gap-x-12 list-[decimal-leading-zero] marker:text-xs marker:text-primary marker:tracking-wider'>
+        <div className='hidden lg:flex gap-x-9 items-center'>
+          <ol className='flex gap-x-16 list-[decimal-leading-zero] marker:text-xs marker:text-primary marker:tracking-wider'>
             {navItems.map((item, index) => (
               <li
                 key={index}
                 onClick={() => scrollToSection(item.scrollTo)}
                 style={{ animationDelay: `${index * 100}ms` }}
-                className='animate-slide-in-nav-item cursor-pointer font-sf-mono text-heading p-2 tracking-wider text-xs hover:text-primary transition-colors duration-500 ease-in-out'
+                className='animate-slide-in-nav-item cursor-pointer font-sf-mono text-heading py-2 pr-2 tracking-wider text-xs hover:text-primary transition-colors duration-500 ease-in-out'
               >
                 {item.title}
               </li>
@@ -102,7 +102,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className='relative z-[5] flex md:hidden size-[45px] animate-fade-in flex-col justify-center items-center gap-[5px] cursor-pointer'
+          className='relative z-[5] flex lg:hidden size-[45px] animate-fade-in flex-col justify-center items-center gap-[5px] cursor-pointer'
           onClick={handleHamIconClick}
         >
           <span
@@ -138,14 +138,14 @@ export default function Navbar() {
         )}
 
         <div
-          className={`z-[4] flex md:hidden bg-navy h-dvh w-[75vw] max-w-[400px] fixed top-0 right-0 bottom-0 flex-col justify-center items-center gap-y-10 [transition:0.5s_ease-in-out] ${hamMenu ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`z-[4] flex lg:hidden bg-navy h-dvh w-[75vw] max-w-[400px] fixed top-0 right-0 bottom-0 flex-col justify-center items-center gap-y-10 [transition:0.5s_ease-in-out] ${hamMenu ? 'translate-x-0' : 'translate-x-full'}`}
         >
           <ol className='flex flex-col gap-y-8 list-[decimal-leading-zero] marker:text-xs marker:text-primary marker:tracking-wider'>
             {navItems.map((item, index) => (
               <li
                 key={index}
                 onClick={() => scrollToSection(item.scrollTo)}
-                className='cursor-pointer font-sf-mono text-heading p-2 tracking-wider text-center text-xs hover:text-primary transition-colors duration-500 ease-in-out'
+                className='cursor-pointer font-sf-mono text-heading py-2 pr-2 tracking-wider text-center text-xs hover:text-primary transition-colors duration-500 ease-in-out'
               >
                 {item.title}
               </li>

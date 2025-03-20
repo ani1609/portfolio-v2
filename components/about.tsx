@@ -40,7 +40,7 @@ export default function About() {
   return (
     <Section
       id='about-section'
-      className='flex flex-col gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
+      className='flex flex-col gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
       <h1
         ref={aboutHeadingRef}
