@@ -1,18 +1,16 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import { Open_Sans, Noto_Sans_SC, Source_Sans_3 } from 'next/font/google';
+import './globals.css';
 
-export const openSans = Open_Sans({
+const openSans = Open_Sans({
   variable: '--font-open-sans',
   subsets: ['latin'],
 });
-
-export const notoSans = Noto_Sans_SC({
+const notoSans = Noto_Sans_SC({
   variable: '--font-noto-sans',
   subsets: ['latin'],
 });
-
-export const sourceSans = Source_Sans_3({
+const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
   subsets: ['latin'],
 });
