@@ -4,28 +4,14 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Logo from '@/public/images/A.webp';
 import Link from 'next/link';
-
-interface NavItem {
-  title: string;
-  scrollTo: string;
-}
-
-const navItems: NavItem[] = [
-  { title: 'About', scrollTo: '.about_container' },
-  { title: 'Experience', scrollTo: '.experience_container' },
-  { title: 'Work', scrollTo: '.major_projects_parent' },
-  { title: 'GitHub Footprints', scrollTo: '.github_footprints_parent' },
-  { title: 'Contact', scrollTo: '#contact-section' },
-];
+import { navItems } from '@/data/nav';
+import { resumeLink } from '@/data/resume';
 
 export default function Navbar() {
   const [shouldRender, setShouldRender] = useState<boolean>(false);
   const [navbarShadow, setNavbarShadow] = useState<boolean>(false);
   const [hamMenu, setHamMenu] = useState<boolean>(false);
   const [isNew, setIsNew] = useState<boolean>(true);
-
-  const resumeLink =
-    'https://drive.google.com/file/d/125sVFrIbADz_FUk1TTHFvo0bATsUR0p_/view?usp=sharing';
 
   useEffect(() => {
     const timer = setTimeout(() => setShouldRender(true), 100);
