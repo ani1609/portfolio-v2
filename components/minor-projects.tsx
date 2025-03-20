@@ -37,7 +37,8 @@ export default function MinorProjects() {
     >
       <h1
         ref={minorProjectHeadingRef}
-        className='font-noto-sans text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["02."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-sf-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
+        // removing before for now
+        className='font-noto text-heading text-[1.375rem] sm:text-2xl gap-x-2 sm:gap-x-4 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center justify-center font-semibold before:content-[""] before:h-px before:w-[7%] before:bg-light-navy after:content-[""] after:h-px after:w-[7%] after:bg-light-navy'
       >
         Other Noteworthy Projects
       </h1>

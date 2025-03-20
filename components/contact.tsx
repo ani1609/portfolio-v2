@@ -40,7 +40,7 @@ export default function Contact() {
 
       <h1
         style={{ wordSpacing: '5px' }}
-        className='mt-2 font-noto-sans text-[clamp(30px,5vw,45px)] lg:text-[45px] text-heading font-semibold tracking-[1px]'
+        className='mt-1 font-noto-sans text-[clamp(30px,5vw,45px)] lg:text-[45px] text-heading font-semibold tracking-[1px]'
       >
         Get In Touch
       </h1>

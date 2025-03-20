@@ -93,7 +93,7 @@ export default function Navbar() {
             target='_blank'
             rel='noopener noreferrer'
             style={{ animationDelay: `${navItems.length * 100}ms` }}
-            className='animate-slide-in-nav-item text-xs text-primary font-open-sans py-3 px-6 font-semibold tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
+            className='animate-slide-in-nav-item text-xs text-primary font-open-sans py-3 px-6 font-medium tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
           >
             Resume
           </Link>
@@ -154,7 +154,7 @@ export default function Navbar() {
             href={resumeLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-xs text-primary font-open-sans py-3 px-6 font-semibold tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
+            className='text-xs text-primary font-open-sans py-3 px-6 font-medium tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
           >
             Resume
           </Link>

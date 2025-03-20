@@ -8,7 +8,7 @@ export default function About() {
   const aboutHeadingRef = useRef(null);
   const aboutContentsRef = useRef(null);
   const bodytextClassName = `tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base `;
-  const technologiesClassName = `font-open-sans text-para tracking-[1.6px] font-semibold whitespace-nowrap text-xs before:content-["▹"] before:text-primary before:text-sm before:pr-2`;
+  const technologiesClassName = `font-open-sans text-para tracking-[1.6px] font-medium whitespace-nowrap text-xs before:content-["▹"] before:text-primary before:text-sm before:pr-2`;
   useEffect(() => {
     const options = {
       root: null,
@@ -43,7 +43,7 @@ export default function About() {
     >
       <h1
         ref={aboutHeadingRef}
-        className='font-noto text-heading text-[1.375rem] sm:text-2xl sm:gap-x-2 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center gap-x-4 font-semibold before:content-["01."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light before:pt-[5px] after:content-[""] after:h-px after:w-1/4 after:mt-[5px] after:bg-light-navy'
+        className='font-noto text-heading text-[1.375rem] sm:text-2xl gap-x-2 sm:gap-x-4 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center font-semibold before:content-["01."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light after:content-[""] after:h-px after:w-1/4 after:bg-light-navy'
       >
         About Me
       </h1>

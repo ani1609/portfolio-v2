@@ -91,7 +91,7 @@ export default function MajorProjectsItem({
               {majorProject.techStack.map((tech, index) => (
                 <li
                   key={index}
-                  className='font-open-sans text-para tracking-[1.6px] font-semibold whitespace-nowrap text-xs'
+                  className='font-open-sans text-para tracking-[1.6px] font-medium whitespace-nowrap text-xs'
                 >
                   {tech}
                 </li>
@@ -154,7 +154,7 @@ export default function MajorProjectsItem({
               {majorProject.techStack.map((tech, index) => (
                 <li
                   key={index}
-                  className='font-open-sans text-para tracking-[1.6px] font-semibold whitespace-nowrap text-xs'
+                  className='font-open-sans text-para tracking-[1.6px] font-medium whitespace-nowrap text-xs'
                 >
                   {tech}
                 </li>
