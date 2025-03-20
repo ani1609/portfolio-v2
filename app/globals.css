@@ -125,10 +125,10 @@ body::-webkit-scrollbar-thumb {
     display: none; /* Chrome, Safari */
   }
 
-  @keyframes fadeInNavigation {
+  @keyframes slideInNavItem {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(-30px);
     }
     to {
       opacity: 1;
@@ -136,8 +136,8 @@ body::-webkit-scrollbar-thumb {
     }
   }
 
-  .animate-fade-in-navigation {
-    animation: fadeInNavigation 0.5s both;
+  .animate-slide-in-nav-item {
+    animation: slideInNavItem 0.5s both;
   }
 
   /* Rotate Down Animation */
@@ -190,6 +190,62 @@ body::-webkit-scrollbar-thumb {
   }
   .animate-remove-rotate-up {
     @apply animate-[remove-rotate-up_0.4s_forwards];
+  }
+
+  @keyframes slideInHeroItem {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-slide-in-hero-item {
+    animation: slideInHeroItem 0.5s both;
+  }
+
+  /* custom delays for hero section (maybe can find a better way to do this) */
+
+  .hero-delay-300 {
+    animation-delay: 0.3s;
+  }
+  .hero-delay-400 {
+    animation-delay: 0.4s;
+  }
+  .hero-delay-500 {
+    animation-delay: 0.5s;
+  }
+  .hero-delay-600 {
+    animation-delay: 0.6s;
+  }
+  .hero-delay-700 {
+    animation-delay: 0.7s;
+  }
+  .hero-delay-1300 {
+    animation-delay: 1.3s;
+  }
+
+  /* Responsive delays */
+  @media (min-width: 768px) {
+    /* md */
+    .md\:hero-delay-900 {
+      animation-delay: 0.9s;
+    }
+    .md\:hero-delay-1000 {
+      animation-delay: 1s;
+    }
+    .md\:hero-delay-1100 {
+      animation-delay: 1.1s;
+    }
+    .md\:hero-delay-1200 {
+      animation-delay: 1.2s;
+    }
+    .md\:hero-delay-1300 {
+      animation-delay: 1.3s;
+    }
   }
 }
 

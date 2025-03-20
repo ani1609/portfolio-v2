@@ -81,7 +81,7 @@ export default function Navbar() {
                 key={index}
                 onClick={() => scrollToSection(item.scrollTo)}
                 style={{ animationDelay: `${index * 100}ms` }}
-                className='animate-fade-in-navigation cursor-pointer font-sf-mono text-heading p-2 tracking-wider text-xs hover:text-primary transition-colors duration-500 ease-in-out'
+                className='animate-slide-in-nav-item cursor-pointer font-sf-mono text-heading p-2 tracking-wider text-xs hover:text-primary transition-colors duration-500 ease-in-out'
               >
                 {item.title}
               </li>
@@ -93,7 +93,7 @@ export default function Navbar() {
             target='_blank'
             rel='noopener noreferrer'
             style={{ animationDelay: `${navItems.length * 100}ms` }}
-            className='animate-fade-in-navigation text-xs text-primary font-open-sans py-3 px-6 font-semibold tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
+            className='animate-slide-in-nav-item text-xs text-primary font-open-sans py-3 px-6 font-semibold tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-all duration-500 ease-in-out'
           >
             Resume
           </Link>
