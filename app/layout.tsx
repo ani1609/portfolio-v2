@@ -2,9 +2,18 @@ import type { Metadata } from 'next';
 import { Open_Sans, Noto_Sans_SC, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
 
-const open = Open_Sans({ variable: '--font-open', subsets: ['latin'] });
-const noto = Noto_Sans_SC({ variable: '--font-noto', subsets: ['latin'] });
-const source = Source_Sans_3({ variable: '--font-source', subsets: ['latin'] });
+const openSans = Open_Sans({
+  variable: '--font-open-sans',
+  subsets: ['latin'],
+});
+const notoSans = Noto_Sans_SC({
+  variable: '--font-noto-sans',
+  subsets: ['latin'],
+});
+const sourceSans = Source_Sans_3({
+  variable: '--font-source-sans',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Ankit Kr. Chowdhury',
@@ -21,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${open.variable} ${noto.variable} ${source.variable} antialiased`}
+        className={`${openSans.variable} ${notoSans.variable} ${sourceSans.variable} antialiased`}
       >
         {children}
       </body>

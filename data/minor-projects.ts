@@ -5,7 +5,7 @@ export const minorProjects: MinorProject[] = [
     id: 1,
     title: 'NeoChat',
     description:
-      "Initially known as 'BridgeTogether', this versatile chat web app offers customizable settings designed for individuals with diverse abilities, facilitating inclusive communication for individuals with varying disabilities like deafness, blindness, and colorblindness.",
+      "Originally 'BridgeTogether', this chat web app enables inclusive communication with customizable settings for users with disabilities like deafness, blindness, and colorblindness.",
     techStack: ['Assembly AI API', 'React', 'Tailwind CSS', ''],
     link: 'https://neo-chat-blush.vercel.app/',
     github: 'https://github.com/ani1609/NeoChat',
