@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Open_Sans, Noto_Sans_SC, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const openSans = Open_Sans({
   variable: '--font-open-sans',
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${openSans.variable} ${notoSans.variable} ${sourceSans.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
