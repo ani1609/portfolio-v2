@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react';
 import { Section } from './ui/section';
 import MyPhoto from '@/public/images/me.jpeg';
 import Image from 'next/image';
+import { Heading, HeadingMarker, HeadingText, HeadingLine } from './ui/heading';
 
 export default function About() {
   const aboutHeadingRef = useRef(null);
@@ -42,12 +43,11 @@ export default function About() {
       id='about-section'
       className='flex flex-col gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
-      <h1
-        ref={aboutHeadingRef}
-        className='font-noto text-heading text-[1.375rem] sm:text-2xl gap-x-2 sm:gap-x-4 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center font-semibold before:content-["01."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light after:content-[""] after:h-px after:w-1/4 after:bg-light-navy'
-      >
-        About Me
-      </h1>
+      <Heading ref={aboutHeadingRef}>
+        <HeadingMarker>01.</HeadingMarker>
+        <HeadingText>About Me</HeadingText>
+        <HeadingLine />
+      </Heading>
 
       <div
         className='w-full flex flex-col justify-start md:flex-row md:justify-between gap-12'
@@ -55,7 +55,7 @@ export default function About() {
       >
         <div className='w-full md:w-[60%] flex flex-col gap-y-4'>
           <p className={bodytextClassName}>
-            I’m a final-year Computer Science student who loves building
+            I&apos;m a final-year Computer Science student who loves building
             high-performance web apps that are as smooth to use as they are
             visually striking—efficient, scalable, and crafted for a seamless
             experience.

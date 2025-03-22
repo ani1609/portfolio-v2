@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import MinorProjectItem from './minor-project-item';
 import { minorProjects } from '@/data/minor-projects';
 import { Section } from './ui/section';
+import { Heading, HeadingText, HeadingLine } from './ui/heading';
 
 export default function MinorProjects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -36,13 +37,11 @@ export default function MinorProjects() {
       id='minor-projects-section'
       className='mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%] relative z-[2] mt-[150px] flex flex-col justify-start gap-y-6 sm:gap-y-10'
     >
-      <h1
-        ref={minorProjectHeadingRef}
-        // removing before for now
-        className='font-noto text-heading text-[1.375rem] sm:text-2xl gap-x-2 sm:gap-x-4 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center justify-center font-semibold before:content-[""] before:h-px before:w-[7%] before:bg-light-navy after:content-[""] after:h-px after:w-[7%] after:bg-light-navy'
-      >
-        Other Noteworthy Projects
-      </h1>
+      <Heading ref={minorProjectHeadingRef} className='justify-center'>
+        <HeadingLine />
+        <HeadingText>Other Noteworthy Projects</HeadingText>
+        <HeadingLine />
+      </Heading>
 
       <div className='w-full gap-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {minorProjects
