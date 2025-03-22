@@ -37,7 +37,11 @@ export default function MinorProjects() {
       id='minor-projects-section'
       className='mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%] relative z-[2] mt-[150px] flex flex-col justify-start gap-y-6 sm:gap-y-10'
     >
-      <Heading ref={minorProjectHeadingRef} className='justify-center'>
+      <Heading
+        id='minor-projects-heading'
+        ref={minorProjectHeadingRef}
+        className='justify-center'
+      >
         <HeadingLine />
         <HeadingText>Other Noteworthy Projects</HeadingText>
         <HeadingLine />

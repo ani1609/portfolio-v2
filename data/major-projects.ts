@@ -12,8 +12,8 @@ export const majorProjects: MajorProject[] = [
       'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, Astra Icons, for streamlined and efficient web development.',
     image: UiAstraImage,
     techStack: ['GSAP', 'Next.js', 'RadixUI', 'Tailwind CSS', 'Typescript'],
-    github: 'https://github.com/uiastra',
-    link: 'https://uiastra.com',
+    githubLink: 'https://github.com/uiastra',
+    deployedLink: 'https://uiastra.com',
   },
   {
     id: 2,
@@ -32,8 +32,7 @@ export const majorProjects: MajorProject[] = [
       'Tailwind CSS',
       'TypeScript',
     ],
-    github: 'https://neuroute.ai',
-    link: 'https://neuroute.ai',
+    deployedLink: 'https://neuroute.ai',
   },
   {
     id: 3,
@@ -50,7 +49,6 @@ export const majorProjects: MajorProject[] = [
       'React',
       'Socket.io',
     ],
-    github: 'https://github.com/ani1609/Conversify',
-    link: 'https://github.com/ani1609/Conversify',
+    githubLink: 'https://github.com/ani1609/Conversify',
   },
 ];

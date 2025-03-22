@@ -7,8 +7,8 @@ export const minorProjects: MinorProject[] = [
     description:
       "Originally 'BridgeTogether', this chat web app enables inclusive communication with customizable settings for users with disabilities like deafness, blindness, and colorblindness.",
     techStack: ['Assembly AI API', 'React', 'Tailwind CSS', ''],
-    link: 'https://neo-chat-blush.vercel.app/',
-    github: 'https://github.com/ani1609/NeoChat',
+    githubLink: 'https://github.com/ani1609/NeoChat',
+    deployedLink: 'https://neo-chat-blush.vercel.app/',
     tagLine: 'Won Synchronicity - S1, JU',
   },
   {
@@ -17,8 +17,8 @@ export const minorProjects: MinorProject[] = [
     description:
       'A user-friendly expense tracker app empowering individuals to effortlessly manage and analyze their financial transactions, fostering effective budgeting and financial awareness.',
     techStack: ['ApexCharts', 'React', 'Firebase', 'Tailwind CSS'],
-    link: 'https://spendwise-two.vercel.app/',
-    github: 'https://github.com/ani1609/Spendwise',
+    githubLink: 'https://github.com/ani1609/Spendwise',
+    deployedLink: 'https://spendwise-two.vercel.app/',
     tagLine: 'KWoC 23, IIT KGP Triumph',
   },
   {
@@ -27,8 +27,8 @@ export const minorProjects: MinorProject[] = [
     description:
       'A React library which can be integrated to open-source websites for non-technicals to contribute.',
     techStack: ['React', 'Tailwind CSS', 'Express.js', 'MongoDB'],
-    link: 'https://github.com/itsme-Subid/EdiNix',
-    github: 'https://github.com/itsme-Subid/EdiNix',
+    githubLink: 'https://github.com/itsme-Subid/EdiNix',
+    deployedLink: 'https://github.com/itsme-Subid/EdiNix',
     tagLine: 'HackNITR 5.0 Triumph',
   },
   {
@@ -37,7 +37,7 @@ export const minorProjects: MinorProject[] = [
     description:
       'A prototype social media clone offering real-time post creation, likes, comments, and sharing features, complete with instantaneous notifications for a dynamic user experience.',
     techStack: ['React', 'Socket.io', 'Express.js', 'MongoDB'],
-    link: 'https://github.com/ani1609/HealTetherAssessment',
-    github: 'https://github.com/ani1609/HealTetherAssessment',
+    githubLink: 'https://github.com/ani1609/HealTetherAssessment',
+    deployedLink: 'https://github.com/ani1609/HealTetherAssessment',
   },
 ];

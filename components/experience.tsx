@@ -97,13 +97,14 @@ export default function Experience() {
       id='experience-section'
       className='flex flex-col mt-[150px] gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
-      <Heading ref={experienceHeadingRef}>
+      <Heading id='experience-heading' ref={experienceHeadingRef}>
         <HeadingMarker>02.</HeadingMarker>
         <HeadingText>Where I&apos;ve Worked</HeadingText>
         <HeadingLine />
       </Heading>
 
       <div
+        id='experience-content'
         className='flex justify-start flex-col sm:flex-row gap-10'
         ref={experienceContentRef}
       >

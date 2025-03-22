@@ -250,20 +250,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 @layer components {
-  #about-section > h1,
-  #about-section > div,
-  #experience-section > h1,
-  #experience-section > div,
-  #major-projects-section > h1,
+  #about-heading,
+  #about-content,
+  #experience-heading,
+  #experience-content,
+  #major-projects-heading,
   #major-project-odd,
   #major-project-even,
-  #minor-projects-section > h1,
+  #minor-projects-heading,
   #minor-project,
-  #github-footprints-section > h1,
+  #github-footprints-heading,
   #commit-chart,
   #pr-chart,
   #language-chart,
-  #contact-section {
+  #contact-section,
+  #maintenance-section {
     @apply opacity-0;
   }
 }

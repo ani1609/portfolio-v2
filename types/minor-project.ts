@@ -3,7 +3,7 @@ export interface MinorProject {
   title: string;
   description: string;
   techStack: string[];
-  github: string;
-  link: string;
+  githubLink?: string;
+  deployedLink?: string;
   tagLine?: string;
 }

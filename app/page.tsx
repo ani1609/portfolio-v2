@@ -16,7 +16,7 @@ export default function App() {
 
   if (isMaintenanceMode) {
     return (
-      <main className='max-w-[1440px] mx-auto my-0'>
+      <main className='max-w-[1440px] h-dvh overflow-hidden mx-auto my-0'>
         <Maintenance />
       </main>
     );
