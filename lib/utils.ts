@@ -8,6 +8,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const openProjectLink = ({
+  deployedLink,
+  githubLink,
+}: {
+  deployedLink?: string;
+  githubLink?: string;
+}) => {
+  const link = deployedLink || githubLink; // Open deployed link if available, else open github link
+  if (link) {
+    window.open(link, '_blank');
+  } else {
+    console.warn('No link available');
+  }
+};
+
 export const getMonthName = ({ monthNumber }: { monthNumber: Month }) => {
   const months = [
     'January',

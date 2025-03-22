@@ -5,8 +5,8 @@ export interface MajorProject {
   title: string;
   description: string;
   techStack: string[];
-  github: string;
   image: StaticImageData;
-  link: string;
+  githubLink?: string;
+  deployedLink?: string;
   tagLine?: string;
 }
