@@ -55,9 +55,10 @@ export default function About() {
       >
         <div className='w-full md:w-[60%] flex flex-col gap-y-4'>
           <p className={bodytextClassName}>
-            I build high-performance web apps that are as smooth to use as they
-            are visually striking—efficient, scalable, and crafted for a
-            seamless experience.
+            I’m a final-year Computer Science student who loves building
+            high-performance web apps that are as smooth to use as they are
+            visually striking—efficient, scalable, and crafted for a seamless
+            experience.
           </p>
 
           <p className={bodytextClassName}>
