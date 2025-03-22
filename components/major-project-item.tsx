@@ -104,7 +104,7 @@ export default function MajorProjectsItem({
               ))}
             </ul>
 
-            <div className='flex items-center gap-x-2 sm:gap-x-4'>
+            <div className='flex items-center gap-x-2 sm:gap-x-3'>
               {majorProject.githubLink && (
                 <Link
                   href={majorProject.githubLink}
@@ -188,7 +188,7 @@ export default function MajorProjectsItem({
               ))}
             </ul>
 
-            <div className='flex items-center gap-x-2 sm:gap-x-4'>
+            <div className='flex items-center gap-x-2 sm:gap-x-3'>
               {majorProject.githubLink && (
                 <Link
                   href={majorProject.githubLink}
