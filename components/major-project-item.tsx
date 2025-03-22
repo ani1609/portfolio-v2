@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { GithubIcon } from '@/assets/icons';
+import { GithubIcon, SquareArrowOutUpRightIcon } from '@/assets/icons';
 import Image from 'next/image';
 import { MajorProject } from '@/types/major-project';
 import Link from 'next/link';
@@ -98,15 +98,27 @@ export default function MajorProjectsItem({
               ))}
             </ul>
 
-            <Link
-              href={majorProject.github}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
-                <GithubIcon className='size-6' />
-              </div>
-            </Link>
+            <div className='flex items-center gap-x-2 sm:gap-x-4'>
+              <Link
+                href={majorProject.github}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
+                  <GithubIcon className='size-5 sm:size-6' />
+                </div>
+              </Link>
+
+              <Link
+                href={majorProject.link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
+                  <SquareArrowOutUpRightIcon className='size-5 sm:size-6' />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       ) : (
@@ -161,15 +173,27 @@ export default function MajorProjectsItem({
               ))}
             </ul>
 
-            <Link
-              href={majorProject.github}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
-                <GithubIcon className='size-6' />
-              </div>
-            </Link>
+            <div className='flex items-center gap-x-2 sm:gap-x-4'>
+              <Link
+                href={majorProject.github}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
+                  <GithubIcon className='size-5 sm:size-6' />
+                </div>
+              </Link>
+
+              <Link
+                href={majorProject.link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
+                  <SquareArrowOutUpRightIcon className='size-5 sm:size-6' />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       )}

@@ -1,7 +1,11 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { FolderIcon, GithubIcon } from '@/assets/icons';
+import {
+  FolderIcon,
+  GithubIcon,
+  SquareArrowOutUpRightIcon,
+} from '@/assets/icons';
 import Link from 'next/link';
 import { MinorProject } from '@/types/minor-project';
 
@@ -47,17 +51,31 @@ export default function MinorProjectItem({
           <FolderIcon className='size-full' />
         </div>
 
-        <Link
-          href={minorProject.github}
-          className='github_icon'
-          target='_blank'
-          onClick={(e) => e.stopPropagation()}
-          rel='noopener noreferrer'
-        >
-          <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
-            <GithubIcon className='size-6' />
-          </div>
-        </Link>
+        <div className='flex gap-x-2 sm:gap-x-4'>
+          <Link
+            href={minorProject.github}
+            className='github_icon'
+            target='_blank'
+            onClick={(e) => e.stopPropagation()}
+            rel='noopener noreferrer'
+          >
+            <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
+              <GithubIcon className='size-5 sm:size-6' />
+            </div>
+          </Link>
+
+          <Link
+            href={minorProject.link}
+            className='github_icon'
+            target='_blank'
+            onClick={(e) => e.stopPropagation()}
+            rel='noopener noreferrer'
+          >
+            <div className='p-1 text-para hover:text-primary transition-colors duration-500 ease-in-out'>
+              <SquareArrowOutUpRightIcon className='size-5 sm:size-6' />
+            </div>
+          </Link>
+        </div>
       </div>
 
       <div className='flex flex-col gap-y-[5px]'>

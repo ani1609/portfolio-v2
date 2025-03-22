@@ -124,7 +124,7 @@ export default function GithubFootprints() {
       id='github-footprints-section'
       className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
-      <Heading ref={githubFootprintsHeadingRef}>
+      <Heading id='github-footprints-heading' ref={githubFootprintsHeadingRef}>
         <HeadingMarker>04.</HeadingMarker>
         <HeadingText> My GitHub Footprints</HeadingText>
         <HeadingLine />

@@ -43,13 +43,14 @@ export default function About() {
       id='about-section'
       className='flex flex-col gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
-      <Heading ref={aboutHeadingRef}>
+      <Heading id='about-heading' ref={aboutHeadingRef}>
         <HeadingMarker>01.</HeadingMarker>
         <HeadingText>About Me</HeadingText>
         <HeadingLine />
       </Heading>
 
       <div
+        id='about-content'
         className='w-full flex flex-col justify-start md:flex-row md:justify-between gap-12'
         ref={aboutContentsRef}
       >
@@ -83,9 +84,8 @@ export default function About() {
           </p>
           <p className={bodytextClassName}>
             I love tech and experimenting with gadgets, capturing moments
-            through photography & videography, staying active with fitness &
-            sports, traveling to new places, and expressing myself through style
-            & fashion.
+            through the lens, staying active with fitness & sports, traveling to
+            new places, and expressing myself through style & fashion.
           </p>
           <p className={bodytextClassName}>
             For me, it&apos;s all about enjoying the process—learning, building,

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 interface HeadingProps {
+  id?: string;
   className?: string;
   children: React.ReactNode;
 }
@@ -21,10 +22,11 @@ interface HeadingLineProps {
 }
 
 const Heading = React.forwardRef<HTMLDivElement, HeadingProps>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, className, id, ...props }, ref) => {
     return (
       <div
         ref={ref}
+        id={id}
         className={cn(
           `flex justify-start items-center gap-x-2 sm:gap-x-4`,
           className
