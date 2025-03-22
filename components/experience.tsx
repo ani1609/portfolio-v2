@@ -155,8 +155,8 @@ export default function Experience() {
           </h2>
 
           <p className='font-open-sans text-para tracking-[1.6px] font-medium whitespace-nowrap text-xs'>
-            {selectedExperience.location}| {selectedExperience.date} |{' '}
-            {selectedExperience.employmentType}
+            {selectedExperience.date} | {selectedExperience.employmentType} |{' '}
+            {selectedExperience.location}
           </p>
 
           <ul className='flex flex-col gap-y-4 mt-3 experience-item'>
