@@ -2,7 +2,10 @@ import { Section } from './ui/section';
 
 export default function Maintenance() {
   return (
-    <Section className='h-dvh flex flex-col justify-center items-center gap-y-3 sm:gap-y-6 px-5'>
+    <Section
+      id='maintenance-section'
+      className='h-dvh flex flex-col justify-center items-center gap-y-3 sm:gap-y-6 px-5'
+    >
       <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-heading font-noto font-semibold'>
         Under Maintenance
       </h1>

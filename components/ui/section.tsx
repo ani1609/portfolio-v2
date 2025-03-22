@@ -2,7 +2,7 @@ import React, { ReactNode, forwardRef } from 'react';
 import { Section as SectionType } from '@/types/nav';
 
 interface SectionProps extends React.HTMLAttributes<HTMLElement> {
-  id?: SectionType;
+  id: SectionType;
   children: ReactNode;
 }
 

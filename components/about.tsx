@@ -55,17 +55,11 @@ export default function About() {
       >
         <div className='w-full md:w-[60%] flex flex-col gap-y-4'>
           <p className={bodytextClassName}>
-            Hey there, I&apos;m Ankit, a final-year B.Tech student in Computer
-            Science and Engineering (CSE). Web development is my ultimate
-            passion, and I thrive in creating captivating websites with seamless
-            user experiences.
+            I build high-performance web apps that are as smooth to use as they
+            are visually striking—efficient, scalable, and crafted for a
+            seamless experience.
           </p>
-          <p className={bodytextClassName}>
-            Throughout my academic journey, coding has opened up endless
-            possibilities, and I&apos;m always eager to learn more. While web
-            development is my primary focus, I&apos;m also intrigued by Data
-            Structures and Algorithms (DSA) for becoming a well-rounded coder.
-          </p>
+
           <p className={bodytextClassName}>
             Here are a few technologies I&apos;ve been working with recently:
           </p>
@@ -83,14 +77,18 @@ export default function About() {
             </ul>
           </div>
           <p className={bodytextClassName}>
-            As a final-year CSE student, I embrace challenges and seek growth.
-            Collaborating with like-minded individuals and making an impact in
-            computer science excites me.
+            I&apos;m always exploring DSA to sharpen my problem-solving skills
+            and push my coding abilities further.
           </p>
           <p className={bodytextClassName}>
-            Innovation, curiosity, and a relentless pursuit of excellence define
-            my journey as a web developer. I can&apos;t wait to see where this
-            exciting path leads me next.
+            I love tech and experimenting with gadgets, capturing moments
+            through photography & videography, staying active with fitness &
+            sports, traveling to new places, and expressing myself through style
+            & fashion.
+          </p>
+          <p className={bodytextClassName}>
+            For me, it&apos;s all about enjoying the process—learning, building,
+            and growing. The outcomes? They&apos;ll take care of themselves.
           </p>
         </div>
 
