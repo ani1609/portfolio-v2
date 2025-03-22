@@ -28,16 +28,14 @@ export const minorProjects: MinorProject[] = [
       'A React library which can be integrated to open-source websites for non-technicals to contribute.',
     techStack: ['React', 'Tailwind CSS', 'Express.js', 'MongoDB'],
     githubLink: 'https://github.com/itsme-Subid/EdiNix',
-    deployedLink: 'https://github.com/itsme-Subid/EdiNix',
     tagLine: 'HackNITR 5.0 Triumph',
   },
   {
     id: 4,
-    title: 'Social Media Clone',
+    title: 'Social Media Prototype',
     description:
       'A prototype social media clone offering real-time post creation, likes, comments, and sharing features, complete with instantaneous notifications for a dynamic user experience.',
     techStack: ['React', 'Socket.io', 'Express.js', 'MongoDB'],
-    githubLink: 'https://github.com/ani1609/HealTetherAssessment',
-    deployedLink: 'https://github.com/ani1609/HealTetherAssessment',
+    githubLink: 'https://github.com/ani1609/social-media-prototype',
   },
 ];

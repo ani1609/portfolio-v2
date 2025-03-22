@@ -57,7 +57,7 @@ export default function MinorProjectItem({
           <FolderIcon className='size-full' />
         </div>
 
-        <div className='flex gap-x-2 sm:gap-x-4'>
+        <div className='flex gap-x-2 sm:gap-x-3'>
           {minorProject.githubLink && (
             <Link
               href={minorProject.githubLink}
