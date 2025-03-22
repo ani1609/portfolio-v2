@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Logo from '@/public/images/A.webp';
 import Link from 'next/link';
 import { navItems } from '@/data/nav';
-import { resumeLink } from '@/data/resume';
+import { resumeLink } from '@/data/nav';
 import { Section } from '@/types/nav';
 
 export default function Navbar() {

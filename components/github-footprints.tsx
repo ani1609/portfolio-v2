@@ -29,6 +29,7 @@ import {
 } from './ui/tooltip';
 import { DotICon, InfoIcon } from '@/assets/icons';
 import { Section } from './ui/section';
+import { Heading, HeadingLine, HeadingMarker, HeadingText } from './ui/heading';
 
 export default function GithubFootprints() {
   const githubFootprintsHeadingRef = useRef(null);
@@ -123,12 +124,11 @@ export default function GithubFootprints() {
       id='github-footprints-section'
       className='relative z-[2] mt-[150px] flex flex-col justify-start gap-y-6 sm:gap-y-10 mx-auto px-5 sm:px-10 md:px-20 w-full lg:px-0 lg:w-[75%]'
     >
-      <h1
-        ref={githubFootprintsHeadingRef}
-        className='font-noto text-heading text-[1.375rem] sm:text-2xl gap-x-2 sm:gap-x-4 md:text-[1.6255rem] lg:text-[1.75rem] flex items-center font-semibold before:content-["04."] before:text-base sm:before:text-lg md:before:text-xl lg:before:text-[1.375rem] before:font-mono before:text-primary before:font-light after:content-[""] after:h-px after:w-1/4 after:bg-light-navy'
-      >
-        My GitHub Footprints
-      </h1>
+      <Heading ref={githubFootprintsHeadingRef}>
+        <HeadingMarker>04.</HeadingMarker>
+        <HeadingText> My GitHub Footprints</HeadingText>
+        <HeadingLine />
+      </Heading>
 
       <div className='flex flex-col gap-y-6'>
         {/* commit graph  */}
