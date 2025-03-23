@@ -62,7 +62,7 @@ export default function About() {
             experience.
           </p>
 
-          <div className='w-full flex flex-col gap-y-2'>
+          <div className='w-full flex flex-col gap-y-1'>
             <p className={bodytextClassName}>
               Here are a few technologies I&apos;ve been working with recently:
             </p>
