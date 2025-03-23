@@ -11,6 +11,7 @@ export default function About() {
   const aboutContentsRef = useRef(null);
   const bodytextClassName = `tracking-[0.6px] [word-spacing:0.8px] text-para text-sm sm:text-base `;
   const technologiesClassName = `font-open-sans text-para tracking-[1.6px] font-medium whitespace-nowrap text-xs before:content-["▹"] before:text-primary before:text-sm before:pr-2`;
+
   useEffect(() => {
     const options = {
       root: null,
