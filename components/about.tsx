@@ -62,34 +62,41 @@ export default function About() {
             experience.
           </p>
 
-          <p className={bodytextClassName}>
-            Here are a few technologies I&apos;ve been working with recently:
-          </p>
-          <div className='flex gap-x-[3.75rem] '>
-            <ul className='flex flex-col gap-y-1'>
-              <li className={technologiesClassName}>Nextjs</li>
-              <li className={technologiesClassName}>TypeScript</li>
-              <li className={technologiesClassName}>Tailwind CSS</li>
-            </ul>
+          <div className='w-full flex flex-col gap-y-2'>
+            <p className={bodytextClassName}>
+              Here are a few technologies I&apos;ve been working with recently:
+            </p>
 
-            <ul className='flex flex-col gap-y-1'>
-              <li className={technologiesClassName}>Go</li>
-              <li className={technologiesClassName}>Expressjs</li>
-              <li className={technologiesClassName}>PostgreSQL</li>
-            </ul>
+            <div className='flex gap-x-[3.75rem] '>
+              <ul className='flex flex-col gap-y-1'>
+                <li className={technologiesClassName}>Nextjs</li>
+                <li className={technologiesClassName}>TypeScript</li>
+                <li className={technologiesClassName}>Tailwind CSS</li>
+              </ul>
+
+              <ul className='flex flex-col gap-y-1'>
+                <li className={technologiesClassName}>Go</li>
+                <li className={technologiesClassName}>Expressjs</li>
+                <li className={technologiesClassName}>PostgreSQL</li>
+              </ul>
+            </div>
           </div>
+
           <p className={bodytextClassName}>
             I&apos;m always exploring DSA to sharpen my problem-solving skills
             and push my coding abilities further.
           </p>
+
           <p className={bodytextClassName}>
-            I love tech and experimenting with gadgets, capturing moments
-            through the lens, staying active with fitness & sports, traveling to
-            new places, and expressing myself through style & fashion.
+            I love tech gadgets, capturing moments through the lens, staying
+            active with fitness and sports, traveling to new places, and
+            expressing myself through style and fashion.
           </p>
+
           <p className={bodytextClassName}>
             For me, it&apos;s all about enjoying the process—learning, building,
-            and growing. The outcomes? They&apos;ll take care of themselves.
+            and growing. The outcomes? I am sure they&apos;ll take care of
+            themselves.
           </p>
         </div>
 
