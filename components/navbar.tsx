@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Logo from '@/public/images/A.webp';
 import Link from 'next/link';
 import { navItems } from '@/data/nav';
 import { resumeLink } from '@/data/nav';
@@ -70,10 +68,11 @@ export default function Navbar() {
         }`}
       >
         <Link
-          href='https://portfolio-ani1609.vercel.app'
-          className='size-[45px] bg-[black] animate-fade-in rounded-[2px] overflow-hidden'
+          href='https://portfolio-v2-gamma-rosy.vercel.app/'
+          className='animate-fade-in text-[1.625rem] flex items-center gap-x-0.5 font-medium tracking-wide'
         >
-          <Image src={Logo} alt='logo' className='size-full object-cover' />
+          <span className='text-primary'>A</span>
+          <span className='text-heading/90'>KC</span>
         </Link>
 
         <div className='hidden lg:flex gap-x-9 items-center'>
