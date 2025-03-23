@@ -1,5 +1,7 @@
 import { NavItem } from '@/types/nav';
 
+export const websiteLink: string = 'https://myselfankit.netlify.app/';
+
 export const navItems: NavItem[] = [
   { title: 'About', scrollTo: 'about-section' },
   { title: 'Experience', scrollTo: 'experience-section' },
@@ -9,4 +11,4 @@ export const navItems: NavItem[] = [
 ];
 
 export const resumeLink: string =
-  'https://drive.google.com/file/d/1wvWE1a7QqGibvdNCu7T4W-GgyH8dqU0z/view?usp=drive_link';
+  'https://drive.google.com/file/d/1sizwbc7du0xKHjXP0TcOs8UqevVPwVl_/view?usp=sharing';

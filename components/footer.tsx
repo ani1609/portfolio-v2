@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { socialItems } from '@/data/social';
+import { socialItems } from '@/data/socials';
 import { Section } from './ui/section';
 
 export default function Footer() {

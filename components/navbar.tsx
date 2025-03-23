@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { navItems } from '@/data/nav';
-import { resumeLink } from '@/data/nav';
+import { navItems, resumeLink, websiteLink } from '@/data/header';
 import { Section } from '@/types/nav';
 
 export default function Navbar() {
@@ -68,7 +67,7 @@ export default function Navbar() {
         }`}
       >
         <Link
-          href='https://portfolio-v2-gamma-rosy.vercel.app/'
+          href={websiteLink}
           className='animate-fade-in text-[1.625rem] flex items-center gap-x-0.5 font-medium tracking-wide'
         >
           <span className='text-primary'>A</span>
