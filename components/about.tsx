@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import { Section } from './ui/section';
-import MyPhoto from '@/public/images/me.jpeg';
+import MyPhoto from '@/public/images/me.webp';
 import Image from 'next/image';
 import { Heading, HeadingMarker, HeadingText, HeadingLine } from './ui/heading';
 
