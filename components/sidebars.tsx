@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { socialItems } from '@/data/social';
+import { socialItems } from '@/data/socials';
 
 export default function Sidebars() {
   const [shouldRender, setShouldRender] = useState(false);
