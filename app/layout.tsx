@@ -74,7 +74,7 @@ export const metadata: Metadata = {
         url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/images/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Ankit Kr. Chowdhury Portfolio',
+        alt: 'Ankit Kr. Chowdhury | Portfolio',
       },
     ],
   },
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
 
   twitter: {
-    title: 'Ankit Kr. Chowdhury | Web Developer',
+    title: 'Ankit Kr. Chowdhury | Portfolio',
     card: 'summary_large_image',
     creator: '@Ankit7049266066',
     images: [
