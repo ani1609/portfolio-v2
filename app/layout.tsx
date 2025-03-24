@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'A passionate web developer skilled in React, Next.js, TypeScript, Tailwind CSS, and more. Explore my portfolio to see my projects.',
+    'A passionate web developer creating seamless and engaging digital experiences. Explore my portfolio to see my projects.',
 
   keywords: [
     'Ankit Kr. Chowdhury',
