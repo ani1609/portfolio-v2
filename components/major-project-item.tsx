@@ -60,12 +60,14 @@ export default function MajorProjectsItem({
                 githubLink: majorProject.githubLink,
               })
             }
-            className='group left-0 w-full max-md:pointer-events-none cursor-pointer rounded-sm overflow-hidden absolute z-[inherit] bg-[#182b3c] md:bg-[#43ae95] h-full md:w-[60%] shadow-[0_0px_30px_-15px_rgba(2,12,27,0.7)]'
+            className={`group left-0 w-full max-md:pointer-events-none cursor-pointer rounded-sm overflow-hidden absolute z-[inherit] opacity-25 md:opacity-100 bg-primary hover:bg-transparent h-full md:w-[60%] shadow-[0_0px_30px_-15px_rgba(2,12,27,0.7)] transition-colors duration-500 ease-in-out
+              before:content-[""] before:absolute before:z-[inherit] before:inset-0 before:bg-navy before:mix-blend-screen hover:before:bg-transparent hover:before:grayscale-0 hover:before:contrast-100 hover:before:brightness-100
+            `}
           >
             <Image
               src={majorProject.image}
-              alt='project_image'
-              className='size-full mix-blend-multiply object-cover filter grayscale contrast-100 brightness-90 group-hover:grayscale-0 group-hover:brightness-80 group-hover:contrast-100 group-hover:mix-blend-normal'
+              alt={majorProject.title}
+              className='size-full object-cover mix-blend-multiply filter grayscale contrast-100 brightness-50 md:brightness-90 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 transition-colors duration-500 ease-in-out'
             />
           </div>
 
@@ -83,7 +85,7 @@ export default function MajorProjectsItem({
               </Link>
 
               {majorProject.tagLine && (
-                <h4 className='text-xs text-primary font-open-sans font-light'>
+                <h4 className='text-xs text-primary font-open-sans'>
                   {majorProject.tagLine}
                 </h4>
               )}
@@ -144,12 +146,14 @@ export default function MajorProjectsItem({
                 githubLink: majorProject.githubLink,
               })
             }
-            className='group right-0 w-full max-md:pointer-events-none cursor-pointer rounded-sm overflow-hidden absolute z-[inherit] bg-[#182b3c] md:bg-[#43ae95] h-full md:w-[60%] shadow-[0_0px_30px_-15px_rgba(2,12,27,0.7)]'
+            className={`group right-0 w-full max-md:pointer-events-none cursor-pointer rounded-sm overflow-hidden absolute z-[inherit] opacity-25 md:opacity-100 bg-primary hover:bg-transparent h-full md:w-[60%] shadow-[0_0px_30px_-15px_rgba(2,12,27,0.7)] transition-colors duration-500 ease-in-out
+              before:content-[""] before:absolute before:z-[inherit] before:inset-0 before:bg-navy before:mix-blend-screen hover:before:bg-transparent hover:before:grayscale-0 hover:before:contrast-100 hover:before:brightness-100
+            `}
           >
             <Image
               src={majorProject.image}
-              alt='project_image'
-              className='size-full mix-blend-multiply object-cover filter grayscale contrast-100 brightness-90 group-hover:grayscale-0 group-hover:brightness-80 group-hover:contrast-100 group-hover:mix-blend-normal'
+              alt={majorProject.title}
+              className='size-full object-cover mix-blend-multiply filter grayscale contrast-100 brightness-50 md:brightness-90 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 transition-colors duration-500 ease-in-out'
             />
           </div>
 
@@ -167,7 +171,7 @@ export default function MajorProjectsItem({
               </Link>
 
               {majorProject.tagLine && (
-                <h4 className='text-xs text-primary font-open-sans font-light'>
+                <h4 className='text-xs text-primary font-open-sans'>
                   {majorProject.tagLine}
                 </h4>
               )}

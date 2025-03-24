@@ -94,7 +94,7 @@ export default function MinorProjectItem({
         </h2>
 
         {minorProject.tagLine && (
-          <h4 className='text-xs text-primary font-open-sans font-light'>
+          <h4 className='text-xs text-primary font-open-sans'>
             {minorProject.tagLine}
           </h4>
         )}
