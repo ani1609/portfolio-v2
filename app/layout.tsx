@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'A passionate web developer creating seamless and engaging digital experiences. Explore my portfolio to see my projects.',
+    'A passionate web developer creating seamless and engaging digital experiences.',
 
   keywords: [
     'Ankit Kr. Chowdhury',
