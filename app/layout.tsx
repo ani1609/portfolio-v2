@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ankit Kr. Chowdhury | Web Developer',
     url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
-    siteName: 'Ankit Kr. Chowdhury Portfolio',
+    siteName: 'Ankit Kr. Chowdhury | Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
