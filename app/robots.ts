@@ -8,12 +8,14 @@ if (!siteDomain) {
   }
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: `https://${siteDomain}`,
-      lastModified: new Date().toISOString(),
-      priority: 1.0,
-    },
-  ];
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+    sitemap: `https://${siteDomain}/sitemap.xml`,
+  };
 }
