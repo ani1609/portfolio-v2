@@ -17,10 +17,91 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: 'Ankit Kr. Chowdhury',
+  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`),
+
+  title: {
+    template: '%s | Ankit Kr. Chowdhury',
+    default: 'Ankit Kr. Chowdhury | Portfolio',
+  },
+
   description:
-    'Personal portfolio and projects by Ankit Kr. Chowdhury, showcasing expertise in software development, UI/UX, and open-source contributions.',
-  icons: '/favicon.ico',
+    'A passionate web developer skilled in React, Next.js, TypeScript, Tailwind CSS, and more. Explore my portfolio to see my projects.',
+
+  keywords: [
+    'Ankit Kr. Chowdhury',
+    'web developer',
+    'frontend engineer',
+    'back-end ngineer',
+    'full-stack developer',
+    'React.js',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'portfolio website',
+    'software engineer',
+    'JavaScript',
+    'portfolio',
+    'website',
+    'developer',
+    'web development',
+    'software development',
+    'software developer',
+    'web developer portfolio',
+    'web development portfolio',
+    'software development portfolio',
+    'software developer portfolio',
+    'Ankit Chowdhury',
+  ],
+
+  authors: [
+    {
+      name: 'Ankit Kr. Chowdhury',
+      url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
+    },
+  ],
+
+  publisher: 'Ankit Kr. Chowdhury',
+
+  openGraph: {
+    title: 'Ankit Kr. Chowdhury | Web Developer',
+    url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
+    siteName: 'Ankit Kr. Chowdhury Portfolio',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Ankit Kr. Chowdhury Portfolio',
+      },
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
+  twitter: {
+    title: 'Ankit Kr. Chowdhury | Web Developer',
+    card: 'summary_large_image',
+    creator: '@Ankit7049266066',
+    images: [`https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/og-image.png`],
+  },
+
+  icons: {
+    shortcut: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/favicon.ico`,
+  },
+
+  alternates: {
+    canonical: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
+  },
 };
 
 export default function RootLayout({
