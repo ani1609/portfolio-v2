@@ -83,7 +83,7 @@ export default function MajorProjectsItem({
               </Link>
 
               {majorProject.tagLine && (
-                <h4 className='text-xs text-primary font-open-sans font-light'>
+                <h4 className='text-xs text-primary font-open-sans'>
                   {majorProject.tagLine}
                 </h4>
               )}
@@ -167,7 +167,7 @@ export default function MajorProjectsItem({
               </Link>
 
               {majorProject.tagLine && (
-                <h4 className='text-xs text-primary font-open-sans font-light'>
+                <h4 className='text-xs text-primary font-open-sans'>
                   {majorProject.tagLine}
                 </h4>
               )}
