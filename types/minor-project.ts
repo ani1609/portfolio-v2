@@ -1,5 +1,4 @@
 export interface MinorProject {
-  id: number;
   title: string;
   description: string;
   techStack: string[];

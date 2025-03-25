@@ -46,7 +46,13 @@ export default function MajorProjects() {
 
       <div className='flex flex-col gap-y-6 sm:gap-y-10'>
         {majorProjects.map((majorProject, index) => {
-          return <MajorProjectsItem key={index} majorProject={majorProject} />;
+          return (
+            <MajorProjectsItem
+              key={index}
+              majorProject={majorProject}
+              index={index}
+            />
+          );
         })}
       </div>
     </Section>

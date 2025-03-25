@@ -5,18 +5,6 @@ import { MajorProject } from '@/types/major-project';
 
 export const majorProjects: MajorProject[] = [
   {
-    id: 1,
-    title: 'UI Astra',
-    tagLine: 'UI Library',
-    description:
-      'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, Astra Icons, for streamlined and efficient web development.',
-    image: UiAstraImage,
-    techStack: ['GSAP', 'Next.js', 'RadixUI', 'Tailwind CSS', 'Typescript'],
-    githubLink: 'https://github.com/uiastra',
-    deployedLink: 'https://uiastra.com',
-  },
-  {
-    id: 2,
     title: 'Neuroute AI',
     tagLine: 'AI based Clinical Research Platform',
     description:
@@ -25,9 +13,13 @@ export const majorProjects: MajorProject[] = [
     techStack: [
       'Firebase',
       'Framer Motion',
+      'Markdown',
+      'MDX',
       'Next.js',
+      'OpenAI API',
       'Pinecone',
       'PostgreSQL',
+      'Python',
       'Recharts',
       'Tailwind CSS',
       'TypeScript',
@@ -35,7 +27,25 @@ export const majorProjects: MajorProject[] = [
     deployedLink: 'https://neuroute.ai',
   },
   {
-    id: 3,
+    title: 'UI Astra',
+    tagLine: 'UI Library',
+    description:
+      'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, Astra Icons, for streamlined and efficient web development.',
+    image: UiAstraImage,
+    techStack: [
+      'GSAP',
+      'Markdown',
+      'MDX',
+      'Next.js',
+      'RadixUI',
+      'Tailwind CSS',
+      'Typescript',
+    ],
+    githubLink: 'https://github.com/uiastra',
+    deployedLink: 'https://uiastra.com',
+  },
+
+  {
     title: 'Conversify',
     tagLine: 'End-to-End Encrypted Chat App',
     description:

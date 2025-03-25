@@ -10,11 +10,13 @@ import Link from 'next/link';
 import { MinorProject } from '@/types/minor-project';
 import { openProjectLink } from '@/lib/utils';
 
+interface MinorProjectItemProps {
+  minorProject: MinorProject;
+}
+
 export default function MinorProjectItem({
   minorProject,
-}: {
-  minorProject: MinorProject;
-}) {
+}: MinorProjectItemProps) {
   const minorProjectRef = useRef(null);
 
   useEffect(() => {
