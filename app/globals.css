@@ -5,6 +5,7 @@
 @plugin 'tailwind-scrollbar';
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant hover (&:hover);
 
 :root {
   --primary: #64ffda;
