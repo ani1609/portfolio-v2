@@ -29,6 +29,12 @@ export const metadata: Metadata = {
 
   keywords: [
     'Ankit Kr. Chowdhury',
+    'Ankit Kumar Chowdhury',
+    'Ankit Chowdhury',
+    'Ankit Kumar',
+    'Ankit',
+    'Chowdhury',
+    'Kumar',
     'web developer',
     'frontend engineer',
     'back-end ngineer',
