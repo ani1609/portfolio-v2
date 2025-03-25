@@ -7,11 +7,15 @@ import { MajorProject } from '@/types/major-project';
 import Link from 'next/link';
 import { openProjectLink } from '@/lib/utils';
 
+interface MajorProjectsItemProps {
+  majorProject: MajorProject;
+  index: number;
+}
+
 export default function MajorProjectsItem({
   majorProject,
-}: {
-  majorProject: MajorProject;
-}) {
+  index,
+}: MajorProjectsItemProps) {
   const majorProjectOddRef = useRef(null);
   const majorProjectEvenRef = useRef(null);
 
@@ -47,7 +51,7 @@ export default function MajorProjectsItem({
 
   return (
     <>
-      {majorProject.id % 2 !== 0 ? (
+      {index % 2 === 0 ? (
         <div
           id='major-project-odd'
           className='w-full h-[380px] sm:h-[350px] flex justify-end items-center relative z-[2]'
