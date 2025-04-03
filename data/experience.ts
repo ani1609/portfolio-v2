@@ -44,7 +44,7 @@ export const experiences: Experience[] = [
       'Implemented authentication and dashboard APIs for <a href="https://galadriel.com/" target="_blank" rel="noopener noreferrer">Galadriel</a>, strengthening security and data accessibility. Redesigned UI/UX, increasing user engagement by <b>25%</b>.',
       'Developed the landing page for <a href="https://smallest.ai/" target="_blank" rel="noopener noreferrer">Smallest AI</a>, improving responsiveness and user experience, leading to better engagement.',
       'Enhanced UI/UX and optimized logic for <a href="https://warped.games/" target="_blank" rel="noopener noreferrer">Warped Games</a>, increasing user interaction by <b>30%</b> through refined game mechanics and navigation.',
-      'Collaborated in daily stand-ups, discussing progress, blockers, and strategies to maintain smooth development workflows.',
+      'Collaborated in daily stand-ups, discussing progress, blockers, and strategies to maintain smooth development workflows while working on client projects.',
     ],
   },
 ];
