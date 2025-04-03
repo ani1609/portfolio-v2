@@ -11,4 +11,4 @@ export const navItems: NavItem[] = [
 ];
 
 export const resumeLink: string =
-  'https://drive.google.com/file/d/1UrTVdplKyRNEqSdRLI0uc4WA-71yocp3/view?usp=sharing';
+  'https://drive.google.com/file/d/18v3ExzZ-sWt7O6vnyOffeD8iSIAYsuml/view?usp=sharing';
