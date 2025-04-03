@@ -21,7 +21,7 @@ export default function Footer() {
       <p className='text-center font-open-sans text-xs text-para font-medium tracking-[1.5px] [word-spacing:2.5px]'>
         Design Inspired by
         <Link
-          href='https://github.com/bchiang7'
+          href='https://github.com/bchiang7/v4'
           target='_blank'
           rel='noopener noreferrer'
           className='text-primary overflow-x-hidden relative after:content-[""] after:absolute after:left-1.5 after:bottom-0 after:right-0 after:h-[0.5px] after:w-[0%] after:bg-primary after:transition-all after:duration-200 after:ease-in-out hover:after:w-[90%]'
