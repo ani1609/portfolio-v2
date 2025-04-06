@@ -30,7 +30,6 @@ export const socialItems: SocialItem[] = [
   },
   {
     name: 'Twitter',
-    // link: 'https://twitter.com/AnkitCh03046966',
     link: '',
     icon: TwitterIcon,
   },
