@@ -1,3 +1,4 @@
+import { emailAddress } from '@/data/header';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -25,7 +26,7 @@ export default function Hero() {
       </p>
 
       <Link
-        href='mailto:ankitparallax@gmail.com'
+        href={`mailto:${emailAddress}`}
         className='animate-slide-in-hero-item hero-delay-700 md:hero-delay-1300 mt-7 sm:mt-10 md:12 text-xs text-primary font-open-sans py-3 px-6 font-medium tracking-[1px] border border-primary rounded-sm hover:bg-hover transition-colors duration-500 ease-in-out'
       >
         Hire me!
