@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Section } from './ui/section';
 import { Heading, HeadingMarker, HeadingText } from './ui/heading';
+import { emailAddress } from '@/data/header';
 
 export default function Contact() {
   const contactRef = useRef(null);
@@ -48,7 +49,7 @@ export default function Contact() {
       </p>
 
       <Link
-        href='mailto:ankitparallax@gmail.com'
+        href={`mailto:${emailAddress}`}
         className='font-sf-mono text-primary text-sm font-light bg-transparent rounded-sm border border-primary py-3 px-6 mt-9 mx-auto hover:bg-hover tracking-[1px] transition-colors'
       >
         Let&apos;s Connect

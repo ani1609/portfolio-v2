@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { socialItems } from '@/data/socials';
+import { emailAddress } from '@/data/header';
 
 export default function Sidebars() {
   const [shouldRender, setShouldRender] = useState(false);
@@ -46,10 +47,10 @@ export default function Sidebars() {
           <ul className='flex flex-col w-5 gap-y-5 items-center'>
             <li className='text-xs tracking-[0.8425px] text-para [writing-mode:vertical-rl] origin-center'>
               <Link
-                href='mailto:ankitparallax@gmail.com'
+                href={`mailto:${emailAddress}`}
                 className='inline-block font-sf-mono text-para hover:text-primary hover:-translate-y-[3px] transition-transform duration-200'
               >
-                ankitparallax@gmail.com
+                {emailAddress}
               </Link>
             </li>
           </ul>
