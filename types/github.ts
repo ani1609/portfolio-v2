@@ -1,5 +1,3 @@
-// commit response from GitHub API
-
 export interface ContributionDay {
   date: string;
   contributionCount: number;
