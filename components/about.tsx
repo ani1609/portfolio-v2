@@ -88,11 +88,11 @@ export default function About() {
             and push my coding abilities further.
           </p>
 
-          <p className={bodytextClassName}>
+          {/* <p className={bodytextClassName}>
             I love tech gadgets, capturing moments through the lens, staying
             active with fitness and sports, traveling to new places, and
             expressing myself through style and fashion.
-          </p>
+          </p> */}
 
           <p className={bodytextClassName}>
             For me, it&apos;s all about enjoying the process—learning, building,
