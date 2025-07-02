@@ -1,4 +1,10 @@
-export type EmploymentType = 'Full-time' | 'Part-time' | 'Internship';
+export type EmploymentType =
+  | 'Full-time'
+  | 'Part-time'
+  | 'Internship'
+  | 'Contract'
+  | 'Freelance'
+  | 'Entrepreneurial';
 
 export interface Experience {
   id: number;

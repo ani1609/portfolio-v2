@@ -72,13 +72,15 @@ export default function About() {
               <ul className='flex flex-col gap-y-1'>
                 <li className={technologiesClassName}>Nextjs</li>
                 <li className={technologiesClassName}>TypeScript</li>
-                <li className={technologiesClassName}>Tailwind CSS</li>
+                <li className={technologiesClassName}>Go</li>
+                <li className={technologiesClassName}>Expressjs</li>
               </ul>
 
               <ul className='flex flex-col gap-y-1'>
-                <li className={technologiesClassName}>Go</li>
-                <li className={technologiesClassName}>Expressjs</li>
+                <li className={technologiesClassName}>Python</li>
+                <li className={technologiesClassName}>LLMs</li>
                 <li className={technologiesClassName}>PostgreSQL</li>
+                <li className={technologiesClassName}>Vector DBs</li>
               </ul>
             </div>
           </div>

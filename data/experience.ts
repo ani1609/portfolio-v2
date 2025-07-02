@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     company: 'Neuroute AI',
     jobTitle: 'Software Development Engineer',
     location: 'Remote',
-    date: 'Dec 2024 - Present',
+    date: 'Dec 2024 - May 2025',
     employmentType: 'Internship',
     companyLink: 'https://www.neuroute.ai/',
     description: [
@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
     company: 'UI Astra',
     jobTitle: 'Software Development Engineer',
     location: 'Remote',
-    date: 'Apr 2024 - Present',
+    date: 'Apr 2024 - Jun 2025',
     employmentType: 'Part-time',
     companyLink: 'https://www.uiastra.com/',
     description: [
@@ -31,20 +31,19 @@ export const experiences: Experience[] = [
       'Contributed to the development of <a href="https://uiastra.com/icons" target="_blank" rel="noopener noreferrer">Astra Icons</a>, enhancing UI consistency across projects and reducing design inconsistencies by <b>20%</b>.',
     ],
   },
-
   {
     id: 3,
-    company: 'Einetic',
-    jobTitle: 'Former Software Development Engineer',
-    location: 'Kolkata, India',
-    date: 'Apr 2024 - Sep 2024',
-    employmentType: 'Internship',
-    companyLink: 'https://www.einetic.com/',
+    company: 'Initify Technologies',
+    jobTitle: 'Co-Founder & Full Stack Developer',
+    location: 'Remote',
+    date: 'Jan 2024 – Present',
+    employmentType: 'Entrepreneurial',
+    companyLink: 'https://www.initify.com/',
     description: [
-      'Implemented authentication and dashboard APIs for <a href="https://galadriel.com/" target="_blank" rel="noopener noreferrer">Galadriel</a>, strengthening security and data accessibility. Redesigned UI/UX, increasing user engagement by <b>25%</b>.',
-      'Developed the landing page for <a href="https://smallest.ai/" target="_blank" rel="noopener noreferrer">Smallest AI</a>, improving responsiveness and user experience, leading to better engagement.',
-      'Enhanced UI/UX and optimized logic for <a href="https://warped.games/" target="_blank" rel="noopener noreferrer">Warped Games</a>, increasing user interaction by <b>30%</b> through refined game mechanics and navigation.',
-      'Collaborated in daily stand-ups, discussing progress, blockers, and strategies to maintain smooth development workflows while working on client projects.',
+      'Co-founded a digital solutions agency delivering products across diverse domains, with 47+ projects delivered to date.',
+      'Led end-to-end execution of client engagements, contributing to over $2.2M+ in client revenue impact through scalable and production-ready solutions.',
+      'Managed strategy, delivery, and stakeholder communication, maintaining a 95%+ client retention rate across a growing portfolio.',
+      'Built solutions across key domains, including SaaS platforms, developer tools, AI integrations, DevOps automation, and open source contributions.',
     ],
   },
 ];
