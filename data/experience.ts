@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
     company: 'UI Astra',
     jobTitle: 'Software Development Engineer',
     location: 'Remote',
-    date: 'Apr 2024 - Present',
+    date: 'Apr 2024 - Jun 2025',
     employmentType: 'Part-time',
     companyLink: 'https://www.uiastra.com/',
     description: [
