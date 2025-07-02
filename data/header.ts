@@ -11,6 +11,6 @@ export const navItems: NavItem[] = [
 ];
 
 export const resumeLink: string =
-  'https://drive.google.com/file/d/18v3ExzZ-sWt7O6vnyOffeD8iSIAYsuml/view?usp=sharing';
+  'https://drive.google.com/file/d/1TwR-55aGlTHmAWWEtV25K5dMNYSHEhJG/view?usp=sharing';
 
 export const emailAddress: string = 'ankitparallax@gmail.com';
