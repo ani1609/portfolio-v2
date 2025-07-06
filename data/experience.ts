@@ -31,19 +31,4 @@ export const experiences: Experience[] = [
       'Contributed to the development of <a href="https://uiastra.com/icons" target="_blank" rel="noopener noreferrer">Astra Icons</a>, enhancing UI consistency across projects and reducing design inconsistencies by <b>20%</b>.',
     ],
   },
-  {
-    id: 3,
-    company: 'Initify Technologies',
-    jobTitle: 'Co-Founder & Full Stack Developer',
-    location: 'Remote',
-    date: 'Jan 2024 – Present',
-    employmentType: 'Entrepreneurial',
-    companyLink: 'https://www.initify.com/',
-    description: [
-      'Co-founded a digital solutions agency delivering products across diverse domains, with 47+ projects delivered to date.',
-      'Led end-to-end execution of client engagements, contributing to over $2.2M+ in client revenue impact through scalable and production-ready solutions.',
-      'Managed strategy, delivery, and stakeholder communication, maintaining a 95%+ client retention rate across a growing portfolio.',
-      'Built solutions across key domains, including SaaS platforms, developer tools, AI integrations, DevOps automation, and open source contributions.',
-    ],
-  },
 ];
