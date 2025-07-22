@@ -12,7 +12,7 @@ import TopButton from '@/components/top-button';
 import GithubFootprints from '@/components/github-footprints';
 
 export default function App() {
-  const isMaintenanceMode = true;
+  const isMaintenanceMode = false;
 
   if (isMaintenanceMode) {
     return (
