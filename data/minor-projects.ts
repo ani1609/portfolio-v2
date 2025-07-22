@@ -11,15 +11,6 @@ export const minorProjects: MinorProject[] = [
     tagLine: 'Won Synchronicity - S1, JU',
   },
   {
-    title: 'Spendwise',
-    description:
-      'A user-friendly expense tracker app empowering individuals to effortlessly manage and analyze their financial transactions, fostering effective budgeting and financial awareness.',
-    techStack: ['ApexCharts', 'React', 'Firebase', 'Tailwind CSS'],
-    githubLink: 'https://github.com/ani1609/Spendwise',
-    deployedLink: 'https://spendwise-two.vercel.app/',
-    tagLine: 'KWoC 23, IIT KGP Triumph',
-  },
-  {
     title: 'Edinix',
     description:
       'A React library which can be integrated to open-source websites for non-technicals to contribute.',

@@ -1,48 +1,24 @@
-import UiAstraImage from '@/public/images/ui-astra.webp';
 import ConversifyImage from '@/public/images/conversify.webp';
-import NeurouteAiImage from '@/public/images/neuroute-ai.webp';
+import Spenwiseimage from '@/public/images/spendwise.webp';
 import { MajorProject } from '@/types/major-project';
 
 export const majorProjects: MajorProject[] = [
   {
-    title: 'Neuroute AI',
-    tagLine: 'AI based Clinical Research Platform',
+    title: 'Spendwise',
+    tagLine: 'KWoC 23, IIT KGP Triumph',
     description:
-      'A clinical research platform that leverages AI and data visualization to help researchers analyze past trials, identify study sites, and streamline the clinical trial process.',
-    image: NeurouteAiImage,
+      'Led and mentored Spendwise, a full-stack expense tracker built during KWoC 2023 by IIT Kharagpur. Managed 30+ contributors, maintaining code quality and community engagement. The project garnered 50+ forks and 25+ stars, reflecting strong open-source traction.',
+    image: Spenwiseimage,
     techStack: [
+      'Express',
       'Firebase',
-      'Framer Motion',
-      'Markdown',
-      'MDX',
-      'Next.js',
-      'OpenAI API',
-      'Pinecone',
-      'PostgreSQL',
-      'Python',
-      'Recharts',
+      'MongoDB',
+      'Node.js',
+      'React',
       'Tailwind CSS',
-      'TypeScript',
     ],
-    deployedLink: 'https://neuroute.ai',
-  },
-  {
-    title: 'UI Astra',
-    tagLine: 'UI Library',
-    description:
-      'A versatile UI library featuring reusable, customizable components built on top of Radix Primitives, and an integrated icon library, Astra Icons, for streamlined and efficient web development.',
-    image: UiAstraImage,
-    techStack: [
-      'GSAP',
-      'Markdown',
-      'MDX',
-      'Next.js',
-      'RadixUI',
-      'Tailwind CSS',
-      'Typescript',
-    ],
-    githubLink: 'https://github.com/uiastra',
-    deployedLink: 'https://uiastra.com',
+    githubLink: 'https://github.com/ani1609/Spendwise',
+    deployedLink: 'https://spendwise-two.vercel.app/',
   },
 
   {
