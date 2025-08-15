@@ -132,7 +132,7 @@ export default function GithubFootprints() {
     >
       <Heading id='github-footprints-heading' ref={githubFootprintsHeadingRef}>
         <HeadingMarker>04.</HeadingMarker>
-        <HeadingText> My GitHub Footprints</HeadingText>
+        <HeadingText>GitHub Footprints</HeadingText>
         <HeadingLine />
       </Heading>
 
