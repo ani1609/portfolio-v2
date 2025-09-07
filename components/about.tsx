@@ -57,9 +57,9 @@ export default function About() {
       >
         <div className='w-full md:w-[60%] flex flex-col gap-y-4'>
           <p className={bodytextClassName}>
-            I&apos;m a final-year Computer Science student who loves building
+            I&apos;m a recent Computer Science graduate who loves building
             high-performance web apps that are as smooth to use as they are
-            visually striking—efficient, scalable, and crafted for a seamless
+            visually striking-efficient, scalable, and crafted for a seamless
             experience.
           </p>
 
@@ -103,7 +103,7 @@ export default function About() {
           </p> */}
 
           <p className={bodytextClassName}>
-            For me, it&apos;s all about enjoying the process—learning, building,
+            For me, it&apos;s all about enjoying the process-learning, building,
             and growing. The outcomes? I am sure they&apos;ll take care of
             themselves.
           </p>
