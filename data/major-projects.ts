@@ -18,7 +18,6 @@ export const majorProjects: MajorProject[] = [
       'Tailwind CSS',
     ],
     githubLink: 'https://github.com/ani1609/Spendwise',
-    deployedLink: 'https://spendwise-two.vercel.app/',
   },
 
   {
