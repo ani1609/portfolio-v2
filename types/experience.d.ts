@@ -3,8 +3,7 @@ export type EmploymentType =
   | 'Part-time'
   | 'Internship'
   | 'Contract'
-  | 'Freelance'
-  | 'Entrepreneurial';
+  | 'Freelance';
 
 export interface Experience {
   id: number;
