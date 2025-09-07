@@ -68,27 +68,33 @@ export default function About() {
               Here are a few technologies I&apos;ve been working with recently:
             </p>
 
-            <div className='flex gap-x-[3.75rem] '>
+            <div className='flex gap-x-[3.75rem]'>
               <ul className='flex flex-col gap-y-1'>
-                <li className={technologiesClassName}>Nextjs</li>
+                <li className={technologiesClassName}>Next.js</li>
                 <li className={technologiesClassName}>TypeScript</li>
                 <li className={technologiesClassName}>Go</li>
-                <li className={technologiesClassName}>Expressjs</li>
+                <li className={technologiesClassName}>Express.js</li>
+                <li className={technologiesClassName}>PostgreSQL</li>
+                <li className={technologiesClassName}>MongoDB</li>
               </ul>
 
               <ul className='flex flex-col gap-y-1'>
-                <li className={technologiesClassName}>Python</li>
+                <li className={technologiesClassName}>Docker</li>
+                <li className={technologiesClassName}>Kubernetes</li>
+                <li className={technologiesClassName}>
+                  CI/CD (GitHub Actions)
+                </li>
                 <li className={technologiesClassName}>LLMs</li>
-                <li className={technologiesClassName}>PostgreSQL</li>
+                <li className={technologiesClassName}>LangChain</li>
                 <li className={technologiesClassName}>Vector DBs</li>
               </ul>
             </div>
           </div>
 
-          <p className={bodytextClassName}>
+          {/* <p className={bodytextClassName}>
             I&apos;m always exploring DSA to sharpen my problem-solving skills
             and push my coding abilities further.
-          </p>
+          </p> */}
 
           {/* <p className={bodytextClassName}>
             I love tech gadgets, capturing moments through the lens, staying
