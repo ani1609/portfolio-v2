@@ -10,11 +10,11 @@ export const experiences: Experience[] = [
     employmentType: 'Full-time',
     companyLink: 'https://lfx.linuxfoundation.org/tools/mentorship/',
     description: [
-      'Contributing to <a href="https://kubeslice.io/" target="_blank" rel="noopener noreferrer">KubeSlice</a>, a framework that enables Kubernetes pods and services to communicate seamlessly across clusters, clouds, edges, and data centers by creating logical application boundaries called Slices, under the CNCF LFX Mentorship Program.',
-      'Implementing <b>Dynamic IPAM</b> in the <a href="https://github.com/kubeslice/kubeslice-controller/" target="_blank" rel="noopener noreferrer">KubeSlice Controller</a> to dynamically allocate and reclaim IP subnets for slice overlay networks, improving IP utilization and scalability.',
-      'Ensuring conflict resolution and state synchronization across clusters using CRDs and distributed storage integration.',
-      'Collaborating with maintainers and cloud-native networking experts to enhance multi-cluster networking capabilities.',
-      'Documenting system design, configuration options, and edge-case behaviors for maintainers and users.',
+      'Contributed to <a href="https://kubeslice.io/" target="_blank" rel="noopener noreferrer">KubeSlice</a>, a framework that enables Kubernetes pods and services to communicate seamlessly across clusters, clouds, edges, and data centers by creating logical application boundaries called Slices, under the CNCF LFX Mentorship Program.',
+      'Implemented <b>Dynamic IPAM</b> in the <a href="https://github.com/kubeslice/kubeslice-controller/" target="_blank" rel="noopener noreferrer">KubeSlice Controller</a> to dynamically allocate and reclaim IP subnets for slice overlay networks, improving IP utilization and scalability.',
+      'Ensured conflict resolution and state synchronization across clusters using CRDs and distributed storage integration.',
+      'Collaborated with maintainers and cloud-native networking experts to enhance multi-cluster networking capabilities.',
+      'Documented system design, configuration options, and edge-case behaviors for maintainers and users.',
     ],
   },
   {
