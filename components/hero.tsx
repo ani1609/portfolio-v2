@@ -20,9 +20,10 @@ export default function Hero() {
       </h2>
 
       <p className='animate-slide-in-hero-item hero-delay-600 md:hero-delay-1200 mt-3 sm:mt-4 md:mt-5 leading-5 sm:leading-6 text-sm sm:text-base tracking-[0.6px] text-justify w-full sm:w-[550px] text-para'>
-        Enthusiastic student web developer with a keen interest in learning and
-        applying front-end and back-end technologies. Dedicated to honing skills
-        creating web solutions that captivate users solve real-world challenges.
+        Software engineer who loves building meaningful digital experiences
+        across web platforms, cloud-native systems, and DevOps workflows —
+        always learning and creating scalable solutions that solve real-world
+        problems.
       </p>
 
       <Link
