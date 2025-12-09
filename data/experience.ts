@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     jobTitle: 'Mentee',
     location: 'Remote',
     date: 'Sep 2025 - Nov 2025',
-    employmentType: 'Internship',
+    employmentType: 'Mentorship',
     companyLink: 'https://lfx.linuxfoundation.org/tools/mentorship/',
     description: [
       'Contributed to <a href="https://kubeslice.io/documentation/open-source/" target="_blank" rel="noopener noreferrer">KubeSlice</a> (CNCF Sandbox) under the LFX Mentorship Program, working on multi-cluster networking for Kubernetes by creating logical application boundaries called Slices.',
