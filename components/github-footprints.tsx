@@ -36,7 +36,7 @@ export default function GithubFootprints() {
   const commitChartRef = useRef(null);
   const prChartRef = useRef(null);
   const languageChartRef = useRef(null);
-  const years: Year[] = [2021, 2022, 2023, 2024, 2025];
+  const years: Year[] = [2021, 2022, 2023, 2024, 2025, 2026];
   const commitMonths: (Month | 'all')[] = [
     'all',
     1,
