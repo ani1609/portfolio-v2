@@ -10,12 +10,19 @@ export const minorProjects: MinorProject[] = [
     tagLine: 'Won Synchronicity - S1, JU',
   },
   {
-    title: 'Edinix',
+    title: 'Spendwise',
     description:
-      'A React library which can be integrated to open-source websites for non-technicals to contribute.',
-    techStack: ['React', 'Tailwind CSS', 'Express.js', 'MongoDB'],
-    githubLink: 'https://github.com/itsme-Subid/EdiNix',
-    tagLine: 'HackNITR 5.0 Triumph',
+      'Led and mentored the Spendwise open-source expense tracker during KWoC 2023 (IIT Kharagpur), coordinating 30+ contributors while maintaining code quality and community engagement. The project gained 50+ forks and 25+ stars.',
+    techStack: [
+      'Express',
+      'Firebase',
+      'MongoDB',
+      'Node.js',
+      'React',
+      'Tailwind CSS',
+    ],
+    githubLink: 'https://github.com/ani1609/Spendwise',
+    tagLine: 'KWoC 23, IIT KGP Triumph',
   },
   {
     title: 'Social Media Prototype',

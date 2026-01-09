@@ -123,7 +123,7 @@ export default function Experience() {
                   : 'text-para bg-transparent'
               }`}
             >
-              {experience.company}
+              {experience.companyNickName}
             </button>
           ))}
           {screenLessThan640 ? (
@@ -150,7 +150,7 @@ export default function Experience() {
                 rel='noopener noreferrer'
                 className='text-primary relative after:content-[""] after:absolute after:left-0 after:bottom-0 after:right-0 after:h-[0.5px] after:w-[0%] after:bg-primary after:transition-all after:duration-200 after:ease-in-out hover:after:w-full'
               >
-                {selectedExperience.company}
+                {selectedExperience.companyName}
               </Link>
             </span>
           </h2>

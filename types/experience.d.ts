@@ -7,7 +7,8 @@ export type EmploymentType =
   | 'Mentorship';
 export interface Experience {
   id: number;
-  company: string;
+  companyName: string;
+  companyNickName: string;
   jobTitle: string;
   location: string;
   date: string;
