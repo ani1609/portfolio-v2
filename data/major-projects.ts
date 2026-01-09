@@ -25,12 +25,13 @@ export const majorProjects: MajorProject[] = [
   },
   {
     title: 'Blue Dart Alerts',
-    tagLine: 'Real-time Multiplayer',
+    tagLine: 'Automated Delivery Alerts on Discord',
     description:
       'An automated shipment-tracking service that monitors delivery status updates and notifies users in real time via a Discord bot, ensuring timely alerts whenever tracking events change.',
     image: BlueDartAlertsImage,
     techStack: [
       'Cheerio',
+      'Cron Jobs',
       'Discord Bot API',
       'MongoDB',
       'Next.js',
