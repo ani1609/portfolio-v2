@@ -13,10 +13,10 @@ export const openProjectLink = ({
   deployedLink,
   githubLink,
 }: {
-  deployedLink?: string;
-  githubLink?: string;
+  deployedLink?: string | undefined;
+  githubLink?: string | undefined;
 }) => {
-  const link = deployedLink || githubLink; // Open deployed link if available, else open github link
+  const link = deployedLink ?? githubLink;
   if (link) {
     window.open(link, '_blank');
   } else {
@@ -86,13 +86,15 @@ export const getLanguageAbbreviations: Record<string, string> = {
   'zig': 'ZIG',
 };
 
-export function validateGitHubToken(): NextResponse | undefined {
+export function validateGitHubToken(): NextResponse | null {
   if (!GITHUB_ACCESS_TOKEN) {
     return NextResponse.json(
       { error: 'GitHub Access Token is missing' },
       { status: 400 }
     );
   }
+
+  return null;
 }
 
 export function getGitHubHeaders() {

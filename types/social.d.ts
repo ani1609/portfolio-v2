@@ -1,5 +1,7 @@
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 export interface SocialItem {
   name: string;
   link: string;
-  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  icon: IconComponent;
 }
