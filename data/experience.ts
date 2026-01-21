@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     companyName: 'Indian Oil Corporation Limited (IOCL)',
     companyNickName: 'Indian Oil',
     jobTitle: 'Full Stack Developer',
-    location: 'Remote',
+    location: 'Hybrid',
     date: 'Dec 2025 - Jan 2026',
     employmentType: 'Contract',
     companyLink: 'https://iocl.com/',
