@@ -7,6 +7,7 @@ export type EmploymentType =
   | 'Mentorship';
 
 export type LocationType = 'Remote' | 'On-site' | 'Hybrid';
+
 export interface Experience {
   id: number;
   companyName: string;
