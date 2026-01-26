@@ -20,7 +20,7 @@ export const socialItems: SocialItem[] = [
   },
   {
     name: 'Linkedin',
-    link: 'https://www.linkedin.com/in/ankit-kr-chowdhury-1b1690218/',
+    link: 'https://www.linkedin.com/in/ankit-chowdhury-1b1690218/',
     icon: LinkedinIcon,
   },
   {
