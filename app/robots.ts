@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next';
+import { WEBSITE_DOMAIN, WEBSITE_URL } from '@/lib/config';
 
-const siteDomain = process.env.NEXT_PUBLIC_WEBSITE_DOMAIN;
-
-if (!siteDomain) {
+if (!WEBSITE_DOMAIN) {
   if (process.env.NODE_ENV === 'production') {
     throw new Error('NEXT_PUBLIC_WEBSITE_DOMAIN is missing in production!');
   }
@@ -16,6 +15,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: `https://${siteDomain}/sitemap.xml`,
+    sitemap: `${WEBSITE_URL}/sitemap.xml`,
   };
 }
