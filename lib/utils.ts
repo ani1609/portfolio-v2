@@ -2,8 +2,7 @@ import { Month } from '@/types/chart';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { NextResponse } from 'next/server';
-
-const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
+import { GITHUB_ACCESS_TOKEN } from '@/lib/config';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

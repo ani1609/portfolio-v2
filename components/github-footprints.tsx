@@ -10,6 +10,7 @@ import {
   type Year,
 } from '@/types/chart';
 import { fetcher } from '@/lib/fetcher';
+import { GITHUB_USERNAME } from '@/lib/config';
 import {
   Select,
   SelectContent,
@@ -70,7 +71,7 @@ export default function GithubFootprints() {
     error: isCommitError,
   } = useSWR<CommitResponse>(
     commitMonth && commitYear
-      ? `/api/commits?username=ani1609&month=${commitMonth === 'all' ? '' : commitMonth}&year=${commitYear}`
+      ? `/api/commits?username=${GITHUB_USERNAME}&month=${commitMonth === 'all' ? '' : commitMonth}&year=${commitYear}`
       : null,
     fetcher
   );
@@ -81,7 +82,7 @@ export default function GithubFootprints() {
     error: isPrError,
   } = useSWR<PrResponse>(
     prMonth && prYear
-      ? `/api/pull-requests?username=ani1609&month=${prMonth}&year=${prYear}`
+      ? `/api/pull-requests?username=${GITHUB_USERNAME}&month=${prMonth}&year=${prYear}`
       : null,
     fetcher
   );
@@ -90,7 +91,10 @@ export default function GithubFootprints() {
     data: languageResponse,
     isLoading: isLanguageLoading,
     error: isLanguageError,
-  } = useSWR<LanguageResponse>(`/api/languages?username=ani1609`, fetcher);
+  } = useSWR<LanguageResponse>(
+    `/api/languages?username=${GITHUB_USERNAME}`,
+    fetcher
+  );
 
   useEffect(() => {
     const options = {

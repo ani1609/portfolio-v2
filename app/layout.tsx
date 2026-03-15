@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Open_Sans, Noto_Sans_SC, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import { WEBSITE_URL } from '@/lib/config';
 
 const openSans = Open_Sans({
   variable: '--font-open-sans',
@@ -17,7 +18,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`),
+  metadataBase: new URL(WEBSITE_URL),
 
   title: {
     template: '%s | Ankit Kr. Chowdhury',
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Ankit Kr. Chowdhury',
-      url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
+      url: WEBSITE_URL,
     },
   ],
 
@@ -71,13 +72,13 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: 'Ankit Kr. Chowdhury | Portfolio',
-    url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
+    url: WEBSITE_URL,
     siteName: 'Ankit Kr. Chowdhury | Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/images/og-image.png`,
+        url: `${WEBSITE_URL}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Ankit Kr. Chowdhury | Portfolio',
@@ -98,17 +99,15 @@ export const metadata: Metadata = {
     title: 'Ankit Kr. Chowdhury | Portfolio',
     card: 'summary_large_image',
     creator: '@Ankit7049266066',
-    images: [
-      `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/images/og-image.png`,
-    ],
+    images: [`${WEBSITE_URL}/images/og-image.png`],
   },
 
   icons: {
-    shortcut: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/favicon.ico`,
+    shortcut: `${WEBSITE_URL}/favicon.ico`,
   },
 
   alternates: {
-    canonical: `https://${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`,
+    canonical: WEBSITE_URL,
   },
 };
 
