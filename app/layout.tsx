@@ -26,8 +26,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'A passionate web developer creating seamless and engaging digital experiences.',
-
+    'Software Engineer building scalable web and mobile apps, cloud-native systems, and AI-powered tools with modern technologies.',
   keywords: [
     'Ankit Kr. Chowdhury',
     'Ankit Kumar Chowdhury',
