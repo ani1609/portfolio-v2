@@ -21,7 +21,7 @@ export const majorProjects: MajorProject[] = [
       'WebSockets',
     ],
     githubLink: 'https://github.com/ani1609/four-in-a-row/',
-    deployedLink: 'https://four-in-a-row.myselfankit.tech/',
+    deployedLink: 'https://ankit-four-in-a-row.vercel.app',
   },
   {
     title: 'Blue Dart Alerts',
@@ -39,6 +39,6 @@ export const majorProjects: MajorProject[] = [
       'TypeScript',
     ],
     githubLink: 'https://github.com/ani1609/bluedart-alerts/',
-    deployedLink: 'https://bluedart-alerts.myselfankit.tech/',
+    deployedLink: 'https://ankit-bluedart-alerts.vercel.app',
   },
 ];

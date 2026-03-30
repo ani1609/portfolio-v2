@@ -1,6 +1,6 @@
 import { NavItem } from '@/types/nav';
 
-export const websiteLink: string = 'https://www.myselfankit.tech/';
+export const websiteLink: string = 'https://ankit-kr-chowdhury.vercel.app/';
 
 export const navItems: NavItem[] = [
   { title: 'About', scrollTo: 'about-section' },
